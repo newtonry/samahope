@@ -27,5 +27,9 @@ class ProjectViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func donateNowPressed(sender: UIButton) {
+        let storyboard = UIStoryboard(name: "PaymentStoryboard", bundle: nil)
+        let projectVC = storyboard.instantiateInitialViewController() as? UINavigationController
+        self.presentViewController(projectVC!, animated: true, completion: nil)
+    }
 }

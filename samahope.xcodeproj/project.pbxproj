@@ -21,6 +21,9 @@
 		3F44C5041AAEBA3700D7F1F1 /* SourceSansPro-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F44C4F81AAEBA3700D7F1F1 /* SourceSansPro-Semibold.ttf */; };
 		3F44C5051AAEBA3700D7F1F1 /* SourceSansPro-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F44C4F91AAEBA3700D7F1F1 /* SourceSansPro-SemiboldItalic.ttf */; };
 		A036EEB3577B71E28C3C4C5D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDEA43EF90BFE02A54AA4045 /* libPods.a */; };
+		C51603231AAF96790044799D /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51603211AAF96790044799D /* PaymentViewController.swift */; };
+		C51603261AAF97050044799D /* PaymentStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C51603251AAF97050044799D /* PaymentStoryboard.storyboard */; };
+		C516032D1AAFA62A0044799D /* PaymentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C516032C1AAFA62A0044799D /* PaymentTableViewCell.swift */; };
 		C54BAC0A1AAE7BC1003AC168 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54BAC091AAE7BC1003AC168 /* ProjectsViewController.swift */; };
 		C54BAC0C1AAE7BD6003AC168 /* ProjectTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C54BAC0B1AAE7BD6003AC168 /* ProjectTableViewCell.xib */; };
 		C54BAC0F1AAE7C25003AC168 /* ProjectsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C54BAC0E1AAE7C25003AC168 /* ProjectsStoryboard.storyboard */; };
@@ -66,6 +69,9 @@
 		3F44C4F91AAEBA3700D7F1F1 /* SourceSansPro-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-SemiboldItalic.ttf"; sourceTree = "<group>"; };
 		83AE896058DCCC748B8D8354 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		98696AFCB772891F46D5D8F8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		C51603211AAF96790044799D /* PaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PaymentViewController.swift; path = ViewControllers/PaymentViewController.swift; sourceTree = "<group>"; };
+		C51603251AAF97050044799D /* PaymentStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = PaymentStoryboard.storyboard; path = Interfaces/PaymentStoryboard.storyboard; sourceTree = "<group>"; };
+		C516032C1AAFA62A0044799D /* PaymentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentTableViewCell.swift; sourceTree = "<group>"; };
 		C54BAC091AAE7BC1003AC168 /* ProjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectsViewController.swift; path = ViewControllers/ProjectsViewController.swift; sourceTree = "<group>"; };
 		C54BAC0B1AAE7BD6003AC168 /* ProjectTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProjectTableViewCell.xib; path = Interfaces/ProjectTableViewCell.xib; sourceTree = "<group>"; };
 		C54BAC0E1AAE7C25003AC168 /* ProjectsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ProjectsStoryboard.storyboard; path = Interfaces/ProjectsStoryboard.storyboard; sourceTree = "<group>"; };
@@ -151,6 +157,7 @@
 			children = (
 				C54BAC091AAE7BC1003AC168 /* ProjectsViewController.swift */,
 				EB957D0F1AAA700F007037A6 /* ViewController.swift */,
+				C51603211AAF96790044799D /* PaymentViewController.swift */,
 				C54BAC131AAE8624003AC168 /* ProjectViewController.swift */,
 			);
 			name = ViewControllers;
@@ -160,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				C54BAC111AAE7C6D003AC168 /* ProjectTableViewCell.swift */,
+				C516032C1AAFA62A0044799D /* PaymentTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -170,6 +178,7 @@
 				C54BAC0E1AAE7C25003AC168 /* ProjectsStoryboard.storyboard */,
 				C5DD150D1AAE716F00F116A6 /* ProjectStoryboard.storyboard */,
 				C54BAC0B1AAE7BD6003AC168 /* ProjectTableViewCell.xib */,
+				C51603251AAF97050044799D /* PaymentStoryboard.storyboard */,
 			);
 			name = Interfaces;
 			sourceTree = "<group>";
@@ -359,6 +368,7 @@
 				3F44C4FC1AAEBA3700D7F1F1 /* SourceSansPro-Bold.ttf in Resources */,
 				EB957D151AAA700F007037A6 /* Images.xcassets in Resources */,
 				3F44C5011AAEBA3700D7F1F1 /* SourceSansPro-Light.ttf in Resources */,
+				C51603261AAF97050044799D /* PaymentStoryboard.storyboard in Resources */,
 				3F44C5031AAEBA3700D7F1F1 /* SourceSansPro-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,12 +421,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB957D511AAA7501007037A6 /* ParseClient.swift in Sources */,
+				C516032D1AAFA62A0044799D /* PaymentTableViewCell.swift in Sources */,
 				EB957D101AAA700F007037A6 /* ViewController.swift in Sources */,
 				C54BAC141AAE8624003AC168 /* ProjectViewController.swift in Sources */,
 				EB957D5B1AAA7DC3007037A6 /* Transaction.swift in Sources */,
 				EB957D0E1AAA700F007037A6 /* AppDelegate.swift in Sources */,
 				EB957D551AAA76F9007037A6 /* Event.swift in Sources */,
 				EB957D571AAA7712007037A6 /* Project.swift in Sources */,
+				C51603231AAF96790044799D /* PaymentViewController.swift in Sources */,
 				C54BAC0A1AAE7BC1003AC168 /* ProjectsViewController.swift in Sources */,
 				C54BAC121AAE7C6D003AC168 /* ProjectTableViewCell.swift in Sources */,
 			);

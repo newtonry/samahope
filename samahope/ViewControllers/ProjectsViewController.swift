@@ -35,5 +35,13 @@ class ProjectsViewController: UIViewController, UITableViewDataSource {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+    @IBAction func toNextVC(sender: UITapGestureRecognizer) {
+        // This is only for the animated gif, should not be here later
+        let storyboard = UIStoryboard(name: "ProjectStoryboard", bundle: nil)
+        let projectVC = storyboard.instantiateInitialViewController() as? ProjectViewController
+        
+        self.presentViewController(projectVC!, animated: true, completion: nil)
+    }
 }
 

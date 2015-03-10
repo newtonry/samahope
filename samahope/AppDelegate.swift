@@ -29,14 +29,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        var e = ParseClient.loadEvents()
 
         
-//        let storyboard = UIStoryboard(name: "ProjectStoryboard", bundle: nil)
-//        window?.rootViewController = storyboard.instantiateInitialViewController() as? UIViewController
-        
         let storyboard = UIStoryboard(name: "ProjectsStoryboard", bundle: nil)
         window?.rootViewController = storyboard.instantiateInitialViewController() as? ProjectsViewController
+        
+//        let storyboard = UIStoryboard(name: "ProjectStoryboard", bundle: nil)
+//        window?.rootViewController = storyboard.instantiateInitialViewController() as? ProjectViewController
 
-        
-        
+//        let storyboard = UIStoryboard(name: "PaymentStoryboard", bundle: nil)
+//        window?.rootViewController = storyboard.instantiateInitialViewController() as? UINavigationController
+
         return true
     }
 
