@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="fsg-OH-6Qh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="fsg-OH-6Qh">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
@@ -10,15 +10,13 @@
         <mutableArray key="SourceSansPro-Bold.ttf">
             <string>SourceSansPro-Bold</string>
         </mutableArray>
-        <mutableArray key="SourceSansPro-Light.ttf">
-            <string>SourceSansPro-Light</string>
-        </mutableArray>
         <mutableArray key="SourceSansPro-Regular.ttf">
-            <string>SourceSansPro-Regular</string>
             <string>SourceSansPro-Regular</string>
             <string>SourceSansPro-Regular</string>
         </mutableArray>
         <mutableArray key="SourceSansPro-Semibold.ttf">
+            <string>SourceSansPro-Semibold</string>
+            <string>SourceSansPro-Semibold</string>
             <string>SourceSansPro-Semibold</string>
         </mutableArray>
     </customFonts>
@@ -31,15 +29,15 @@
                         <viewControllerLayoutGuide type="top" id="i3u-cj-Yr3"/>
                         <viewControllerLayoutGuide type="bottom" id="ntK-MB-O8D"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Rma-vN-lh7">
+                    <view key="view" contentMode="scaleToFill" id="Rma-vN-lh7" customClass="UIScrollView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OT1-Wz-aCi">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Dr. Robert Kalyesubula" id="Qbg-Yb-5J6"/>
@@ -48,51 +46,52 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="procedure3@1x" translatesAutoresizingMaskIntoConstraints="NO" id="bFb-l9-dl2">
                                 <rect key="frame" x="0.0" y="44" width="320" height="320"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Obstructed Birth" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qbf-Sl-ren">
-                                <rect key="frame" x="8" y="370" width="128" height="21"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fJb-nY-1p9">
+                                <rect key="frame" x="0.0" y="415" width="320" height="69"/>
+                                <color key="backgroundColor" red="0.96473315437283136" green="0.96473315437283136" blue="0.96473315437283136" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Obstructed Birth" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qbf-Sl-ren">
+                                <rect key="frame" x="102" y="372" width="116" height="21"/>
                                 <fontDescription key="fontDescription" name="SourceSansPro-Semibold" family="Source Sans Pro" pointSize="16"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The Need" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7a-iy-ZYJ">
-                                <rect key="frame" x="8" y="489" width="128" height="21"/>
-                                <fontDescription key="fontDescription" name="SourceSansPro-Light" family="Source Sans Pro" pointSize="15"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vh0-JF-oeV">
-                                <rect key="frame" x="8" y="511" width="924" height="21"/>
-                                <string key="text">Helen is a 24 years old, and was brought to Nakaseke hospital unconscious and in shock. On examination, Dr. Robert noted that she was severely anemic and 39 weeks pregnant with her </string>
-                                <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="12"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="The Need" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7a-iy-ZYJ">
+                                <rect key="frame" x="130" y="489" width="60" height="19"/>
+                                <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1W7-hi-VY1">
                                 <rect key="frame" x="0.0" y="364" width="320" height="1"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AS5-dz-BQ9">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AS5-dz-BQ9">
                                 <rect key="frame" x="0.0" y="414" width="320" height="1"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="Urr-zh-xur"/>
+                                    <constraint firstAttribute="height" constant="1" id="cY2-Z9-jbQ"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4s4-gU-kWB">
                                 <rect key="frame" x="0.0" y="484" width="320" height="1"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Nakaseke District, Uganda" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBo-Ls-khZ">
-                                <rect key="frame" x="20" y="389" width="132" height="16"/>
-                                <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="12"/>
-                                <color key="textColor" white="0.84999999999999998" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="92" y="389" width="136" height="16"/>
+                                <fontDescription key="fontDescription" name="SourceSansPro-Semibold" family="Source Sans Pro" pointSize="12"/>
+                                <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dr. Robert Kalyesubula" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SIX-je-j6r">
-                                <rect key="frame" x="103" y="462" width="115" height="16"/>
-                                <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="12"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <rect key="frame" x="101" y="462" width="119" height="16"/>
+                                <fontDescription key="fontDescription" name="SourceSansPro-Semibold" family="Source Sans Pro" pointSize="12"/>
+                                <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vmw-6M-ntd">
-                                <rect key="frame" x="8" y="386" width="8" height="21"/>
+                                <rect key="frame" x="81" y="386" width="8" height="21.5"/>
                                 <fontDescription key="fontDescription" name="Entypo" family="Entypo" pointSize="21"/>
                                 <color key="textColor" red="0.56479060650000001" green="0.80094510320000001" blue="0.79396176340000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -115,18 +114,34 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="doctor-robert-thumbnail" translatesAutoresizingMaskIntoConstraints="NO" id="ndW-Y3-38I">
                                 <rect key="frame" x="140" y="423" width="40" height="40"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="NuS-Ot-R9h"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="P9t-He-LXf"/>
                                     <constraint firstAttribute="width" constant="40" id="QTL-b6-9v9"/>
                                     <constraint firstAttribute="height" constant="40" id="qbl-hc-7D4"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vh0-JF-oeV">
+                                <rect key="frame" x="8" y="514" width="304" height="196.5"/>
+                                <mutableString key="text">My name is Robert Kalyesubula. In 1984 my father was killed in a war in Luwero Uganda when I was only 8 years old. My mother disappeared at the same time, and my brothers and sisters got separated from me. I was brought up in an orphanage that educated me through medical school. I work with my colleagues at ACCESS and Nakaseke hospital to offer both surgeries and medical care to vulnerable populations in the Nakaseke district. This kind of work is very fulfilling because it brings tangible and immediate results to all. There is no better calling than that of ensuring that fellow human beings have a good life free of pain and suffering irrespective of their race, financial status and color. Join me in treating more women with birth injuries.</mutableString>
+                                <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="iBo-Ls-khZ" firstAttribute="centerY" secondItem="Vmw-6M-ntd" secondAttribute="centerY" id="6Y0-cU-FiH"/>
                             <constraint firstItem="xA5-1Y-pfM" firstAttribute="leading" secondItem="Rma-vN-lh7" secondAttribute="leading" id="7bt-U6-sZE"/>
                             <constraint firstItem="iBo-Ls-khZ" firstAttribute="leading" secondItem="Vmw-6M-ntd" secondAttribute="trailing" constant="2.5" id="9tV-eg-NCD"/>
+                            <constraint firstAttribute="centerX" secondItem="ndW-Y3-38I" secondAttribute="centerX" id="C5b-f6-JKF"/>
                             <constraint firstAttribute="bottom" secondItem="xA5-1Y-pfM" secondAttribute="bottom" id="HW1-lN-7ip"/>
+                            <constraint firstItem="Vh0-JF-oeV" firstAttribute="leading" secondItem="Rma-vN-lh7" secondAttribute="leading" constant="8" id="OUc-mW-h1a"/>
+                            <constraint firstAttribute="trailing" secondItem="AS5-dz-BQ9" secondAttribute="trailing" id="U2I-KP-x8d"/>
                             <constraint firstAttribute="trailing" secondItem="xA5-1Y-pfM" secondAttribute="trailing" id="k5K-BD-emn"/>
+                            <constraint firstItem="Vh0-JF-oeV" firstAttribute="top" secondItem="K7a-iy-ZYJ" secondAttribute="bottom" constant="6" id="kY1-I8-nL5"/>
+                            <constraint firstAttribute="trailing" secondItem="Vh0-JF-oeV" secondAttribute="trailing" constant="8" id="mSg-aB-ghD"/>
+                            <constraint firstItem="ndW-Y3-38I" firstAttribute="top" secondItem="AS5-dz-BQ9" secondAttribute="bottom" constant="8" id="nkA-I5-R8s"/>
+                            <constraint firstItem="AS5-dz-BQ9" firstAttribute="leading" secondItem="Rma-vN-lh7" secondAttribute="leading" id="qf3-1d-DGk"/>
                         </constraints>
                     </view>
                     <connections>
@@ -137,23 +152,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1mK-on-Keh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="369" y="329"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="9Xr-Qw-BHV">
-            <objects>
-                <viewController id="nfc-sk-FUH" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Yeb-Gs-Mht"/>
-                        <viewControllerLayoutGuide type="bottom" id="KpQ-w5-VMu"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="uyz-JM-twa">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="v6w-Bx-xxg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
     <resources>
