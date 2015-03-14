@@ -29,7 +29,7 @@
                         <viewControllerLayoutGuide type="top" id="i3u-cj-Yr3"/>
                         <viewControllerLayoutGuide type="bottom" id="ntK-MB-O8D"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Rma-vN-lh7">
+                    <view key="view" contentMode="scaleToFill" id="Rma-vN-lh7" customClass="UIScrollView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -56,16 +56,9 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The Need" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7a-iy-ZYJ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="The Need" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7a-iy-ZYJ">
                                 <rect key="frame" x="130" y="489" width="60" height="19"/>
                                 <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="15"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vh0-JF-oeV">
-                                <rect key="frame" x="8" y="511" width="924" height="21"/>
-                                <string key="text">Helen is a 24 years old, and was brought to Nakaseke hospital unconscious and in shock. On examination, Dr. Robert noted that she was severely anemic and 39 weeks pregnant with her </string>
-                                <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="12"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -98,7 +91,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vmw-6M-ntd">
-                                <rect key="frame" x="81" y="386" width="8" height="21"/>
+                                <rect key="frame" x="81" y="386" width="8" height="21.5"/>
                                 <fontDescription key="fontDescription" name="Entypo" family="Entypo" pointSize="21"/>
                                 <color key="textColor" red="0.56479060650000001" green="0.80094510320000001" blue="0.79396176340000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -127,6 +120,13 @@
                                     <constraint firstAttribute="height" constant="40" id="qbl-hc-7D4"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vh0-JF-oeV">
+                                <rect key="frame" x="8" y="514" width="304" height="196.5"/>
+                                <mutableString key="text">My name is Robert Kalyesubula. In 1984 my father was killed in a war in Luwero Uganda when I was only 8 years old. My mother disappeared at the same time, and my brothers and sisters got separated from me. I was brought up in an orphanage that educated me through medical school. I work with my colleagues at ACCESS and Nakaseke hospital to offer both surgeries and medical care to vulnerable populations in the Nakaseke district. This kind of work is very fulfilling because it brings tangible and immediate results to all. There is no better calling than that of ensuring that fellow human beings have a good life free of pain and suffering irrespective of their race, financial status and color. Join me in treating more women with birth injuries.</mutableString>
+                                <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <constraints>
@@ -135,8 +135,11 @@
                             <constraint firstItem="iBo-Ls-khZ" firstAttribute="leading" secondItem="Vmw-6M-ntd" secondAttribute="trailing" constant="2.5" id="9tV-eg-NCD"/>
                             <constraint firstAttribute="centerX" secondItem="ndW-Y3-38I" secondAttribute="centerX" id="C5b-f6-JKF"/>
                             <constraint firstAttribute="bottom" secondItem="xA5-1Y-pfM" secondAttribute="bottom" id="HW1-lN-7ip"/>
+                            <constraint firstItem="Vh0-JF-oeV" firstAttribute="leading" secondItem="Rma-vN-lh7" secondAttribute="leading" constant="8" id="OUc-mW-h1a"/>
                             <constraint firstAttribute="trailing" secondItem="AS5-dz-BQ9" secondAttribute="trailing" id="U2I-KP-x8d"/>
                             <constraint firstAttribute="trailing" secondItem="xA5-1Y-pfM" secondAttribute="trailing" id="k5K-BD-emn"/>
+                            <constraint firstItem="Vh0-JF-oeV" firstAttribute="top" secondItem="K7a-iy-ZYJ" secondAttribute="bottom" constant="6" id="kY1-I8-nL5"/>
+                            <constraint firstAttribute="trailing" secondItem="Vh0-JF-oeV" secondAttribute="trailing" constant="8" id="mSg-aB-ghD"/>
                             <constraint firstItem="ndW-Y3-38I" firstAttribute="top" secondItem="AS5-dz-BQ9" secondAttribute="bottom" constant="8" id="nkA-I5-R8s"/>
                             <constraint firstItem="AS5-dz-BQ9" firstAttribute="leading" secondItem="Rma-vN-lh7" secondAttribute="leading" id="qf3-1d-DGk"/>
                         </constraints>
@@ -149,23 +152,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1mK-on-Keh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="369" y="329"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="9Xr-Qw-BHV">
-            <objects>
-                <viewController id="nfc-sk-FUH" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Yeb-Gs-Mht"/>
-                        <viewControllerLayoutGuide type="bottom" id="KpQ-w5-VMu"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="uyz-JM-twa">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="v6w-Bx-xxg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
     <resources>
