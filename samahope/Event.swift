@@ -11,7 +11,7 @@ import Foundation
 class Event : PFObject, PFSubclassing {
     @NSManaged var name: String?
     @NSManaged var location: String?
-    @NSManaged var projects : Array< Project >
+    @NSManaged var projects : [Project]
     @NSManaged var date : String?
     
     // live event components
