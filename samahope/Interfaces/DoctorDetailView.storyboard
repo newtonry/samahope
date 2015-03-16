@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="duC-ru-bgq">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <scenes>
+        <!--Doctor Detail View Controller-->
+        <scene sceneID="Bur-Sh-MHI">
+            <objects>
+                <viewController storyboardIdentifier="DoctorDetailViewController" id="duC-ru-bgq" customClass="DoctorDetailViewController" customModule="samahope" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QeL-NB-Hfi"/>
+                        <viewControllerLayoutGuide type="bottom" id="HLy-cK-zao"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oKA-yy-wgY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aai-gi-qE9">
+                                <rect key="frame" x="0.0" y="503" width="320" height="65"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWz-eQ-pHi">
+                                        <rect key="frame" x="109" y="18" width="103" height="30"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                        <state key="normal" title="DONATE NOW">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.11372549831867218" green="0.70980393886566162" blue="0.7450980544090271" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerY" secondItem="cWz-eQ-pHi" secondAttribute="centerY" id="3Nq-bI-E44"/>
+                                    <constraint firstAttribute="height" constant="65" id="Uhq-JX-NNl"/>
+                                    <constraint firstAttribute="centerX" secondItem="cWz-eQ-pHi" secondAttribute="centerX" id="w0D-b3-yjZ"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="291" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="yIm-pR-SRn">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="503"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DoctorDetailInfoCell" rowHeight="359" id="cAw-ls-Dfk" customClass="DoctorDetailInfoCell" customModule="samahope" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cAw-ls-Dfk" id="Mtn-TS-IpW">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Phs-wr-0W2">
+                                                    <rect key="frame" x="0.0" y="-5" width="320" height="144"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="144" id="3yp-Wp-OUY"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n38-5i-87O">
+                                                    <rect key="frame" x="0.0" y="139" width="320" height="75"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dr. Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOF-D8-aSU">
+                                                            <rect key="frame" x="0.0" y="15" width="320" height="30"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                                                            <color key="textColor" red="0.34117648005485535" green="0.29803922772407532" blue="0.25098040699958801" alpha="1" colorSpace="deviceRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="224 Supporters" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ve6-L3-WOf">
+                                                            <rect key="frame" x="0.0" y="50" width="320" height="20"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                            <color key="textColor" red="0.7725490927696228" green="0.73333334922790527" blue="0.68627452850341797" alpha="1" colorSpace="deviceRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="ve6-L3-WOf" firstAttribute="top" secondItem="QOF-D8-aSU" secondAttribute="bottom" constant="5" id="Evm-dW-gUe"/>
+                                                        <constraint firstAttribute="trailing" secondItem="ve6-L3-WOf" secondAttribute="trailing" id="U3E-ea-mOm"/>
+                                                        <constraint firstItem="QOF-D8-aSU" firstAttribute="top" secondItem="n38-5i-87O" secondAttribute="top" constant="15" id="fSU-7m-oxV"/>
+                                                        <constraint firstItem="ve6-L3-WOf" firstAttribute="leading" secondItem="n38-5i-87O" secondAttribute="leading" id="gFO-Dd-A8x"/>
+                                                        <constraint firstAttribute="trailing" secondItem="QOF-D8-aSU" secondAttribute="trailing" id="gfn-Nx-Ex7"/>
+                                                        <constraint firstItem="QOF-D8-aSU" firstAttribute="leading" secondItem="n38-5i-87O" secondAttribute="leading" id="mjp-wN-B0b"/>
+                                                        <constraint firstAttribute="height" constant="75" id="rIW-dP-7qu"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dhl-ns-CiY" customClass="CircleTitleView" customModule="samahope" customModuleProvider="target">
+                                                    <rect key="frame" x="15" y="222" width="150" height="90"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ENJ-x7-G89">
+                                                            <rect key="frame" x="55" y="5" width="41" height="41"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="41" id="JsQ-Xb-3JZ"/>
+                                                                <constraint firstAttribute="height" constant="41" id="n9d-5s-ZS1"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2bA-aQ-q77">
+                                                            <rect key="frame" x="29" y="49" width="93" height="46"/>
+                                                            <string key="text">Bo, Siera Leone
+
+</string>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                                            <color key="textColor" red="0.41568630933761597" green="0.36862745881080627" blue="0.31764706969261169" alpha="1" colorSpace="deviceRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="150" id="Gxm-1V-r0U"/>
+                                                        <constraint firstItem="2bA-aQ-q77" firstAttribute="top" secondItem="ENJ-x7-G89" secondAttribute="bottom" constant="3" id="IIq-yx-QdI"/>
+                                                        <constraint firstItem="ENJ-x7-G89" firstAttribute="top" secondItem="dhl-ns-CiY" secondAttribute="top" constant="5" id="Jmw-rX-X4H"/>
+                                                        <constraint firstAttribute="centerX" secondItem="ENJ-x7-G89" secondAttribute="centerX" id="PwA-M4-fiy"/>
+                                                        <constraint firstAttribute="centerX" secondItem="2bA-aQ-q77" secondAttribute="centerX" id="XFT-6j-Y25"/>
+                                                        <constraint firstAttribute="height" constant="90" id="dSn-Ax-5K4"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <outlet property="circleImage" destination="ENJ-x7-G89" id="HNc-b1-Let"/>
+                                                        <outlet property="title" destination="2bA-aQ-q77" id="vzd-t2-5PR"/>
+                                                    </connections>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="viF-I4-pbR" customClass="CircleTitleView" customModule="samahope" customModuleProvider="target">
+                                                    <rect key="frame" x="155" y="222" width="150" height="90"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xsM-Ji-MHU">
+                                                            <rect key="frame" x="55" y="5" width="41" height="41"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="41" id="NaL-09-nLL"/>
+                                                                <constraint firstAttribute="width" constant="41" id="oPF-zN-Fen"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2pC-Zk-fyT">
+                                                            <rect key="frame" x="29" y="49" width="93" height="46"/>
+                                                            <string key="text">Bo, Siera Leone
+
+</string>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                                            <color key="textColor" red="0.4156863093" green="0.36862745879999997" blue="0.31764706970000001" alpha="1" colorSpace="deviceRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="150" id="9lT-Vg-HqC"/>
+                                                        <constraint firstItem="2pC-Zk-fyT" firstAttribute="top" secondItem="xsM-Ji-MHU" secondAttribute="bottom" constant="3" id="E6A-5N-rWW"/>
+                                                        <constraint firstAttribute="centerX" secondItem="xsM-Ji-MHU" secondAttribute="centerX" id="eUG-nV-ncR"/>
+                                                        <constraint firstAttribute="centerX" secondItem="2pC-Zk-fyT" secondAttribute="centerX" id="eah-Zn-HcW"/>
+                                                        <constraint firstItem="xsM-Ji-MHU" firstAttribute="top" secondItem="viF-I4-pbR" secondAttribute="top" constant="5" id="oRq-7f-vTu"/>
+                                                        <constraint firstAttribute="height" constant="90" id="wE3-fz-9jS"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <outlet property="circleImage" destination="xsM-Ji-MHU" id="ONu-8G-scL"/>
+                                                        <outlet property="title" destination="2pC-Zk-fyT" id="cR0-3p-1fe"/>
+                                                    </connections>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="dhl-ns-CiY" firstAttribute="top" secondItem="n38-5i-87O" secondAttribute="bottom" constant="8" id="Jeq-s5-tdi"/>
+                                                <constraint firstAttribute="trailing" secondItem="viF-I4-pbR" secondAttribute="trailing" constant="15" id="apg-CO-1w9"/>
+                                                <constraint firstItem="n38-5i-87O" firstAttribute="leading" secondItem="Mtn-TS-IpW" secondAttribute="leading" id="bOp-7h-7Hp"/>
+                                                <constraint firstItem="n38-5i-87O" firstAttribute="top" secondItem="Phs-wr-0W2" secondAttribute="bottom" id="e17-35-qKJ"/>
+                                                <constraint firstItem="Phs-wr-0W2" firstAttribute="leading" secondItem="Mtn-TS-IpW" secondAttribute="leading" id="i1d-87-gEh"/>
+                                                <constraint firstItem="dhl-ns-CiY" firstAttribute="centerY" secondItem="viF-I4-pbR" secondAttribute="centerY" id="jzD-RP-OfE"/>
+                                                <constraint firstAttribute="trailing" secondItem="n38-5i-87O" secondAttribute="trailing" id="nAO-Nq-ORN"/>
+                                                <constraint firstItem="Phs-wr-0W2" firstAttribute="top" secondItem="Mtn-TS-IpW" secondAttribute="top" constant="-5" id="vbN-3u-jOB"/>
+                                                <constraint firstAttribute="trailing" secondItem="Phs-wr-0W2" secondAttribute="trailing" id="y3u-73-wXV"/>
+                                                <constraint firstItem="dhl-ns-CiY" firstAttribute="leading" secondItem="Mtn-TS-IpW" secondAttribute="leading" constant="15" id="ysM-4R-caX"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="bannerImage" destination="Phs-wr-0W2" id="wFG-E6-qxU"/>
+                                            <outlet property="doctorName" destination="QOF-D8-aSU" id="qhM-se-wUQ"/>
+                                            <outlet property="leftCircleTitleView" destination="dhl-ns-CiY" id="I8c-0s-t8r"/>
+                                            <outlet property="rightCircleTitleView" destination="viF-I4-pbR" id="LNj-9d-XQq"/>
+                                            <outlet property="supportersCountLabel" destination="ve6-L3-WOf" id="xSV-Np-1aw"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FundingStatusCell" rowHeight="40" id="jCa-ob-Qcn" customClass="FundingStatusCell" customModule="samahope" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jCa-ob-Qcn" id="wsg-xz-FVm">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MoreDoctorDetailCell" rowHeight="30" id="3AY-4R-fhE" customClass="MoreDoctorDetailCell" customModule="samahope" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3AY-4R-fhE" id="wig-US-nMU">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="yIm-pR-SRn" secondAttribute="trailing" id="1Wv-wY-trf"/>
+                            <constraint firstItem="Aai-gi-qE9" firstAttribute="top" secondItem="yIm-pR-SRn" secondAttribute="bottom" id="b8m-4g-Xk9"/>
+                            <constraint firstAttribute="trailing" secondItem="Aai-gi-qE9" secondAttribute="trailing" id="cfC-vM-8yZ"/>
+                            <constraint firstItem="yIm-pR-SRn" firstAttribute="top" secondItem="oKA-yy-wgY" secondAttribute="top" id="eAu-wK-hh1"/>
+                            <constraint firstItem="yIm-pR-SRn" firstAttribute="leading" secondItem="oKA-yy-wgY" secondAttribute="leading" id="jK3-zj-Z8I"/>
+                            <constraint firstItem="HLy-cK-zao" firstAttribute="top" secondItem="Aai-gi-qE9" secondAttribute="bottom" id="q5X-os-6bw"/>
+                            <constraint firstItem="Aai-gi-qE9" firstAttribute="leading" secondItem="oKA-yy-wgY" secondAttribute="leading" id="wFN-0V-0pU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="yIm-pR-SRn" id="vXz-bC-7gO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mJh-SG-JOM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="191" y="346"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

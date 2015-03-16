@@ -46,9 +46,11 @@ class ProjectsViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func tableView(projectsTableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let project = projects![indexPath.row]
-        
-        
-        println(project)
+
+        let storyboard = UIStoryboard(name: "DoctorDetailView", bundle: nil)
+        let projectViewController = storyboard.instantiateInitialViewController() as? DoctorDetailViewController
+        projectViewController!.setProject(project)
+        self.presentViewController(projectViewController!, animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {
@@ -60,7 +62,7 @@ class ProjectsViewController: UIViewController, UITableViewDataSource, UITableVi
 //        // This is only for the animated gif, should not be here later
 //        let storyboard = UIStoryboard(name: "ProjectStoryboard", bundle: nil)
 //        let projectVC = storyboard.instantiateInitialViewController() as? ProjectViewController
-//        
+//
 //        self.presentViewController(projectVC!, animated: true, completion: nil)
 //    }
 }

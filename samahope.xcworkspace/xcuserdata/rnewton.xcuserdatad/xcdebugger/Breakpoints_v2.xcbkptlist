@@ -79,5 +79,123 @@
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Views/FundingStatusView.swift"
+            timestampString = "448143306.950659"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "FundingStatusView"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "samahope.FundingStatusView.raisedText.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UILabel&gt;"
+                  moduleName = "samahope"
+                  urlString = "file:///Users/rnewton/projects/Codepath/SamaHope/samahope/Views/FundingStatusView.swift"
+                  timestampString = "448143307.044111"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "samahope.FundingStatusView.raisedText.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UILabel&gt;"
+                  moduleName = "samahope"
+                  urlString = "file:///Users/rnewton/projects/Codepath/SamaHope/samahope/Views/FundingStatusView.swift"
+                  timestampString = "448143307.044382"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "samahope.FundingStatusView.raisedText.materializeForSet : weak Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UILabel&gt;"
+                  moduleName = "samahope"
+                  urlString = "file:///Users/rnewton/projects/Codepath/SamaHope/samahope/Views/FundingStatusView.swift"
+                  timestampString = "448143307.044516"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "samahope.FundingStatusView.init (samahope.FundingStatusView.Type)(frame : C.CGRect) -&gt; samahope.FundingStatusView"
+                  moduleName = "samahope"
+                  urlString = "file:///Users/rnewton/projects/Codepath/SamaHope/samahope/Views/FundingStatusView.swift"
+                  timestampString = "448143307.044686"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "194">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "samahope.FundingStatusView.init (samahope.FundingStatusView.Type)() -&gt; samahope.FundingStatusView"
+                  moduleName = "samahope"
+                  urlString = "file:///Users/rnewton/projects/Codepath/SamaHope/samahope/Views/FundingStatusView.swift"
+                  timestampString = "448143307.044819"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "127">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "samahope.FundingStatusView.init (samahope.FundingStatusView.Type)(coder : ObjectiveC.NSCoder) -&gt; samahope.FundingStatusView"
+                  moduleName = "samahope"
+                  urlString = "file:///Users/rnewton/projects/Codepath/SamaHope/samahope/Views/FundingStatusView.swift"
+                  timestampString = "448143307.044948"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "138">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Views/FundingStatusView.swift"
+            timestampString = "448146705.81809"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "setWithStats(_:treatmentsGoal:amountRaised:amountPerProcedure:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

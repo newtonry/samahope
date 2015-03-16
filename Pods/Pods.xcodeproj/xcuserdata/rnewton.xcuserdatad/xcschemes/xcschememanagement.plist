@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Bolts.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>9643A6B4A4BA840BE05A8216</key>
+		<key>31AE54F7E24E195EAF4BEB4E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CD774EB35F270E966E65C6A5</key>
+		<key>448604EE159CF148D0B02723</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D33A23DD30CA2282893AFD23</key>
+		<key>CC1E6009EE05C27C88C50DE4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DBC9116C477DBB1B98E6F193</key>
 		<dict>
 			<key>primary</key>
 			<true/>

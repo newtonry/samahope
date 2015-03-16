@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="135" id="KGk-i7-Jjw" customClass="FundingStatusCell" customModule="samahope" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="135"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Treatment 21 of 50 needed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TGt-Zy-U5k">
+                        <rect key="frame" x="15" y="25" width="290" height="20"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                        <color key="textColor" red="0.7725490927696228" green="0.73333334922790527" blue="0.68627452850341797" alpha="1" colorSpace="deviceRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$446 raised of $1000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rhV-9h-3Kg">
+                        <rect key="frame" x="15" y="53" width="290" height="23"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
+                        <color key="textColor" red="0.41568630933761597" green="0.36862745881080627" blue="0.31764706969261169" alpha="1" colorSpace="deviceRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qoJ-04-WB2">
+                        <rect key="frame" x="15" y="91" width="290" height="15"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="sKC-Xc-MGm"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.97647064924240112" green="0.97254908084869385" blue="0.96862751245498657" alpha="1" colorSpace="deviceRGB"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="rhV-9h-3Kg" secondAttribute="trailing" constant="15" id="0Kg-x9-9aN"/>
+                    <constraint firstItem="rhV-9h-3Kg" firstAttribute="top" secondItem="TGt-Zy-U5k" secondAttribute="bottom" constant="8" id="1Ay-5y-XwN"/>
+                    <constraint firstAttribute="trailing" secondItem="qoJ-04-WB2" secondAttribute="trailing" constant="15" id="1uT-BW-cmx"/>
+                    <constraint firstItem="rhV-9h-3Kg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="9Nq-Mz-D6Q"/>
+                    <constraint firstAttribute="trailing" secondItem="qoJ-04-WB2" secondAttribute="trailing" constant="15" id="AED-30-DHR"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="qoJ-04-WB2" secondAttribute="bottom" constant="20" id="BPe-Fu-tnn"/>
+                    <constraint firstAttribute="trailing" secondItem="rhV-9h-3Kg" secondAttribute="trailing" constant="15" id="Jqv-tc-SYl"/>
+                    <constraint firstItem="qoJ-04-WB2" firstAttribute="top" secondItem="rhV-9h-3Kg" secondAttribute="bottom" constant="15" id="NVW-1p-sFB"/>
+                    <constraint firstItem="TGt-Zy-U5k" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="25" id="O7h-mk-URm"/>
+                    <constraint firstAttribute="bottom" secondItem="qoJ-04-WB2" secondAttribute="bottom" constant="20" id="TcR-aZ-tFa"/>
+                    <constraint firstItem="TGt-Zy-U5k" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="afW-1A-cF9"/>
+                    <constraint firstItem="qoJ-04-WB2" firstAttribute="top" secondItem="rhV-9h-3Kg" secondAttribute="bottom" constant="15" id="eht-Yv-R9D"/>
+                    <constraint firstItem="qoJ-04-WB2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="geb-Z0-PzG"/>
+                    <constraint firstItem="qoJ-04-WB2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="kZt-Wj-WXx"/>
+                    <constraint firstAttribute="trailing" secondItem="TGt-Zy-U5k" secondAttribute="trailing" constant="15" id="zXF-g2-ZoL"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="0Kg-x9-9aN"/>
+                        <exclude reference="1uT-BW-cmx"/>
+                        <exclude reference="NVW-1p-sFB"/>
+                        <exclude reference="TcR-aZ-tFa"/>
+                        <exclude reference="kZt-Wj-WXx"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="amountRaisedLabel" destination="rhV-9h-3Kg" id="tiS-LC-BAs"/>
+                <outlet property="progressBar" destination="qoJ-04-WB2" id="EoE-WN-qWF"/>
+                <outlet property="treatmentStats" destination="TGt-Zy-U5k" id="R2I-aX-B0m"/>
+            </connections>
+            <point key="canvasLocation" x="366" y="383.5"/>
+        </tableViewCell>
+    </objects>
+</document>
