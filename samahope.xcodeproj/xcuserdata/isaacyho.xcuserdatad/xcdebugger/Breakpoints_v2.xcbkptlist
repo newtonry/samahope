@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ParseClient.swift"
-            timestampString = "447452767.486488"
+            timestampString = "448317908.247905"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
-            landmarkName = "buildTestDb()"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "testQuery()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ParseClient.swift"
-            timestampString = "447452767.486488"
+            timestampString = "448317908.247905"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
             landmarkName = "loadEvents()"
             landmarkType = "5">
          </BreakpointContent>

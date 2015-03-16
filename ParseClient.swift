@@ -9,13 +9,45 @@
 import Foundation
 
 class ParseClient {
+    class func loadEventsInForeground() -> [Event] {
+        var query = Event.query()
+        var myEvents = [Event]()
+        var errorPtr = NSErrorPointer()
+        
+        var objects = query.findObjects( errorPtr )
+        println( "\(objects.count) objects loaded with error: \(errorPtr)" )
+        
+        // Do something with the found objects
+        if let events = objects as? [Event] {
+            for event in events {
+                var projectPointers = event["projects"] as [PFObject]
+                event.projects = [Project]()
+                for projectPointer in projectPointers {
+                    var projectQuery = Project.query()
+                    var projectResponse = projectQuery.getObjectWithId(projectPointer.objectId)
+                    
+                    if let project = projectResponse as? Project {
+                        
+                        println(project.doctorImage!)
+                        event.projects.append(project)
+                    } else {
+                        println("That was not a project :(!")
+                    }
+                }
+                myEvents.append( event )
+            }
+        }
+        return myEvents
+    }
     class func loadEvents() -> [Event] {
         var events = [Event]()
         var query = Event.query()
         
+        var errorPtr = NSErrorPointer()
+        
         query.findObjectsInBackgroundWithBlock {
-            (objects: [AnyObject]!, error: NSError!) -> Void in
-            if error == nil {
+           (objects: [AnyObject]!, error: NSError!) -> Void in
+            if errorPtr == nil {
                 // The find succeeded.
                 println("Successfully retrieved \(objects.count) objects.")
                 

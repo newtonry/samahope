@@ -1,9 +1,17 @@
-- Object model:
-*Project*
-many to many events  ( Pointer )
-
-*Event*
-many to many with project - array[]
+Questions:
+- proper way to deserialize PFSubclassing / object relations
 
 
-https://parse.com/questions/array-of-pointer
+/// need to add to Project:
+/// - treatmentCost
+
+- after 'pay': show confirmation, dismiss'
+- donate page: add doctor thumbnail icon / project title
+- autolayout
+- DoctorVC: circular thumbnail
+- integrate Ryan's progress bar
+
+
+
+
+git push isaac master

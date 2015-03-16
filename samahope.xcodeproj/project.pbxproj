@@ -30,6 +30,7 @@
 		C54BAC121AAE7C6D003AC168 /* ProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54BAC111AAE7C6D003AC168 /* ProjectTableViewCell.swift */; };
 		C54BAC141AAE8624003AC168 /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54BAC131AAE8624003AC168 /* ProjectViewController.swift */; };
 		C5DD150E1AAE716F00F116A6 /* ProjectStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5DD150D1AAE716F00F116A6 /* ProjectStoryboard.storyboard */; };
+		EB72D94E1AB626E200BCFF48 /* DonateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB72D94D1AB626E200BCFF48 /* DonateViewController.swift */; };
 		EB957D0E1AAA700F007037A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB957D0D1AAA700F007037A6 /* AppDelegate.swift */; };
 		EB957D101AAA700F007037A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB957D0F1AAA700F007037A6 /* ViewController.swift */; };
 		EB957D131AAA700F007037A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB957D111AAA700F007037A6 /* Main.storyboard */; };
@@ -41,6 +42,11 @@
 		EB957D571AAA7712007037A6 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB957D561AAA7712007037A6 /* Project.swift */; };
 		EB957D591AAA7956007037A6 /* TODO in Resources */ = {isa = PBXBuildFile; fileRef = EB957D581AAA7956007037A6 /* TODO */; };
 		EB957D5B1AAA7DC3007037A6 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB957D5A1AAA7DC3007037A6 /* Transaction.swift */; };
+		EBD0FFC21AB5098000A70049 /* DummyDoctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD0FFC11AB5098000A70049 /* DummyDoctor.swift */; };
+		EBD0FFC41AB509E300A70049 /* DummyTreatment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD0FFC31AB509E300A70049 /* DummyTreatment.swift */; };
+		EBD0FFC61AB50B5600A70049 /* Isaac.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBD0FFC51AB50B5600A70049 /* Isaac.storyboard */; };
+		EBD0FFC81AB50C9800A70049 /* DoctorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD0FFC71AB50C9800A70049 /* DoctorTableViewController.swift */; };
+		EBD0FFCC1AB5103A00A70049 /* DoctorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD0FFCB1AB5103A00A70049 /* DoctorTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +84,7 @@
 		C54BAC111AAE7C6D003AC168 /* ProjectTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectTableViewCell.swift; sourceTree = "<group>"; };
 		C54BAC131AAE8624003AC168 /* ProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectViewController.swift; path = ViewControllers/ProjectViewController.swift; sourceTree = "<group>"; };
 		C5DD150D1AAE716F00F116A6 /* ProjectStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ProjectStoryboard.storyboard; path = Interfaces/ProjectStoryboard.storyboard; sourceTree = "<group>"; };
+		EB72D94D1AB626E200BCFF48 /* DonateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DonateViewController.swift; sourceTree = "<group>"; };
 		EB957D081AAA700F007037A6 /* samahope.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = samahope.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB957D0C1AAA700F007037A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB957D0D1AAA700F007037A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +101,11 @@
 		EB957D561AAA7712007037A6 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		EB957D581AAA7956007037A6 /* TODO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO; sourceTree = "<group>"; };
 		EB957D5A1AAA7DC3007037A6 /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		EBD0FFC11AB5098000A70049 /* DummyDoctor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyDoctor.swift; sourceTree = "<group>"; };
+		EBD0FFC31AB509E300A70049 /* DummyTreatment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyTreatment.swift; sourceTree = "<group>"; };
+		EBD0FFC51AB50B5600A70049 /* Isaac.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Isaac.storyboard; sourceTree = "<group>"; };
+		EBD0FFC71AB50C9800A70049 /* DoctorTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorTableViewController.swift; sourceTree = "<group>"; };
+		EBD0FFCB1AB5103A00A70049 /* DoctorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorTableViewCell.swift; sourceTree = "<group>"; };
 		EDEA43EF90BFE02A54AA4045 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -156,8 +168,10 @@
 			isa = PBXGroup;
 			children = (
 				C54BAC091AAE7BC1003AC168 /* ProjectsViewController.swift */,
+				EBD0FFC71AB50C9800A70049 /* DoctorTableViewController.swift */,
 				EB957D0F1AAA700F007037A6 /* ViewController.swift */,
 				C51603211AAF96790044799D /* PaymentViewController.swift */,
+				EB72D94D1AB626E200BCFF48 /* DonateViewController.swift */,
 				C54BAC131AAE8624003AC168 /* ProjectViewController.swift */,
 			);
 			name = ViewControllers;
@@ -167,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				C54BAC111AAE7C6D003AC168 /* ProjectTableViewCell.swift */,
+				EBD0FFCB1AB5103A00A70049 /* DoctorTableViewCell.swift */,
 				C516032C1AAFA62A0044799D /* PaymentTableViewCell.swift */,
 			);
 			path = Cells;
@@ -175,6 +190,7 @@
 		C5DD150C1AAE715500F116A6 /* Interfaces */ = {
 			isa = PBXGroup;
 			children = (
+				EBD0FFC51AB50B5600A70049 /* Isaac.storyboard */,
 				C54BAC0E1AAE7C25003AC168 /* ProjectsStoryboard.storyboard */,
 				C5DD150D1AAE716F00F116A6 /* ProjectStoryboard.storyboard */,
 				C54BAC0B1AAE7BD6003AC168 /* ProjectTableViewCell.xib */,
@@ -254,6 +270,8 @@
 				EB957D541AAA76F9007037A6 /* Event.swift */,
 				EB957D561AAA7712007037A6 /* Project.swift */,
 				EB957D5A1AAA7DC3007037A6 /* Transaction.swift */,
+				EBD0FFC11AB5098000A70049 /* DummyDoctor.swift */,
+				EBD0FFC31AB509E300A70049 /* DummyTreatment.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -365,6 +383,7 @@
 				3F44C4FE1AAEBA3700D7F1F1 /* SourceSansPro-ExtraLight.ttf in Resources */,
 				EB957D591AAA7956007037A6 /* TODO in Resources */,
 				3F44C4FA1AAEBA3700D7F1F1 /* SourceSansPro-Black.ttf in Resources */,
+				EBD0FFC61AB50B5600A70049 /* Isaac.storyboard in Resources */,
 				3F44C4FC1AAEBA3700D7F1F1 /* SourceSansPro-Bold.ttf in Resources */,
 				EB957D151AAA700F007037A6 /* Images.xcassets in Resources */,
 				3F44C5011AAEBA3700D7F1F1 /* SourceSansPro-Light.ttf in Resources */,
@@ -421,8 +440,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB957D511AAA7501007037A6 /* ParseClient.swift in Sources */,
+				EBD0FFCC1AB5103A00A70049 /* DoctorTableViewCell.swift in Sources */,
 				C516032D1AAFA62A0044799D /* PaymentTableViewCell.swift in Sources */,
 				EB957D101AAA700F007037A6 /* ViewController.swift in Sources */,
+				EBD0FFC21AB5098000A70049 /* DummyDoctor.swift in Sources */,
+				EBD0FFC81AB50C9800A70049 /* DoctorTableViewController.swift in Sources */,
+				EBD0FFC41AB509E300A70049 /* DummyTreatment.swift in Sources */,
 				C54BAC141AAE8624003AC168 /* ProjectViewController.swift in Sources */,
 				EB957D5B1AAA7DC3007037A6 /* Transaction.swift in Sources */,
 				EB957D0E1AAA700F007037A6 /* AppDelegate.swift in Sources */,
@@ -431,6 +454,7 @@
 				C51603231AAF96790044799D /* PaymentViewController.swift in Sources */,
 				C54BAC0A1AAE7BC1003AC168 /* ProjectsViewController.swift in Sources */,
 				C54BAC121AAE7C6D003AC168 /* ProjectTableViewCell.swift in Sources */,
+				EB72D94E1AB626E200BCFF48 /* DonateViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

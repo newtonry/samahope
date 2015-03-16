@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="fsg-OH-6Qh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6750" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="fsg-OH-6Qh">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6735"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Entypo.otf">
@@ -122,7 +122,7 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vh0-JF-oeV">
                                 <rect key="frame" x="8" y="514" width="304" height="196.5"/>
-                                <mutableString key="text">My name is Robert Kalyesubula. In 1984 my father was killed in a war in Luwero Uganda when I was only 8 years old. My mother disappeared at the same time, and my brothers and sisters got separated from me. I was brought up in an orphanage that educated me through medical school. I work with my colleagues at ACCESS and Nakaseke hospital to offer both surgeries and medical care to vulnerable populations in the Nakaseke district. This kind of work is very fulfilling because it brings tangible and immediate results to all. There is no better calling than that of ensuring that fellow human beings have a good life free of pain and suffering irrespective of their race, financial status and color. Join me in treating more women with birth injuries.</mutableString>
+                                <string key="text">My name is Robert Kalyesubula. In 1984 my father was killed in a war in Luwero Uganda when I was only 8 years old. My mother disappeared at the same time, and my brothers and sisters got separated from me. I was brought up in an orphanage that educated me through medical school. I work with my colleagues at ACCESS and Nakaseke hospital to offer both surgeries and medical care to vulnerable populations in the Nakaseke district. This kind of work is very fulfilling because it brings tangible and immediate results to all. There is no better calling than that of ensuring that fellow human beings have a good life free of pain and suffering irrespective of their race, financial status and color. Join me in treating more women with birth injuries.</string>
                                 <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="12"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>

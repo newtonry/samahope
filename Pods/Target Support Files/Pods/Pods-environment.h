@@ -6,6 +6,12 @@
 // project.
 
 
+// ApplePayStubs
+#define COCOAPODS_POD_AVAILABLE_ApplePayStubs
+#define COCOAPODS_VERSION_MAJOR_ApplePayStubs 0
+#define COCOAPODS_VERSION_MINOR_ApplePayStubs 1
+#define COCOAPODS_VERSION_PATCH_ApplePayStubs 4
+
 // Bolts
 #define COCOAPODS_POD_AVAILABLE_Bolts
 #define COCOAPODS_VERSION_MAJOR_Bolts 1
