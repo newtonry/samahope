@@ -15,28 +15,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        Parse.setApplicationId("Oz5dstQ42Z3UQoau7JdbIZaS1PJLo3JyDaOU8cMd",
-            clientKey: "VZpD5J8u6azzxkvHTGbhNe2uJpusto5aHzPobNiF")
-        PFUser.enableAutomaticUser()
+        ParseClient.setupParse()
+
+        let storyboard = UIStoryboard(name: "ProgramStoryboard", bundle: nil)
+        let programViewController = storyboard.instantiateViewControllerWithIdentifier("ProgramViewController") as ProgramViewController
+        window?.rootViewController = programViewController
         
-        var defaultACL = PFACL()
-        // If you would like all objects to be private by default, remove this line.
-        defaultACL.setPublicReadAccess(true)
-        PFACL.setDefaultACL(defaultACL, withAccessForCurrentUser: true)
-//        
-//        //ParseClient.buildTestDb()
-//        
-//        var e = ParseClient.loadEvents()
-
-        var events = ParseClient.loadEventsInForeground()
-
-        let storyboard = UIStoryboard(name: "Isaac", bundle: nil)
-        var vc = storyboard.instantiateInitialViewController() as? DoctorTableViewController
-        vc!.events = events /// XXX <- you must set this for data to populate
-        window?.rootViewController = vc
+//        let storyboard = UIStoryboard(name: "ProjectsStoryboard", bundle: nil)
+//        let projectsViewController = storyboard.instantiateInitialViewController() as? ProjectsViewController
+//        window?.rootViewController = projectsViewController
         
-    
-
 //        let storyboard = UIStoryboard(name: "ProjectStoryboard", bundle: nil)
 //        window?.rootViewController = storyboard.instantiateInitialViewController() as? ProjectViewController
 
