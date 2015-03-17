@@ -17,9 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         ParseClient.setupParse()
 
-        let storyboard = UIStoryboard(name: "ProjectsStoryboard", bundle: nil)
-        let projectsViewController = storyboard.instantiateInitialViewController() as? ProjectsViewController
-        window?.rootViewController = projectsViewController
+        let storyboard = UIStoryboard(name: "ProgramStoryboard", bundle: nil)
+        let programViewController = storyboard.instantiateViewControllerWithIdentifier("ProgramViewController") as ProgramViewController
+        window?.rootViewController = programViewController
+        
+//        let storyboard = UIStoryboard(name: "ProjectsStoryboard", bundle: nil)
+//        let projectsViewController = storyboard.instantiateInitialViewController() as? ProjectsViewController
+//        window?.rootViewController = projectsViewController
         
 //        let storyboard = UIStoryboard(name: "ProjectStoryboard", bundle: nil)
 //        window?.rootViewController = storyboard.instantiateInitialViewController() as? ProjectViewController
