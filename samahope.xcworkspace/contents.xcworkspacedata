@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:samahope/DummyDoctor.swift">
+   </FileRef>
+   <FileRef
+      location = "group:samahope/DummyTreatment.swift">
+   </FileRef>
+   <FileRef
       location = "group:samahope.xcodeproj">
    </FileRef>
    <FileRef

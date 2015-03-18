@@ -8,27 +8,17 @@
 
 import UIKit
 
-class ProjectsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ProjectsViewController: UIViewController, UITableViewDataSource {
 
-    @IBOutlet weak var tableView: UITableView!
-    var rootEvent: Event?
-    var projects: [Project]?
-    
-    
+    @IBOutlet weak var projectsTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.dataSource = self
-        self.tableView.delegate = self
         
-        ParseClient.loadEventWithCallback({(event: Event?)-> Void in
-            self.rootEvent = event!
-            self.projects = self.rootEvent?.projects
-            self.tableView.reloadData()
-        })
-
+        self.projectsTableView.dataSource = self
+        
         let cellNib = UINib(nibName: "ProjectTableViewCell", bundle: NSBundle.mainBundle())
-        tableView.registerNib(cellNib, forCellReuseIdentifier: "ProjectTableViewCell")
+        projectsTableView.registerNib(cellNib, forCellReuseIdentifier: "ProjectTableViewCell")
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -38,19 +28,7 @@ class ProjectsViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let arr = projects {
-            return arr.count
-        }
-        return 0
-    }
-    
-    func tableView(projectsTableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let project = projects![indexPath.row]
-
-        let storyboard = UIStoryboard(name: "DoctorDetailView", bundle: nil)
-        let projectViewController = storyboard.instantiateInitialViewController() as? DoctorDetailViewController
-        projectViewController!.setProject(project)
-        self.presentViewController(projectViewController!, animated: true, completion: nil)
+        return 5
     }
     
     override func didReceiveMemoryWarning() {
@@ -58,12 +36,12 @@ class ProjectsViewController: UIViewController, UITableViewDataSource, UITableVi
         // Dispose of any resources that can be recreated.
     }
 
-//    @IBAction func toNextVC(sender: UITapGestureRecognizer) {
-//        // This is only for the animated gif, should not be here later
-//        let storyboard = UIStoryboard(name: "ProjectStoryboard", bundle: nil)
-//        let projectVC = storyboard.instantiateInitialViewController() as? ProjectViewController
-//
-//        self.presentViewController(projectVC!, animated: true, completion: nil)
-//    }
+    @IBAction func toNextVC(sender: UITapGestureRecognizer) {
+        // This is only for the animated gif, should not be here later
+        let storyboard = UIStoryboard(name: "ProjectStoryboard", bundle: nil)
+        let projectVC = storyboard.instantiateInitialViewController() as? ProjectViewController
+        
+        self.presentViewController(projectVC!, animated: true, completion: nil)
+    }
 }
 
