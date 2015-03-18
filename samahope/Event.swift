@@ -10,6 +10,11 @@ import Foundation
 
 class Event : PFObject, PFSubclassing {
     @NSManaged var name: String?
+    @NSManaged var eventDescription: String?
+    @NSManaged var startTime: String?
+    @NSManaged var endTime: String?
+    @NSManaged var totalDonations: String?
+    @NSManaged var speakers : [String]
     @NSManaged var location: String?
     @NSManaged var projects : [Project]
     @NSManaged var date : String?
