@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
         ParseClient.setupParse()
 
         let storyboard = UIStoryboard(name: "ProgramStoryboard", bundle: nil)
