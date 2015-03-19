@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <scenes>
+        <!--Menu View Controller-->
+        <scene sceneID="Hx4-qo-EHw">
+            <objects>
+                <viewController storyboardIdentifier="MenuViewController" id="BpJ-qz-8s9" customClass="MenuViewController" customModule="samahope" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TdU-lE-RfS"/>
+                        <viewControllerLayoutGuide type="bottom" id="e0D-ad-N96"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kpY-Jm-png">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gu0-db-1jC" userLabel="Active View Container">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="teb-hf-TjJ" userLabel="Menu">
+                                <rect key="frame" x="0.0" y="519" width="320" height="49"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7FH-D0-FIk">
+                                        <rect key="frame" x="8" y="-5" width="86" height="48"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
+                                        <inset key="titleEdgeInsets" minX="-60" minY="35" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Program" image="program">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onProgramPress:" destination="BpJ-qz-8s9" eventType="touchUpInside" id="yn1-10-5ie"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d7D-qG-Q4R">
+                                        <rect key="frame" x="135" y="-5" width="86" height="48"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
+                                        <inset key="titleEdgeInsets" minX="-58" minY="35" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Doctors" image="doctor@1x">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onDoctorPress:" destination="BpJ-qz-8s9" eventType="touchUpInside" id="kZz-GI-W7o"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Xn-BV-jeh">
+                                        <rect key="frame" x="252" y="-5" width="109" height="48"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
+                                        <inset key="titleEdgeInsets" minX="-76" minY="35" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Treatments" image="treatments@1x">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onTreatmentPress:" destination="BpJ-qz-8s9" eventType="touchUpInside" id="l1b-YJ-CZf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.4169268012046814" green="0.36931684613227844" blue="0.31456774473190308" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="DnV-aM-FNi"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="teb-hf-TjJ" secondAttribute="trailing" id="4yn-nH-C0Y"/>
+                            <constraint firstItem="gu0-db-1jC" firstAttribute="leading" secondItem="kpY-Jm-png" secondAttribute="leading" id="Ev7-iQ-eEk"/>
+                            <constraint firstItem="teb-hf-TjJ" firstAttribute="top" secondItem="gu0-db-1jC" secondAttribute="bottom" id="KHQ-4a-PX3"/>
+                            <constraint firstItem="teb-hf-TjJ" firstAttribute="leading" secondItem="kpY-Jm-png" secondAttribute="leading" id="LNB-lw-4cU"/>
+                            <constraint firstItem="gu0-db-1jC" firstAttribute="top" secondItem="kpY-Jm-png" secondAttribute="top" id="Qhp-hR-bJ7"/>
+                            <constraint firstItem="e0D-ad-N96" firstAttribute="top" secondItem="teb-hf-TjJ" secondAttribute="bottom" id="kI8-Ng-3Fr"/>
+                            <constraint firstAttribute="trailing" secondItem="gu0-db-1jC" secondAttribute="trailing" id="zYG-vR-jRm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activeViewContainer" destination="gu0-db-1jC" id="aXd-Jp-Yep"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="je7-IF-xAJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="123" y="232"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="doctor@1x" width="18" height="23"/>
+        <image name="program" width="21" height="16"/>
+        <image name="treatments@1x" width="20" height="20"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

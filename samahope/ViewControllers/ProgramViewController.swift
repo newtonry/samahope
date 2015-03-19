@@ -16,6 +16,7 @@ class ProgramViewController: UIViewController, UITableViewDataSource, ProgramBut
     @IBOutlet weak var eventDonationTotal: UILabel!
     
     var rootEvent: Event?
+    var events: [Event]?
     var projects: [Project]?
     
     let programCellId = "ProgramTableViewCell"
@@ -26,11 +27,11 @@ class ProgramViewController: UIViewController, UITableViewDataSource, ProgramBut
         self.tableView.dataSource = self
         self.tableView.estimatedRowHeight = 215
         
-        ParseClient.loadEventWithCallback({(event: Event?)-> Void in
-            self.rootEvent = event!
-            self.projects = self.rootEvent?.projects
-            self.tableView.reloadData()
-        })
+//        ParseClient.loadEventWithCallback({(event: Event?)-> Void in
+//            self.rootEvent = event!
+//            self.projects = self.rootEvent?.projects
+//            self.tableView.reloadData()
+//        })
         self.eventName.text = rootEvent?.name
         self.eventDescription.text = rootEvent?.eventDescription
         self.eventDonationTotal.text = "$\(rootEvent?.totalDonations)"

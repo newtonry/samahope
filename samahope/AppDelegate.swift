@@ -12,14 +12,36 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let storyboard = UIStoryboard(name: "Main", bundle: nil)
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        ParseClient.setupParse()
+        let mvc = self.storyboard.instantiateViewControllerWithIdentifier("MenuViewController") as MenuViewController
+        
+        if let window = self.window{
+            window.rootViewController = mvc
+        }
+        
+//        ParseClient.setupParse()
+        
+        Parse.setApplicationId("Oz5dstQ42Z3UQoau7JdbIZaS1PJLo3JyDaOU8cMd",
+            clientKey: "VZpD5J8u6azzxkvHTGbhNe2uJpusto5aHzPobNiF")
+        PFUser.enableAutomaticUser()
+        
+        var defaultACL = PFACL()
+        // If you would like all objects to be private by default, remove this line.
+        defaultACL.setPublicReadAccess(true)
+        PFACL.setDefaultACL(defaultACL, withAccessForCurrentUser: true)
+        //
+        //        //ParseClient.buildTestDb()
+        //
+        //        var e = ParseClient.loadEvents()
+        
+        var events = ParseClient.loadEventsInForeground()
 
         let storyboard = UIStoryboard(name: "ProgramStoryboard", bundle: nil)
         let programViewController = storyboard.instantiateViewControllerWithIdentifier("ProgramViewController") as ProgramViewController
+        programViewController.events = events
         window?.rootViewController = programViewController
         
 //        let storyboard = UIStoryboard(name: "ProjectsStoryboard", bundle: nil)
