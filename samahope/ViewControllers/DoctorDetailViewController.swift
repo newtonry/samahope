@@ -12,6 +12,8 @@ class DoctorDetailViewController: UIViewController, UITableViewDataSource,UITabl
     
     var project: Project?
     
+    
+    @IBOutlet weak var donateButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {

@@ -26,6 +26,9 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onDonate:" destination="duC-ru-bgq" eventType="touchUpInside" id="9Uy-0z-Ptp"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.11372549831867218" green="0.70980393886566162" blue="0.7450980544090271" alpha="1" colorSpace="deviceRGB"/>
@@ -197,6 +200,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="donateButton" destination="cWz-eQ-pHi" id="2bX-mB-KbL"/>
                         <outlet property="tableView" destination="yIm-pR-SRn" id="vXz-bC-7gO"/>
                     </connections>
                 </viewController>
