@@ -33,6 +33,12 @@
 		A036EEB3577B71E28C3C4C5D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDEA43EF90BFE02A54AA4045 /* libPods.a */; };
 		C51603261AAF97050044799D /* PaymentStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C51603251AAF97050044799D /* PaymentStoryboard.storyboard */; };
 		C516032D1AAFA62A0044799D /* PaymentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C516032C1AAFA62A0044799D /* PaymentTableViewCell.swift */; };
+		C52E48571ABA634100620E43 /* Isaac.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C52E48561ABA634100620E43 /* Isaac.storyboard */; };
+		C52E485A1ABA639900620E43 /* DoctorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52E48581ABA639900620E43 /* DoctorTableViewController.swift */; };
+		C52E485B1ABA639900620E43 /* DonateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52E48591ABA639900620E43 /* DonateViewController.swift */; };
+		C52E485E1ABA63E700620E43 /* DummyDoctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52E485C1ABA63E700620E43 /* DummyDoctor.swift */; };
+		C52E485F1ABA63E700620E43 /* DummyTreatment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52E485D1ABA63E700620E43 /* DummyTreatment.swift */; };
+		C52E48611ABA63FF00620E43 /* DoctorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52E48601ABA63FF00620E43 /* DoctorTableViewCell.swift */; };
 		C54BAC0C1AAE7BD6003AC168 /* ProjectTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C54BAC0B1AAE7BD6003AC168 /* ProjectTableViewCell.xib */; };
 		C54BAC0F1AAE7C25003AC168 /* ProjectsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C54BAC0E1AAE7C25003AC168 /* ProjectsStoryboard.storyboard */; };
 		C54BAC121AAE7C6D003AC168 /* ProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54BAC111AAE7C6D003AC168 /* ProjectTableViewCell.swift */; };
@@ -96,6 +102,12 @@
 		98696AFCB772891F46D5D8F8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C51603251AAF97050044799D /* PaymentStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = PaymentStoryboard.storyboard; path = Interfaces/PaymentStoryboard.storyboard; sourceTree = "<group>"; };
 		C516032C1AAFA62A0044799D /* PaymentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentTableViewCell.swift; sourceTree = "<group>"; };
+		C52E48561ABA634100620E43 /* Isaac.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Isaac.storyboard; sourceTree = "<group>"; };
+		C52E48581ABA639900620E43 /* DoctorTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DoctorTableViewController.swift; path = samahope/DoctorTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		C52E48591ABA639900620E43 /* DonateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DonateViewController.swift; path = samahope/DonateViewController.swift; sourceTree = SOURCE_ROOT; };
+		C52E485C1ABA63E700620E43 /* DummyDoctor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyDoctor.swift; sourceTree = "<group>"; };
+		C52E485D1ABA63E700620E43 /* DummyTreatment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyTreatment.swift; sourceTree = "<group>"; };
+		C52E48601ABA63FF00620E43 /* DoctorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DoctorTableViewCell.swift; path = Cells/DoctorTableViewCell.swift; sourceTree = "<group>"; };
 		C54BAC0B1AAE7BD6003AC168 /* ProjectTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProjectTableViewCell.xib; path = ../Interfaces/ProjectTableViewCell.xib; sourceTree = "<group>"; };
 		C54BAC0E1AAE7C25003AC168 /* ProjectsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ProjectsStoryboard.storyboard; path = Interfaces/ProjectsStoryboard.storyboard; sourceTree = "<group>"; };
 		C54BAC111AAE7C6D003AC168 /* ProjectTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectTableViewCell.swift; sourceTree = "<group>"; };
@@ -187,6 +199,8 @@
 			children = (
 				3F5AD5631AB6C5C600ED3689 /* DoctorDetailViewController.swift */,
 				3F5AD5641AB6C5C600ED3689 /* PaymentViewController.swift */,
+				C52E48581ABA639900620E43 /* DoctorTableViewController.swift */,
+				C52E48591ABA639900620E43 /* DonateViewController.swift */,
 				3F5AD5661AB6C5C600ED3689 /* ProjectViewController.swift */,
 				3F5AD5651AB6C5C600ED3689 /* ProjectsViewController.swift */,
 				3F27CA2F1AB936CF009EEBF1 /* ProgramViewController.swift */,
@@ -224,6 +238,7 @@
 		C5DD150C1AAE715500F116A6 /* Interfaces */ = {
 			isa = PBXGroup;
 			children = (
+				C52E48561ABA634100620E43 /* Isaac.storyboard */,
 				C54BAC0E1AAE7C25003AC168 /* ProjectsStoryboard.storyboard */,
 				C5B5E00F1AB632060082A65E /* DoctorDetailView.storyboard */,
 				C5B5E0131AB63FF70082A65E /* DoctorDetailInfoCell.swift */,
@@ -260,6 +275,9 @@
 			children = (
 				EB957D5C1AAA80B9007037A6 /* Model */,
 				EB957D0D1AAA700F007037A6 /* AppDelegate.swift */,
+				C52E48601ABA63FF00620E43 /* DoctorTableViewCell.swift */,
+				C52E485C1ABA63E700620E43 /* DummyDoctor.swift */,
+				C52E485D1ABA63E700620E43 /* DummyTreatment.swift */,
 				3F5AD5621AB6C5C600ED3689 /* ViewControllers */,
 				C5C11DC41AB603F30048E0D6 /* Views */,
 				C54BAC101AAE7C6D003AC168 /* Cells */,
@@ -414,6 +432,7 @@
 				3F9230EE1AB6BE550002DF49 /* ProgramStoryboard.storyboard in Resources */,
 				C54BAC0C1AAE7BD6003AC168 /* ProjectTableViewCell.xib in Resources */,
 				EB957D181AAA700F007037A6 /* LaunchScreen.xib in Resources */,
+				C52E48571ABA634100620E43 /* Isaac.storyboard in Resources */,
 				C5DD150E1AAE716F00F116A6 /* ProjectStoryboard.storyboard in Resources */,
 				3F44C5021AAEBA3700D7F1F1 /* SourceSansPro-LightItalic.ttf in Resources */,
 				3F44C4FD1AAEBA3700D7F1F1 /* SourceSansPro-BoldItalic.ttf in Resources */,
@@ -481,6 +500,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F5AD5691AB6C5C600ED3689 /* ProjectsViewController.swift in Sources */,
+				C52E485B1ABA639900620E43 /* DonateViewController.swift in Sources */,
+				C52E48611ABA63FF00620E43 /* DoctorTableViewCell.swift in Sources */,
 				3F5AD5671AB6C5C600ED3689 /* DoctorDetailViewController.swift in Sources */,
 				EB957D511AAA7501007037A6 /* ParseClient.swift in Sources */,
 				C5B5E0171AB646500082A65E /* FundingStatusCell.swift in Sources */,
@@ -488,6 +509,7 @@
 				C5B5E0141AB63FF70082A65E /* DoctorDetailInfoCell.swift in Sources */,
 				C5C11DC81AB604720048E0D6 /* CircleTitleView.swift in Sources */,
 				3F5AD56A1AB6C5C600ED3689 /* ProjectViewController.swift in Sources */,
+				C52E485A1ABA639900620E43 /* DoctorTableViewController.swift in Sources */,
 				3F5AD5681AB6C5C600ED3689 /* PaymentViewController.swift in Sources */,
 				C5B5E01B1AB65E400082A65E /* MoreDoctorDetailCell.swift in Sources */,
 				EB957D5B1AAA7DC3007037A6 /* Transaction.swift in Sources */,
@@ -499,6 +521,8 @@
 				C5C11DCC1AB619770048E0D6 /* FundingStatusView.swift in Sources */,
 				C54BAC121AAE7C6D003AC168 /* ProjectTableViewCell.swift in Sources */,
 				3F27CA301AB936CF009EEBF1 /* ProgramViewController.swift in Sources */,
+				C52E485E1ABA63E700620E43 /* DummyDoctor.swift in Sources */,
+				C52E485F1ABA63E700620E43 /* DummyTreatment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
