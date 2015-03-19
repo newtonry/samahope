@@ -15,20 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let storyboard = UIStoryboard(name: "MenuStoryboard", bundle: nil)
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
 
-        Parse.setApplicationId("Oz5dstQ42Z3UQoau7JdbIZaS1PJLo3JyDaOU8cMd",
-            clientKey: "VZpD5J8u6azzxkvHTGbhNe2uJpusto5aHzPobNiF")
-        PFUser.enableAutomaticUser()
-        
-        var defaultACL = PFACL()
-        // If you would like all objects to be private by default, remove this line.
-        defaultACL.setPublicReadAccess(true)
-        PFACL.setDefaultACL(defaultACL, withAccessForCurrentUser: true)
-        
-        var events = ParseClient.loadEventsInForeground()
-        
-        
+        ParseClient.setupParse()
+
+        var events = ParseClient.sharedInstance.events
         
         let mvc = self.storyboard.instantiateViewControllerWithIdentifier("MenuViewController") as MenuViewController
         
@@ -37,16 +27,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let ds = UIStoryboard(name: "Isaac", bundle: nil)
         let dvc = ds.instantiateViewControllerWithIdentifier("DoctorTableViewController") as DoctorTableViewController
-        dvc.events = events
- 
-        
+
         mvc.viewControllers = [pvc, dvc]
+        mvc.activeViewController = pvc
         
-        if let window = self.window{
+        if let window = self.window {
             window.rootViewController = mvc
         }
         
-//        ParseClient.setupParse()
+        
+        
         
         
 //

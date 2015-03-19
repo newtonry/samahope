@@ -9,7 +9,7 @@
 import UIKit
 
 class DoctorTableViewController: UITableViewController {
-    var events: [Event]? // XXX previous controller must set this!!!
+    var events = ParseClient.sharedInstance.events
     
     var doctors: [Doctor]? // internally we use Doctors converted from Projects
     
@@ -21,7 +21,6 @@ class DoctorTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
         doctors = [Doctor]()
         for ( var i = 0; i < events!.count; i++ ) {
             var e = events![ i ]
