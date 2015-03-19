@@ -10,7 +10,7 @@ import UIKit
 
 class DoctorDetailViewController: UIViewController, UITableViewDataSource,UITableViewDelegate {
     
-    private var project: Project?
+    var project: Project?
     
     @IBOutlet weak var tableView: UITableView!
 

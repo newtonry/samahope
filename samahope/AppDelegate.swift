@@ -20,20 +20,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         var events = ParseClient.sharedInstance.events
         
-        let mvc = self.storyboard.instantiateViewControllerWithIdentifier("MenuViewController") as MenuViewController
+        let mainEvent = events![0] as Event
         
-        let ps = UIStoryboard(name: "ProgramStoryboard", bundle: nil)
-        let pvc = ps.instantiateViewControllerWithIdentifier("ProgramViewController") as ProgramViewController
+        let doctorDetailViewStoryboard = UIStoryboard(name: "DoctorDetailView", bundle: nil)
         
-        let ds = UIStoryboard(name: "Isaac", bundle: nil)
-        let dvc = ds.instantiateViewControllerWithIdentifier("DoctorTableViewController") as DoctorTableViewController
-
-        mvc.viewControllers = [pvc, dvc]
-        mvc.activeViewController = pvc
+        let doctorDetailVC = doctorDetailViewStoryboard.instantiateViewControllerWithIdentifier("DoctorDetailViewController") as DoctorDetailViewController
+        doctorDetailVC.project = mainEvent.projects[3] as Project
         
-        if let window = self.window {
-            window.rootViewController = mvc
-        }
+        window?.rootViewController = doctorDetailVC
+        
+        
+        
+//        let mvc = self.storyboard.instantiateViewControllerWithIdentifier("MenuViewController") as MenuViewController
+//        
+//        let ps = UIStoryboard(name: "ProgramStoryboard", bundle: nil)
+//        let pvc = ps.instantiateViewControllerWithIdentifier("ProgramViewController") as ProgramViewController
+//        
+//        let ds = UIStoryboard(name: "Isaac", bundle: nil)
+//        let dvc = ds.instantiateViewControllerWithIdentifier("DoctorTableViewController") as DoctorTableViewController
+//
+//        mvc.viewControllers = [pvc, dvc]
+//        mvc.activeViewController = pvc
+//        
+//        if let window = self.window {
+//            window.rootViewController = mvc
+//        }
         
         
         

@@ -39,6 +39,7 @@
 		C52E485E1ABA63E700620E43 /* DummyDoctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52E485C1ABA63E700620E43 /* DummyDoctor.swift */; };
 		C52E485F1ABA63E700620E43 /* DummyTreatment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52E485D1ABA63E700620E43 /* DummyTreatment.swift */; };
 		C52E48611ABA63FF00620E43 /* DoctorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52E48601ABA63FF00620E43 /* DoctorTableViewCell.swift */; };
+		C52E48651ABA76F600620E43 /* FundingProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52E48641ABA76F600620E43 /* FundingProgressBarView.swift */; };
 		C54BAC0C1AAE7BD6003AC168 /* ProjectTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C54BAC0B1AAE7BD6003AC168 /* ProjectTableViewCell.xib */; };
 		C54BAC0F1AAE7C25003AC168 /* ProjectsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C54BAC0E1AAE7C25003AC168 /* ProjectsStoryboard.storyboard */; };
 		C54BAC121AAE7C6D003AC168 /* ProjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54BAC111AAE7C6D003AC168 /* ProjectTableViewCell.swift */; };
@@ -108,6 +109,7 @@
 		C52E485C1ABA63E700620E43 /* DummyDoctor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyDoctor.swift; sourceTree = "<group>"; };
 		C52E485D1ABA63E700620E43 /* DummyTreatment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DummyTreatment.swift; sourceTree = "<group>"; };
 		C52E48601ABA63FF00620E43 /* DoctorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DoctorTableViewCell.swift; path = Cells/DoctorTableViewCell.swift; sourceTree = "<group>"; };
+		C52E48641ABA76F600620E43 /* FundingProgressBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FundingProgressBarView.swift; sourceTree = "<group>"; };
 		C54BAC0B1AAE7BD6003AC168 /* ProjectTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProjectTableViewCell.xib; path = ../Interfaces/ProjectTableViewCell.xib; sourceTree = "<group>"; };
 		C54BAC0E1AAE7C25003AC168 /* ProjectsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ProjectsStoryboard.storyboard; path = Interfaces/ProjectsStoryboard.storyboard; sourceTree = "<group>"; };
 		C54BAC111AAE7C6D003AC168 /* ProjectTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectTableViewCell.swift; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 				C5B5E0161AB646500082A65E /* FundingStatusCell.xib */,
 				C5B5E0191AB65E400082A65E /* MoreDoctorDetailCell.swift */,
 				C5B5E01A1AB65E400082A65E /* MoreDoctorDetailCell.xib */,
+				C52E48641ABA76F600620E43 /* FundingProgressBarView.swift */,
 				C5DD150D1AAE716F00F116A6 /* ProjectStoryboard.storyboard */,
 				C54BAC0B1AAE7BD6003AC168 /* ProjectTableViewCell.xib */,
 				3F5AD56B1AB6C5FF00ED3689 /* ProgramTableViewCell.swift */,
@@ -505,6 +508,7 @@
 				3F5AD5671AB6C5C600ED3689 /* DoctorDetailViewController.swift in Sources */,
 				EB957D511AAA7501007037A6 /* ParseClient.swift in Sources */,
 				C5B5E0171AB646500082A65E /* FundingStatusCell.swift in Sources */,
+				C52E48651ABA76F600620E43 /* FundingProgressBarView.swift in Sources */,
 				C516032D1AAFA62A0044799D /* PaymentTableViewCell.swift in Sources */,
 				C5B5E0141AB63FF70082A65E /* DoctorDetailInfoCell.swift in Sources */,
 				C5C11DC81AB604720048E0D6 /* CircleTitleView.swift in Sources */,
