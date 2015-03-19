@@ -104,6 +104,13 @@ class DoctorDetailViewController: UIViewController, UITableViewDataSource,UITabl
         }
     }
     
+    @IBAction func onDonate(sender: AnyObject) {
+        var storyboard: UIStoryboard = UIStoryboard(name: "Isaac", bundle: nil)
+        var vc = storyboard.instantiateViewControllerWithIdentifier("DonateViewController") as DonateViewController
+        vc.project = project
+        self.showViewController(vc, sender: self)
+
+    }
     func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         println("Ended scrolling")
 

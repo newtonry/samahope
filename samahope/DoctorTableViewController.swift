@@ -51,7 +51,13 @@ class DoctorTableViewController: UITableViewController {
         return doctors!.count
     }
 
-    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        var storyboard: UIStoryboard = UIStoryboard(name: "DoctorDetailView", bundle: nil)
+        var vc = storyboard.instantiateViewControllerWithIdentifier("DoctorDetailViewController") as DoctorDetailViewController
+        var projects = events![0].projects
+        vc.setProject( projects[ indexPath.row ])
+        self.showViewController(vc, sender: self)
+    }
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         println( "tableView.cellForRowAtIndexPath")
         let cell = tableView.dequeueReusableCellWithIdentifier("com.codepath.doctortableviewcell", forIndexPath: indexPath) as DoctorTableViewCell
