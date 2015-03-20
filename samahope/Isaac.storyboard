@@ -181,7 +181,7 @@
         <!--View Controller-->
         <scene sceneID="LFL-A1-wvs">
             <objects>
-                <viewController id="7B0-fN-fwz" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PaymentConfirmationViewController" id="7B0-fN-fwz" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bvT-Kt-VNt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -197,10 +197,10 @@
                                 <rect key="frame" x="38" y="148" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank you" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="enA-wL-dFr">
-                                <rect key="frame" x="118" y="86" width="80" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank you" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="enA-wL-dFr">
+                                <rect key="frame" x="99" y="90" width="122" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -236,6 +236,18 @@
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </imageView>
+                                                <view contentMode="scaleToFill" id="STH-rC-ciU" customClass="FundingProgressBarView" customModule="samahope" customModuleProvider="target">
+                                                    <rect key="frame" x="13" y="107" width="254" height="15"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1000 raised of $1000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DFT-Li-km0">
+                                                    <rect key="frame" x="13" y="72" width="283" height="35"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" red="0.00098642676767679571" green="0.00098177335777907028" blue="0.00096397222990839138" alpha="1" colorSpace="calibratedRGB"/>
                                         </view>
@@ -257,17 +269,6 @@
                                             <color key="textColor" red="0.81451231060606055" green="0.81451231060606055" blue="0.81451231060606055" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1000 raised of $1000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DFT-Li-km0">
-                                            <rect key="frame" x="26" y="106" width="283" height="35"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
-                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" id="NcS-7I-Xu0">
-                                            <rect key="frame" x="26" y="149" width="200" height="2"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </progressView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doctor-robert-thumbnail" id="ac8-4j-M3P">
                                             <rect key="frame" x="213" y="50" width="41" height="47"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -278,9 +279,9 @@
                                     <outlet property="doctorMainImageView" destination="Fo9-LV-ft9" id="l60-ph-Alg"/>
                                     <outlet property="doctorThumbnailView" destination="ac8-4j-M3P" id="fT4-Mi-0RN"/>
                                     <outlet property="fundingProgressLabel" destination="DFT-Li-km0" id="agK-w0-fAZ"/>
-                                    <outlet property="fundingProgressView" destination="NcS-7I-Xu0" id="EZo-sj-sWs"/>
                                     <outlet property="locationAndTreatmentLabel" destination="Psf-3G-ejM" id="P3f-Fc-xga"/>
                                     <outlet property="nameLabel" destination="k8c-Ur-i5l" id="baY-bX-TU1"/>
+                                    <outlet property="progressBar" destination="STH-rC-ciU" id="emD-Rj-rhN"/>
                                     <outlet property="treatmentImageView" destination="iZH-rP-niO" id="OUv-W2-LZi"/>
                                 </connections>
                             </tableViewCell>

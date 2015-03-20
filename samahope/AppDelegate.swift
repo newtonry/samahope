@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ParseClient.setupParse()
 
         var events = ParseClient.sharedInstance.events
-        
+
         let mvc = self.storyboard.instantiateViewControllerWithIdentifier("MenuViewController") as MenuViewController
         
         let ps = UIStoryboard(name: "ProgramStoryboard", bundle: nil)

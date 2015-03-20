@@ -22,7 +22,6 @@
 		3F44C5041AAEBA3700D7F1F1 /* SourceSansPro-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F44C4F81AAEBA3700D7F1F1 /* SourceSansPro-Semibold.ttf */; };
 		3F44C5051AAEBA3700D7F1F1 /* SourceSansPro-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F44C4F91AAEBA3700D7F1F1 /* SourceSansPro-SemiboldItalic.ttf */; };
 		3F5AD5671AB6C5C600ED3689 /* DoctorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5AD5631AB6C5C600ED3689 /* DoctorDetailViewController.swift */; };
-		3F5AD5681AB6C5C600ED3689 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5AD5641AB6C5C600ED3689 /* PaymentViewController.swift */; };
 		3F5AD5691AB6C5C600ED3689 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5AD5651AB6C5C600ED3689 /* ProjectsViewController.swift */; };
 		3F5AD56A1AB6C5C600ED3689 /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5AD5661AB6C5C600ED3689 /* ProjectViewController.swift */; };
 		3F5AD56D1AB6C5FF00ED3689 /* ProgramTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5AD56B1AB6C5FF00ED3689 /* ProgramTableViewCell.swift */; };
@@ -63,6 +62,7 @@
 		EB957D571AAA7712007037A6 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB957D561AAA7712007037A6 /* Project.swift */; };
 		EB957D591AAA7956007037A6 /* TODO in Resources */ = {isa = PBXBuildFile; fileRef = EB957D581AAA7956007037A6 /* TODO */; };
 		EB957D5B1AAA7DC3007037A6 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB957D5A1AAA7DC3007037A6 /* Transaction.swift */; };
+		EBF30B3B1ABCCB7100F53E33 /* PaymentConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF30B3A1ABCCB7100F53E33 /* PaymentConfirmationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,7 +91,6 @@
 		3F44C4F81AAEBA3700D7F1F1 /* SourceSansPro-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Semibold.ttf"; sourceTree = "<group>"; };
 		3F44C4F91AAEBA3700D7F1F1 /* SourceSansPro-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-SemiboldItalic.ttf"; sourceTree = "<group>"; };
 		3F5AD5631AB6C5C600ED3689 /* DoctorDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorDetailViewController.swift; sourceTree = "<group>"; };
-		3F5AD5641AB6C5C600ED3689 /* PaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		3F5AD5651AB6C5C600ED3689 /* ProjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
 		3F5AD5661AB6C5C600ED3689 /* ProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
 		3F5AD56B1AB6C5FF00ED3689 /* ProgramTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramTableViewCell.swift; sourceTree = "<group>"; };
@@ -138,6 +137,7 @@
 		EB957D561AAA7712007037A6 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		EB957D581AAA7956007037A6 /* TODO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO; sourceTree = "<group>"; };
 		EB957D5A1AAA7DC3007037A6 /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		EBF30B3A1ABCCB7100F53E33 /* PaymentConfirmationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentConfirmationViewController.swift; sourceTree = "<group>"; };
 		EDEA43EF90BFE02A54AA4045 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -200,12 +200,12 @@
 			isa = PBXGroup;
 			children = (
 				3F5AD5631AB6C5C600ED3689 /* DoctorDetailViewController.swift */,
-				3F5AD5641AB6C5C600ED3689 /* PaymentViewController.swift */,
 				C52E48581ABA639900620E43 /* DoctorTableViewController.swift */,
 				C52E48591ABA639900620E43 /* DonateViewController.swift */,
 				3F5AD5661AB6C5C600ED3689 /* ProjectViewController.swift */,
 				3F5AD5651AB6C5C600ED3689 /* ProjectsViewController.swift */,
 				3F27CA2F1AB936CF009EEBF1 /* ProgramViewController.swift */,
+				EBF30B3A1ABCCB7100F53E33 /* PaymentConfirmationViewController.swift */,
 				3FBCC8921ABA1DFC00906CBC /* MenuViewController.swift */,
 			);
 			path = ViewControllers;
@@ -276,6 +276,7 @@
 		EB957D0A1AAA700F007037A6 /* samahope */ = {
 			isa = PBXGroup;
 			children = (
+				EB957D501AAA7501007037A6 /* ParseClient.swift */,
 				EB957D5C1AAA80B9007037A6 /* Model */,
 				EB957D0D1AAA700F007037A6 /* AppDelegate.swift */,
 				C52E48601ABA63FF00620E43 /* DoctorTableViewCell.swift */,
@@ -288,7 +289,6 @@
 				EB957D141AAA700F007037A6 /* Images.xcassets */,
 				C5C11DC91AB613090048E0D6 /* CircleTitleView.xib */,
 				EB957D161AAA700F007037A6 /* LaunchScreen.xib */,
-				EB957D501AAA7501007037A6 /* ParseClient.swift */,
 				C5DD150C1AAE715500F116A6 /* Interfaces */,
 				3F44C4EA1AAEB9EB00D7F1F1 /* Resources */,
 				EB957D0B1AAA700F007037A6 /* Supporting Files */,
@@ -511,10 +511,10 @@
 				C52E48651ABA76F600620E43 /* FundingProgressBarView.swift in Sources */,
 				C516032D1AAFA62A0044799D /* PaymentTableViewCell.swift in Sources */,
 				C5B5E0141AB63FF70082A65E /* DoctorDetailInfoCell.swift in Sources */,
+				EBF30B3B1ABCCB7100F53E33 /* PaymentConfirmationViewController.swift in Sources */,
 				C5C11DC81AB604720048E0D6 /* CircleTitleView.swift in Sources */,
 				3F5AD56A1AB6C5C600ED3689 /* ProjectViewController.swift in Sources */,
 				C52E485A1ABA639900620E43 /* DoctorTableViewController.swift in Sources */,
-				3F5AD5681AB6C5C600ED3689 /* PaymentViewController.swift in Sources */,
 				C5B5E01B1AB65E400082A65E /* MoreDoctorDetailCell.swift in Sources */,
 				EB957D5B1AAA7DC3007037A6 /* Transaction.swift in Sources */,
 				EB957D0E1AAA700F007037A6 /* AppDelegate.swift in Sources */,

@@ -1,16 +1,9 @@
-Questions:
-- proper way to deserialize PFSubclassing / object relations
-
-
-/// need to add to Project:
-/// - treatmentCost
-
 - after 'pay': show confirmation, dismiss'
 - donate page: add doctor thumbnail icon / project title
-- autolayout
 - DoctorVC: circular thumbnail
-- integrate Ryan's progress bar
 
+Interface:
+- make the apple pay a pull up menu, along with confirmation page, with a 'dismiss button'
 
 
 

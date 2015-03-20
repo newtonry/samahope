@@ -21,9 +21,10 @@ class ParseClient {
     }
     
     var events: [ Event ]?
+    var projects: [ Project ]? // needed because not all projects are associated with all events
     
     class func setupParse() {
-        //        Parse.enableLocalDatastore()
+        // Parse.enableLocalDatastore()
         Parse.setApplicationId("Oz5dstQ42Z3UQoau7JdbIZaS1PJLo3JyDaOU8cMd",
             clientKey: "VZpD5J8u6azzxkvHTGbhNe2uJpusto5aHzPobNiF")
         PFUser.enableAutomaticUser()
@@ -35,8 +36,116 @@ class ParseClient {
     }
 
     
+    // loadLatestTransactions() // return the last x transcations
+
+    // updates the associated project/event records in db
+    func processPayment( amount: Int, project: Project, event: Event ) {
+        var tx = Transaction()
+        tx.setValues( amount, project: project, event: event )
+        
+        
+        var newNeeded = ( project.amountNeeded!.integerValue + amount ) %
+            project.totalAmount!.integerValue
+        project.amountNeeded = ( newNeeded )
+        event.totalDonations = (amount + event.totalDonations!.integerValue)
+        var errorPtr = NSErrorPointer()
+
+        println( "saving event" )
+        if ( event.save( errorPtr )) {
+            println( "event saved" )
+        }
+        else {
+            println("event not saved with error: \(errorPtr)" )
+        }
+
+        if ( project.save( errorPtr) ) {
+            println( "project saved")
+        } else {
+            println( "project not saved with error: \(errorPtr)")
+        }
+
+        println( "tx: objectId = \(tx.objectId)" )
+        if ( tx.save( errorPtr ) ) {
+            println( "tx saved with objectId \(tx.objectId)" )
+        } else {
+            println( "error: \(errorPtr)" )
+        }
+     
+    }
     
-    func loadEventsInForeground() {
+    func printTime() {
+        println( NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle))
+    }
+    
+
+    // gives you back an array of Transaction objects, sorted by descending timestamp
+    // runs in the background, then calls your callback upon completion ( no error state is kept, so
+    //    caveat emptor! hopefully the array it sends you will be nil... )
+    func loadTransactions( numRowsToReturn: Int, callback: ( [Transaction] ) -> () ) {
+        var returnVal = true
+        
+        dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+            //Background Thread
+            var query = Transaction.query()
+            query.limit = numRowsToReturn
+            query.orderByDescending("createdAt")
+            var errorPtr = NSErrorPointer()
+            var txObjects = query.findObjects(errorPtr)
+            var tx = txObjects[0]
+            
+            callback( txObjects as [Transaction] )
+        }
+
+    }
+    // loads events and associated objects in background with a callback
+    func loadEvents( callback: ( Bool ) -> () ) {
+        var returnVal = true
+        
+        dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+            //Background Thread
+            returnVal = self.loadEventsInForeground()
+            callback( returnVal )
+        }
+    }
+    // fires off loadEvents in a background thread
+    // currently takes less than .5 seconds to run
+    // actually loads all events, all projects: note some projects may not be related to any events
+    func loadEventsInForeground() -> Bool {
+        var query = Event.query()
+        var errorPtr = NSErrorPointer()
+        var myEvents = [Event]()
+
+    
+        printTime()
+        var eventObjects = query.findObjects( errorPtr )
+        println( "\(eventObjects.count) objects loaded with error: \(errorPtr)" )
+        
+        query = Project.query()
+        var projectObjects = query.findObjects( errorPtr )
+        println( "\(projectObjects.count) objects loaded with error: \(errorPtr)" )
+        
+        projects = projectObjects as? [Project]
+        if let events = eventObjects as? [Event] {
+            for event in events {
+                var projectPointers = event["projects"] as [PFObject]
+                
+                
+                event.projects = [Project]()
+                for projectPointer in projectPointers {
+                    for p in projects! {
+                        if projectPointer.objectId == p.objectId {
+                            event.projects.append( p )
+                            println("appending project")
+                        }
+                    }
+                }
+                myEvents.append( event )
+            }
+        }
+        events = myEvents
+        return true
+    }
+    func loadEventsInForegroundDefunct() {
         var query = Event.query()
         var myEvents = [Event]()
         var errorPtr = NSErrorPointer()

@@ -17,28 +17,13 @@ class Doctor {
     var amountFunded: Int?
     var amountNeeded: Int?
 
-/*
-    @NSManaged var doctorName: String?
-    @NSManaged var doctorImage: String?
-    @NSManaged var doctorBanner: String?
-    @NSManaged var doctorQuote: String?
-    @NSManaged var doctorBio: String?
-    @NSManaged var treatmentName: String?
-    @NSManaged var treatmentImage: String?
-    @NSManaged var treatmentDescription: String?
-    @NSManaged var stories: String?
-    @NSManaged var location: String?
-    @NSManaged var amountNeeded: NSString?
-    @NSManaged var totalAmount: NSString?
-*/
     init( p: Project ) {
         self.name = p.doctorName
         self.location = p.location
         self.thumbnailPicUrl = p.doctorImage
         self.bannerPicUrl = p.doctorBanner
-        self.amountFunded = 555 //XXX
-        self.amountNeeded = 999 //( p.amountNeeded as String ).toInt() - model out of date
-        
+        self.amountFunded = p.totalAmount!.integerValue - p.amountNeeded!.integerValue
+        self.amountNeeded = p.amountNeeded!.integerValue
         
         var t = Treatment()
         t.description = p.treatmentDescription

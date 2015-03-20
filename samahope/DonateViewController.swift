@@ -135,11 +135,22 @@ class DonateViewController: UIViewController, UITextFieldDelegate {
 
 extension DonateViewController: PKPaymentAuthorizationViewControllerDelegate {
     func paymentAuthorizationViewController(controller: PKPaymentAuthorizationViewController!, didAuthorizePayment payment: PKPayment!, completion: ((PKPaymentAuthorizationStatus) -> Void)!) {
+        
+        println( "payment auth complete: saving objects to db" )
+        ParseClient.sharedInstance.processPayment( selectedAmount!, project: project!, event: ParseClient.sharedInstance.events![0])
+
         completion(PKPaymentAuthorizationStatus.Success)
+
     }
     
     func paymentAuthorizationViewControllerDidFinish(controller: PKPaymentAuthorizationViewController!) {
         controller.dismissViewControllerAnimated(true, completion: nil)
+        
+        // go to confirmation screen
+        let cs = UIStoryboard(name: "Isaac", bundle: nil)
+        let cvc = cs.instantiateViewControllerWithIdentifier("PaymentConfirmationViewController") as UIViewController
+
+        controller.showViewController(cvc, sender: self)
     }
 }
 

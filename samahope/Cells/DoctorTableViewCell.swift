@@ -10,14 +10,23 @@ import UIKit
 
 class DoctorTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var progressBar: FundingProgressBarView!
     @IBOutlet weak var doctorThumbnailView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var locationAndTreatmentLabel: UILabel!
     @IBOutlet weak var doctorMainImageView: UIImageView!
     @IBOutlet weak var treatmentImageView: UIImageView!
     
-    @IBOutlet weak var fundingProgressView: UIProgressView!
+    
+    
+    
+    
+    
    
+    
+    
+    
+    
     @IBAction func onPayClick(sender: AnyObject) {
     }
     
@@ -30,7 +39,7 @@ class DoctorTableViewCell: UITableViewCell {
         locationAndTreatmentLabel.text = "\(doctor!.location!), \(doctor!.treatment!.name!)"
         fundingProgressLabel.text = "$\(doctor!.amountFunded!) raised out of $\(doctor!.amountNeeded!)"
         var p = Double(doctor!.amountFunded!) / Double( doctor!.amountNeeded! )
-        fundingProgressView.setProgress( Float(p), animated:false )
+        progressBar.fillWithPercent( CGFloat(p) )
         
         let url = NSURL(string: doctor!.bannerPicUrl! )
         let data = NSData(contentsOfURL: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check
