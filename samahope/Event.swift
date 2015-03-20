@@ -11,9 +11,9 @@ import Foundation
 class Event : PFObject, PFSubclassing {
     @NSManaged var name: String?
     @NSManaged var eventDescription: String?
-    @NSManaged var startTime: String?
+    @NSManaged var startTime: NSDate?
     @NSManaged var endTime: String?
-    @NSManaged var totalDonations: String?
+    @NSManaged var totalDonations: NSNumber?
     @NSManaged var speakers : [String]
     @NSManaged var location: String?
     @NSManaged var projects : [Project]
@@ -30,6 +30,10 @@ class Event : PFObject, PFSubclassing {
     }
     override init() {
         super.init()
+//        
+//        var formatter = NSDateFormatter()
+//        formatter.dateFormat = "EEE MMM d HH:mm:ss Z y"
+//        startAt = formatter.dateFromString(startTime!)
     }
     class func parseClassName() -> String! {
         return "Event"

@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="229" id="KGk-i7-Jjw" customClass="ProgramTableViewCell" customModule="samahope" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="220"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="235" id="KGk-i7-Jjw" customClass="ProgramTableViewCell" customModule="samahope" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="226"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YdZ-jn-Zzo">
-                        <rect key="frame" x="10" y="13" width="29.5" height="14.5"/>
+                        <rect key="frame" x="10" y="13" width="30" height="15"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="12"/>
                         <color key="textColor" red="0.4169268012046814" green="0.36931684613227844" blue="0.31456774473190308" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30% of births in Sierra Leone end up in injury" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAJ-R3-qgL">
-                        <rect key="frame" x="10" y="31" width="300" height="38.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="30% of births in Sierra Leone end up in injury" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAJ-R3-qgL">
+                        <rect key="frame" x="10" y="31" width="293" height="39"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
                         <color key="textColor" red="0.4169268012046814" green="0.36931684613227844" blue="0.31456774473190308" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speaker: Dr. Bo Nam" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpo-mD-yH9">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Speaker: Dr. Bo Nam" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpo-mD-yH9">
                         <rect key="frame" x="10" y="81" width="113" height="14"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                         <color key="textColor" red="0.4169268012046814" green="0.36931684613227844" blue="0.31456774473190308" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$446 raised of $1000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KPJ-g9-wC8">
-                        <rect key="frame" x="10" y="112" width="175.5" height="21.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$446 raised of $1000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KPJ-g9-wC8">
+                        <rect key="frame" x="10" y="112" width="176" height="22"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                         <color key="textColor" red="0.4169268012046814" green="0.36931684613227844" blue="0.31456774473190308" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iNd-38-hdA">
+                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iNd-38-hdA">
                         <rect key="frame" x="10" y="144" width="279" height="14"/>
                         <color key="backgroundColor" red="0.94915992021560669" green="0.94142055511474609" blue="0.92871737480163574" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -45,7 +45,7 @@
                             <constraint firstAttribute="height" constant="14" id="U7X-9P-whH"/>
                         </constraints>
                     </view>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iqv-dx-odO">
+                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iqv-dx-odO">
                         <rect key="frame" x="10" y="166" width="155" height="35"/>
                         <color key="backgroundColor" red="0.001845656312070787" green="0.7104184627532959" blue="0.7498282790184021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -69,7 +69,7 @@
                             <action selector="onDonate:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="TXG-Ej-5mh"/>
                         </connections>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bVu-IV-pqL">
+                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bVu-IV-pqL">
                         <rect key="frame" x="173" y="166" width="113" height="35"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="35" id="GuX-eL-pxh"/>
@@ -92,8 +92,8 @@
                             <action selector="onLearn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="2Hj-Qa-Ru8"/>
                         </connections>
                     </button>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Auf-HN-XGF">
-                        <rect key="frame" x="0.0" y="210" width="320" height="9"/>
+                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Auf-HN-XGF">
+                        <rect key="frame" x="0.0" y="217" width="320" height="9"/>
                         <color key="backgroundColor" red="0.97648090124130249" green="0.97266668081283569" blue="0.968303382396698" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="9" id="OaC-xT-DAI"/>
@@ -104,6 +104,7 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="RMF-Kz-XTU"/>
+                                <exclude reference="VL3-eI-kBN"/>
                                 <exclude reference="qXZ-kH-K9q"/>
                             </mask>
                         </variation>
@@ -113,16 +114,17 @@
                     <constraint firstItem="bVu-IV-pqL" firstAttribute="top" secondItem="iNd-38-hdA" secondAttribute="bottom" constant="8" id="2s1-K1-Hzq"/>
                     <constraint firstItem="Iqv-dx-odO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="3Wp-MC-tc8"/>
                     <constraint firstItem="YdZ-jn-Zzo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="6A6-5d-JLb"/>
-                    <constraint firstAttribute="trailing" secondItem="uAJ-R3-qgL" secondAttribute="trailing" constant="10" id="EPk-hQ-4qm"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uAJ-R3-qgL" secondAttribute="trailing" constant="8" id="EPk-hQ-4qm"/>
                     <constraint firstItem="Iqv-dx-odO" firstAttribute="centerY" secondItem="bVu-IV-pqL" secondAttribute="centerY" id="Ku4-e8-ZIz"/>
                     <constraint firstItem="KPJ-g9-wC8" firstAttribute="top" secondItem="hpo-mD-yH9" secondAttribute="bottom" constant="17" id="U4m-Fn-TsG"/>
                     <constraint firstItem="iNd-38-hdA" firstAttribute="top" secondItem="KPJ-g9-wC8" secondAttribute="bottom" constant="10.5" id="VBL-MU-HVE"/>
                     <constraint firstItem="hpo-mD-yH9" firstAttribute="top" secondItem="uAJ-R3-qgL" secondAttribute="bottom" constant="11.5" id="Xuk-6D-3JA"/>
-                    <constraint firstItem="Auf-HN-XGF" firstAttribute="top" secondItem="Iqv-dx-odO" secondAttribute="bottom" constant="9" id="Zti-Z0-Sew"/>
+                    <constraint firstItem="Auf-HN-XGF" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Iqv-dx-odO" secondAttribute="bottom" constant="9" id="Zti-Z0-Sew"/>
                     <constraint firstItem="iNd-38-hdA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="a3q-3f-siX"/>
                     <constraint firstAttribute="centerY" secondItem="Iqv-dx-odO" secondAttribute="centerY" id="aG1-8o-TEN"/>
                     <constraint firstItem="Auf-HN-XGF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="bOo-vj-Gul"/>
                     <constraint firstItem="KPJ-g9-wC8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="dLB-BN-O7T"/>
+                    <constraint firstAttribute="trailing" secondItem="Auf-HN-XGF" secondAttribute="trailing" id="guh-9L-fSx"/>
                     <constraint firstItem="Auf-HN-XGF" firstAttribute="top" secondItem="bVu-IV-pqL" secondAttribute="bottom" constant="9" id="jTX-bS-DIL"/>
                     <constraint firstAttribute="bottom" secondItem="Auf-HN-XGF" secondAttribute="bottom" id="lML-Xf-hIh"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Iqv-dx-odO" secondAttribute="bottom" constant="15" id="lmv-0g-F0f"/>
@@ -150,9 +152,10 @@
                 <outlet property="learnButton" destination="bVu-IV-pqL" id="Zve-cv-8ZG"/>
                 <outlet property="speakerLabel" destination="hpo-mD-yH9" id="wXE-pT-Lmh"/>
                 <outlet property="statusBarView" destination="iNd-38-hdA" id="7LH-i8-4Pu"/>
+                <outlet property="timeLabel" destination="YdZ-jn-Zzo" id="HCV-6M-k1t"/>
                 <outlet property="topicLabel" destination="uAJ-R3-qgL" id="n06-au-FUf"/>
             </connections>
-            <point key="canvasLocation" x="280" y="337"/>
+            <point key="canvasLocation" x="280" y="340"/>
         </tableViewCell>
     </objects>
 </document>

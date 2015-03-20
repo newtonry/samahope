@@ -14,6 +14,7 @@ class Project : PFObject, PFSubclassing {
     @NSManaged var doctorImage: String?
     @NSManaged var doctorBanner: String?
     @NSManaged var doctorQuote: String?
+    @NSManaged var doctorTopic: String?
     @NSManaged var doctorBio: String?
     @NSManaged var treatmentName: String?
     @NSManaged var treatmentImage: String?
@@ -22,6 +23,7 @@ class Project : PFObject, PFSubclassing {
     @NSManaged var location: String?
     @NSManaged var amountNeeded: NSString?
     @NSManaged var totalAmount: NSString?
+    @NSManaged var speakTime: NSDate?
     
     override class func initialize() {
         var onceToken : dispatch_once_t = 0;
