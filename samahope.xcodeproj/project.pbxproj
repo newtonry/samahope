@@ -9,18 +9,6 @@
 /* Begin PBXBuildFile section */
 		3F27CA301AB936CF009EEBF1 /* ProgramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F27CA2F1AB936CF009EEBF1 /* ProgramViewController.swift */; };
 		3F44C4ED1AAEBA1A00D7F1F1 /* Entypo.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3F44C4EC1AAEBA1A00D7F1F1 /* Entypo.otf */; };
-		3F44C4FA1AAEBA3700D7F1F1 /* SourceSansPro-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F44C4EE1AAEBA3700D7F1F1 /* SourceSansPro-Black.ttf */; };
-		3F44C4FB1AAEBA3700D7F1F1 /* SourceSansPro-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F44C4EF1AAEBA3700D7F1F1 /* SourceSansPro-BlackItalic.ttf */; };
-		3F44C4FC1AAEBA3700D7F1F1 /* SourceSansPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F44C4F01AAEBA3700D7F1F1 /* SourceSansPro-Bold.ttf */; };
-		3F44C4FD1AAEBA3700D7F1F1 /* SourceSansPro-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F44C4F11AAEBA3700D7F1F1 /* SourceSansPro-BoldItalic.ttf */; };
-		3F44C4FE1AAEBA3700D7F1F1 /* SourceSansPro-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F44C4F21AAEBA3700D7F1F1 /* SourceSansPro-ExtraLight.ttf */; };
-		3F44C4FF1AAEBA3700D7F1F1 /* SourceSansPro-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F44C4F31AAEBA3700D7F1F1 /* SourceSansPro-ExtraLightItalic.ttf */; };
-		3F44C5001AAEBA3700D7F1F1 /* SourceSansPro-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F44C4F41AAEBA3700D7F1F1 /* SourceSansPro-Italic.ttf */; };
-		3F44C5011AAEBA3700D7F1F1 /* SourceSansPro-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F44C4F51AAEBA3700D7F1F1 /* SourceSansPro-Light.ttf */; };
-		3F44C5021AAEBA3700D7F1F1 /* SourceSansPro-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F44C4F61AAEBA3700D7F1F1 /* SourceSansPro-LightItalic.ttf */; };
-		3F44C5031AAEBA3700D7F1F1 /* SourceSansPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F44C4F71AAEBA3700D7F1F1 /* SourceSansPro-Regular.ttf */; };
-		3F44C5041AAEBA3700D7F1F1 /* SourceSansPro-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F44C4F81AAEBA3700D7F1F1 /* SourceSansPro-Semibold.ttf */; };
-		3F44C5051AAEBA3700D7F1F1 /* SourceSansPro-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F44C4F91AAEBA3700D7F1F1 /* SourceSansPro-SemiboldItalic.ttf */; };
 		3F5AD5671AB6C5C600ED3689 /* DoctorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5AD5631AB6C5C600ED3689 /* DoctorDetailViewController.swift */; };
 		3F5AD5691AB6C5C600ED3689 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5AD5651AB6C5C600ED3689 /* ProjectsViewController.swift */; };
 		3F5AD56A1AB6C5C600ED3689 /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5AD5661AB6C5C600ED3689 /* ProjectViewController.swift */; };
@@ -29,6 +17,10 @@
 		3F9230EE1AB6BE550002DF49 /* ProgramStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F9230ED1AB6BE550002DF49 /* ProgramStoryboard.storyboard */; };
 		3FBCC8911ABA1DAE00906CBC /* MenuStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FBCC8901ABA1DAE00906CBC /* MenuStoryboard.storyboard */; };
 		3FBCC8931ABA1DFD00906CBC /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBCC8921ABA1DFC00906CBC /* MenuViewController.swift */; };
+		3FC98E661ABD41210092206A /* ActivityFeedStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FC98E651ABD41210092206A /* ActivityFeedStoryboard.storyboard */; };
+		3FC98E681ABD43CC0092206A /* ActivityFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC98E671ABD43CC0092206A /* ActivityFeedViewController.swift */; };
+		3FC98E6B1ABD44430092206A /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC98E691ABD44430092206A /* ActivityTableViewCell.swift */; };
+		3FC98E6C1ABD44430092206A /* ActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FC98E6A1ABD44430092206A /* ActivityTableViewCell.xib */; };
 		A036EEB3577B71E28C3C4C5D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDEA43EF90BFE02A54AA4045 /* libPods.a */; };
 		C51603261AAF97050044799D /* PaymentStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C51603251AAF97050044799D /* PaymentStoryboard.storyboard */; };
 		C516032D1AAFA62A0044799D /* PaymentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C516032C1AAFA62A0044799D /* PaymentTableViewCell.swift */; };
@@ -78,18 +70,6 @@
 /* Begin PBXFileReference section */
 		3F27CA2F1AB936CF009EEBF1 /* ProgramViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramViewController.swift; sourceTree = "<group>"; };
 		3F44C4EC1AAEBA1A00D7F1F1 /* Entypo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Entypo.otf; sourceTree = "<group>"; };
-		3F44C4EE1AAEBA3700D7F1F1 /* SourceSansPro-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Black.ttf"; sourceTree = "<group>"; };
-		3F44C4EF1AAEBA3700D7F1F1 /* SourceSansPro-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-BlackItalic.ttf"; sourceTree = "<group>"; };
-		3F44C4F01AAEBA3700D7F1F1 /* SourceSansPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Bold.ttf"; sourceTree = "<group>"; };
-		3F44C4F11AAEBA3700D7F1F1 /* SourceSansPro-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-BoldItalic.ttf"; sourceTree = "<group>"; };
-		3F44C4F21AAEBA3700D7F1F1 /* SourceSansPro-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-ExtraLight.ttf"; sourceTree = "<group>"; };
-		3F44C4F31AAEBA3700D7F1F1 /* SourceSansPro-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
-		3F44C4F41AAEBA3700D7F1F1 /* SourceSansPro-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Italic.ttf"; sourceTree = "<group>"; };
-		3F44C4F51AAEBA3700D7F1F1 /* SourceSansPro-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Light.ttf"; sourceTree = "<group>"; };
-		3F44C4F61AAEBA3700D7F1F1 /* SourceSansPro-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-LightItalic.ttf"; sourceTree = "<group>"; };
-		3F44C4F71AAEBA3700D7F1F1 /* SourceSansPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Regular.ttf"; sourceTree = "<group>"; };
-		3F44C4F81AAEBA3700D7F1F1 /* SourceSansPro-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Semibold.ttf"; sourceTree = "<group>"; };
-		3F44C4F91AAEBA3700D7F1F1 /* SourceSansPro-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-SemiboldItalic.ttf"; sourceTree = "<group>"; };
 		3F5AD5631AB6C5C600ED3689 /* DoctorDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorDetailViewController.swift; sourceTree = "<group>"; };
 		3F5AD5651AB6C5C600ED3689 /* ProjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
 		3F5AD5661AB6C5C600ED3689 /* ProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +78,10 @@
 		3F9230ED1AB6BE550002DF49 /* ProgramStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ProgramStoryboard.storyboard; path = Interfaces/ProgramStoryboard.storyboard; sourceTree = "<group>"; };
 		3FBCC8901ABA1DAE00906CBC /* MenuStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MenuStoryboard.storyboard; sourceTree = "<group>"; };
 		3FBCC8921ABA1DFC00906CBC /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		3FC98E651ABD41210092206A /* ActivityFeedStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ActivityFeedStoryboard.storyboard; sourceTree = "<group>"; };
+		3FC98E671ABD43CC0092206A /* ActivityFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityFeedViewController.swift; sourceTree = "<group>"; };
+		3FC98E691ABD44430092206A /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
+		3FC98E6A1ABD44430092206A /* ActivityTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityTableViewCell.xib; sourceTree = "<group>"; };
 		83AE896058DCCC748B8D8354 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		98696AFCB772891F46D5D8F8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C51603251AAF97050044799D /* PaymentStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = PaymentStoryboard.storyboard; path = Interfaces/PaymentStoryboard.storyboard; sourceTree = "<group>"; };
@@ -179,18 +163,6 @@
 		3F44C4EB1AAEB9F700D7F1F1 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				3F44C4EE1AAEBA3700D7F1F1 /* SourceSansPro-Black.ttf */,
-				3F44C4EF1AAEBA3700D7F1F1 /* SourceSansPro-BlackItalic.ttf */,
-				3F44C4F01AAEBA3700D7F1F1 /* SourceSansPro-Bold.ttf */,
-				3F44C4F11AAEBA3700D7F1F1 /* SourceSansPro-BoldItalic.ttf */,
-				3F44C4F21AAEBA3700D7F1F1 /* SourceSansPro-ExtraLight.ttf */,
-				3F44C4F31AAEBA3700D7F1F1 /* SourceSansPro-ExtraLightItalic.ttf */,
-				3F44C4F41AAEBA3700D7F1F1 /* SourceSansPro-Italic.ttf */,
-				3F44C4F51AAEBA3700D7F1F1 /* SourceSansPro-Light.ttf */,
-				3F44C4F61AAEBA3700D7F1F1 /* SourceSansPro-LightItalic.ttf */,
-				3F44C4F71AAEBA3700D7F1F1 /* SourceSansPro-Regular.ttf */,
-				3F44C4F81AAEBA3700D7F1F1 /* SourceSansPro-Semibold.ttf */,
-				3F44C4F91AAEBA3700D7F1F1 /* SourceSansPro-SemiboldItalic.ttf */,
 				3F44C4EC1AAEBA1A00D7F1F1 /* Entypo.otf */,
 			);
 			name = Fonts;
@@ -199,6 +171,7 @@
 		3F5AD5621AB6C5C600ED3689 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				3FC98E671ABD43CC0092206A /* ActivityFeedViewController.swift */,
 				3F5AD5631AB6C5C600ED3689 /* DoctorDetailViewController.swift */,
 				C52E48581ABA639900620E43 /* DoctorTableViewController.swift */,
 				C52E48591ABA639900620E43 /* DonateViewController.swift */,
@@ -214,7 +187,8 @@
 		C54BAC101AAE7C6D003AC168 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				C54BAC111AAE7C6D003AC168 /* ProjectTableViewCell.swift */,
+				3FC98E691ABD44430092206A /* ActivityTableViewCell.swift */,
+				3FC98E6A1ABD44430092206A /* ActivityTableViewCell.xib */,
 				C516032C1AAFA62A0044799D /* PaymentTableViewCell.swift */,
 				C5B5E0151AB646500082A65E /* FundingStatusCell.swift */,
 				C5B5E0161AB646500082A65E /* FundingStatusCell.xib */,
@@ -222,6 +196,7 @@
 				C5B5E01A1AB65E400082A65E /* MoreDoctorDetailCell.xib */,
 				C52E48641ABA76F600620E43 /* FundingProgressBarView.swift */,
 				C5DD150D1AAE716F00F116A6 /* ProjectStoryboard.storyboard */,
+				C54BAC111AAE7C6D003AC168 /* ProjectTableViewCell.swift */,
 				C54BAC0B1AAE7BD6003AC168 /* ProjectTableViewCell.xib */,
 				3F5AD56B1AB6C5FF00ED3689 /* ProgramTableViewCell.swift */,
 				3F5AD56C1AB6C5FF00ED3689 /* ProgramTableViewCell.xib */,
@@ -248,6 +223,7 @@
 				C51603251AAF97050044799D /* PaymentStoryboard.storyboard */,
 				3F9230ED1AB6BE550002DF49 /* ProgramStoryboard.storyboard */,
 				3FBCC8901ABA1DAE00906CBC /* MenuStoryboard.storyboard */,
+				3FC98E651ABD41210092206A /* ActivityFeedStoryboard.storyboard */,
 			);
 			name = Interfaces;
 			sourceTree = "<group>";
@@ -424,34 +400,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F44C4ED1AAEBA1A00D7F1F1 /* Entypo.otf in Resources */,
-				3F44C5041AAEBA3700D7F1F1 /* SourceSansPro-Semibold.ttf in Resources */,
 				EB957D131AAA700F007037A6 /* Main.storyboard in Resources */,
-				3F44C4FB1AAEBA3700D7F1F1 /* SourceSansPro-BlackItalic.ttf in Resources */,
 				C54BAC0F1AAE7C25003AC168 /* ProjectsStoryboard.storyboard in Resources */,
 				C5B5E0181AB646500082A65E /* FundingStatusCell.xib in Resources */,
 				3FBCC8911ABA1DAE00906CBC /* MenuStoryboard.storyboard in Resources */,
-				3F44C5001AAEBA3700D7F1F1 /* SourceSansPro-Italic.ttf in Resources */,
-				3F44C5051AAEBA3700D7F1F1 /* SourceSansPro-SemiboldItalic.ttf in Resources */,
 				3F9230EE1AB6BE550002DF49 /* ProgramStoryboard.storyboard in Resources */,
 				C54BAC0C1AAE7BD6003AC168 /* ProjectTableViewCell.xib in Resources */,
 				EB957D181AAA700F007037A6 /* LaunchScreen.xib in Resources */,
 				C52E48571ABA634100620E43 /* Isaac.storyboard in Resources */,
 				C5DD150E1AAE716F00F116A6 /* ProjectStoryboard.storyboard in Resources */,
-				3F44C5021AAEBA3700D7F1F1 /* SourceSansPro-LightItalic.ttf in Resources */,
-				3F44C4FD1AAEBA3700D7F1F1 /* SourceSansPro-BoldItalic.ttf in Resources */,
-				3F44C4FF1AAEBA3700D7F1F1 /* SourceSansPro-ExtraLightItalic.ttf in Resources */,
-				3F44C4FE1AAEBA3700D7F1F1 /* SourceSansPro-ExtraLight.ttf in Resources */,
 				EB957D591AAA7956007037A6 /* TODO in Resources */,
-				3F44C4FA1AAEBA3700D7F1F1 /* SourceSansPro-Black.ttf in Resources */,
-				3F44C4FC1AAEBA3700D7F1F1 /* SourceSansPro-Bold.ttf in Resources */,
 				EB957D151AAA700F007037A6 /* Images.xcassets in Resources */,
 				C5B5E0101AB632060082A65E /* DoctorDetailView.storyboard in Resources */,
 				C5B5E01C1AB65E400082A65E /* MoreDoctorDetailCell.xib in Resources */,
-				3F44C5011AAEBA3700D7F1F1 /* SourceSansPro-Light.ttf in Resources */,
 				C5C11DCA1AB613090048E0D6 /* CircleTitleView.xib in Resources */,
+				3FC98E661ABD41210092206A /* ActivityFeedStoryboard.storyboard in Resources */,
 				3F5AD56E1AB6C5FF00ED3689 /* ProgramTableViewCell.xib in Resources */,
 				C51603261AAF97050044799D /* PaymentStoryboard.storyboard in Resources */,
-				3F44C5031AAEBA3700D7F1F1 /* SourceSansPro-Regular.ttf in Resources */,
+				3FC98E6C1ABD44430092206A /* ActivityTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,11 +488,13 @@
 				3F5AD56D1AB6C5FF00ED3689 /* ProgramTableViewCell.swift in Sources */,
 				3FBCC8931ABA1DFD00906CBC /* MenuViewController.swift in Sources */,
 				EB957D571AAA7712007037A6 /* Project.swift in Sources */,
+				3FC98E681ABD43CC0092206A /* ActivityFeedViewController.swift in Sources */,
 				C5C11DCC1AB619770048E0D6 /* FundingStatusView.swift in Sources */,
 				C54BAC121AAE7C6D003AC168 /* ProjectTableViewCell.swift in Sources */,
 				3F27CA301AB936CF009EEBF1 /* ProgramViewController.swift in Sources */,
 				C52E485E1ABA63E700620E43 /* DummyDoctor.swift in Sources */,
 				C52E485F1ABA63E700620E43 /* DummyTreatment.swift in Sources */,
+				3FC98E6B1ABD44430092206A /* ActivityTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

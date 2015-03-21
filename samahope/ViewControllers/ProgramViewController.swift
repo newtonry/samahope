@@ -45,8 +45,8 @@ class ProgramViewController: UIViewController, UITableViewDataSource, UITableVie
                 self.eventDonationTotal.text = formatter.stringFromNumber(rootEvent!.totalDonations!)
             }
         }
-        let cellNib = UINib(nibName: "ProgramTableViewCell", bundle: NSBundle.mainBundle())
-        tableView.registerNib(cellNib, forCellReuseIdentifier: "ProgramTableViewCell")
+        let cellNib = UINib(nibName: programCellId, bundle: NSBundle.mainBundle())
+        tableView.registerNib(cellNib, forCellReuseIdentifier: programCellId)
     }
     
     func tableView(tableView: UITableView, shouldHighlightRowAtIndexPath indexPath: NSIndexPath) -> Bool {
