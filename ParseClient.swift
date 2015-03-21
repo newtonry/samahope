@@ -87,6 +87,8 @@ class ParseClient {
         dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
             //Background Thread
             var query = Transaction.query()
+            query.includeKey("project")
+            query.includeKey("event")
             query.limit = numRowsToReturn
             query.orderByDescending("createdAt")
             var errorPtr = NSErrorPointer()
