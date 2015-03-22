@@ -187,16 +187,31 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Rm-aQ-WFs">
+                                <rect key="frame" x="10" y="10" width="21" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="0nx-ht-fYd"/>
+                                    <constraint firstAttribute="width" constant="21" id="zOV-SL-QqS"/>
+                                </constraints>
+                                <state key="normal" image="back-button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onBackButtonPress:" destination="duC-ru-bgq" eventType="touchUpInside" id="4Wh-ZF-Ubj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="yIm-pR-SRn" secondAttribute="trailing" id="1Wv-wY-trf"/>
+                            <constraint firstItem="0Rm-aQ-WFs" firstAttribute="top" secondItem="oKA-yy-wgY" secondAttribute="top" constant="10" id="8nk-JB-YcY"/>
                             <constraint firstItem="Aai-gi-qE9" firstAttribute="top" secondItem="yIm-pR-SRn" secondAttribute="bottom" id="b8m-4g-Xk9"/>
                             <constraint firstAttribute="trailing" secondItem="Aai-gi-qE9" secondAttribute="trailing" id="cfC-vM-8yZ"/>
                             <constraint firstItem="yIm-pR-SRn" firstAttribute="top" secondItem="oKA-yy-wgY" secondAttribute="top" id="eAu-wK-hh1"/>
                             <constraint firstItem="yIm-pR-SRn" firstAttribute="leading" secondItem="oKA-yy-wgY" secondAttribute="leading" id="jK3-zj-Z8I"/>
                             <constraint firstItem="HLy-cK-zao" firstAttribute="top" secondItem="Aai-gi-qE9" secondAttribute="bottom" id="q5X-os-6bw"/>
                             <constraint firstItem="Aai-gi-qE9" firstAttribute="leading" secondItem="oKA-yy-wgY" secondAttribute="leading" id="wFN-0V-0pU"/>
+                            <constraint firstItem="0Rm-aQ-WFs" firstAttribute="leading" secondItem="oKA-yy-wgY" secondAttribute="leading" constant="10" id="ynj-sm-jjf"/>
                         </constraints>
                     </view>
                     <connections>
@@ -209,6 +224,9 @@
             <point key="canvasLocation" x="191" y="346"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="back-button" width="84" height="129"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -137,7 +137,6 @@ class ParseClient {
                     for p in projects! {
                         if projectPointer.objectId == p.objectId {
                             event.projects.append( p )
-                            println("appending project")
                         }
                     }
                 }

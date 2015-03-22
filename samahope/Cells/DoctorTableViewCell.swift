@@ -16,24 +16,12 @@ class DoctorTableViewCell: UITableViewCell {
     @IBOutlet weak var locationAndTreatmentLabel: UILabel!
     @IBOutlet weak var doctorMainImageView: UIImageView!
     @IBOutlet weak var treatmentImageView: UIImageView!
-    
-    
-    
-    
-    
-    
-   
-    
-    
-    
-    
     @IBAction func onPayClick(sender: AnyObject) {
     }
     
     private var doctor: Doctor?
     
     func setDoctor( newDoctor: Doctor ) {
-        println( "setDoctor" )
         doctor = newDoctor
         nameLabel.text = doctor!.name
         locationAndTreatmentLabel.text = "\(doctor!.location!), \(doctor!.treatment!.name!)"
@@ -42,17 +30,13 @@ class DoctorTableViewCell: UITableViewCell {
         progressBar.fillWithPercent( CGFloat(p) )
         
         let url = NSURL(string: doctor!.bannerPicUrl! )
-        let data = NSData(contentsOfURL: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check
-        doctorMainImageView.image = UIImage(data: data!)
+        
+        doctorMainImageView.setImageWithURL(url)
         
         let url2 = NSURL(string: doctor!.thumbnailPicUrl! )
-        let data2 = NSData(contentsOfURL: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check
-        doctorThumbnailView.image = UIImage(data: data2!)
-        
+        doctorThumbnailView.setImageWithURL(url2)
         let url3 = NSURL(string: doctor!.treatment!.iconPicUrl!)
-        let data3 = NSData(contentsOfURL: url3!)
-        treatmentImageView.image = UIImage(data: data3!)
-    
+        treatmentImageView.setImageWithURL(url3)
     }
 
     override func awakeFromNib() {

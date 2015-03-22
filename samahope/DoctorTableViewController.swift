@@ -59,7 +59,6 @@ class DoctorTableViewController: UITableViewController {
         self.showViewController(vc, sender: self)
     }
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        println( "tableView.cellForRowAtIndexPath")
         let cell = tableView.dequeueReusableCellWithIdentifier("com.codepath.doctortableviewcell", forIndexPath: indexPath) as DoctorTableViewCell
 
         // Configure the cell...

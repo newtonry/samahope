@@ -5,4 +5,5 @@
 #import <Parse/Parse.h>
 #import <Parse/PFObject+Subclass.h>
 #import <UIImageView+AFNetworking.h>
+#import <AFNetworking.h>
 #import <ApplePayStubs/STPTestPaymentAuthorizationViewController.h>

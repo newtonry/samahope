@@ -28,7 +28,12 @@ class FundingStatusCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    func setWithStats(treatmentsFulfilled: Int, treatmentsGoal: Int, amountRaised: Int, amountPerProcedure: Int) {
+    func setWithProject(project: Project) {
+        let treatmentsFulfilled = 10
+        let treatmentsGoal = 50
+        let amountRaised = project.amountNeeded!
+        let amountPerProcedure = project.totalAmount!
+        
         treatmentStats.text = "Treatment \(treatmentsFulfilled) of \(treatmentsGoal) needed"
         amountRaisedLabel.text = "$\(amountRaised) raised of $\(amountPerProcedure)"
         let percComplete = CGFloat(amountRaised) / CGFloat(amountPerProcedure)
