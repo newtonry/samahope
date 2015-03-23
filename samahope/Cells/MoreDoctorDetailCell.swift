@@ -12,6 +12,9 @@ class MoreDoctorDetailCell: UITableViewCell {
 
     @IBOutlet weak var cellDescription: UILabel!
     @IBOutlet weak var cellImage: UIImageView!
+    @IBOutlet weak var secondHeader: UILabel!
+    
+    @IBOutlet weak var textBody: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,15 +22,17 @@ class MoreDoctorDetailCell: UITableViewCell {
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        self.selectionStyle = UITableViewCellSelectionStyle.None;
     }
     
-    func fillWithDescriptionAndImage(description: String, imageUrlString: String) {
+    func fillWithDescriptionAndImage(description: String, imageUrlString: String, secondHeader: String, textBody: String) {
         cellDescription.text = description
         cellImage.setImageWithURL(NSURL(string: imageUrlString))
         cellImage.layer.cornerRadius = cellImage.frame.height / 2
         cellImage.clipsToBounds = true
+        
+        self.secondHeader.text = secondHeader
+        self.textBody.text = textBody
     }
     
     

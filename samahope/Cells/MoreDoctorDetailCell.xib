@@ -6,40 +6,98 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="105" id="KGk-i7-Jjw" customClass="MoreDoctorDetailCell" customModule="samahope" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="371" height="105"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="387" id="KGk-i7-Jjw" customClass="MoreDoctorDetailCell" customModule="samahope" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="371" height="387"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Doctor X" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFL-u4-62U">
-                        <rect key="frame" x="15" y="15" width="126" height="84"/>
-                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                        <color key="textColor" red="0.41568630933761597" green="0.36862745881080627" blue="0.31764706969261169" alpha="1" colorSpace="deviceRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yCW-7h-GDn">
-                        <rect key="frame" x="311" y="32" width="50" height="50"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yn0-Hj-7bl">
+                        <rect key="frame" x="0.0" y="0.0" width="371" height="55"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Doctor X" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LFL-u4-62U">
+                                <rect key="frame" x="15" y="17" width="133" height="22"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" red="0.41568630933761597" green="0.36862745881080627" blue="0.31764706969261169" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yCW-7h-GDn">
+                                <rect key="frame" x="306" y="3" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="BX5-9y-4JX"/>
+                                    <constraint firstAttribute="height" constant="50" id="lrl-NG-GS8"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="50" id="2Yn-Oh-mrH"/>
-                            <constraint firstAttribute="width" constant="50" id="Lkf-kd-Kub"/>
+                            <constraint firstItem="LFL-u4-62U" firstAttribute="leading" secondItem="yn0-Hj-7bl" secondAttribute="leading" constant="15" id="3Vv-0u-c1s"/>
+                            <constraint firstItem="LFL-u4-62U" firstAttribute="centerY" secondItem="yCW-7h-GDn" secondAttribute="centerY" id="QMG-05-gof"/>
+                            <constraint firstAttribute="centerY" secondItem="LFL-u4-62U" secondAttribute="centerY" id="rzw-gA-PJH"/>
+                            <constraint firstAttribute="height" constant="55" id="vcf-RA-sbC"/>
+                            <constraint firstAttribute="trailing" secondItem="yCW-7h-GDn" secondAttribute="trailing" constant="15" id="z98-2m-AqS"/>
                         </constraints>
-                    </imageView>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3pa-MM-znk">
+                        <rect key="frame" x="0.0" y="55" width="371" height="331"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QED-6L-l3t">
+                                <rect key="frame" x="15" y="0.0" width="291" height="39"/>
+                                <string key="text">Over 15,000 babies delivered.
+</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" red="0.4156863093" green="0.36862745879999997" blue="0.31764706970000001" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cy-Jc-FjW">
+                                <rect key="frame" x="15" y="39" width="291" height="263"/>
+                                <string key="text">My name is Dr. Shukri Mohamed Dahir and sitting next to me is Dr. Naima Ahmed Mohamed. We are both doctors: we went to Medical School together and are now working as a team for the same hospital in Somaliland.
+
+We both first graduated from the School of Midwifery and were trained as Nurses. After proving our skills and motivation at work, we were very lucky to receive sponsoring through Medical School for a period of 6 years. In July 2011 we both graduated.
+</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" red="0.4156863093" green="0.36862745879999997" blue="0.31764706970000001" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="0cy-Jc-FjW" secondAttribute="trailing" constant="65" id="2cb-rT-YfM"/>
+                            <constraint firstItem="0cy-Jc-FjW" firstAttribute="top" secondItem="QED-6L-l3t" secondAttribute="bottom" id="F6A-gh-zgz"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="0cy-Jc-FjW" secondAttribute="bottom" constant="15" id="Gdh-Gc-T1j"/>
+                            <constraint firstItem="0cy-Jc-FjW" firstAttribute="leading" secondItem="3pa-MM-znk" secondAttribute="leading" constant="15" id="J4n-ux-Pyg"/>
+                            <constraint firstAttribute="trailing" secondItem="QED-6L-l3t" secondAttribute="trailing" constant="65" id="KCZ-34-8Jr"/>
+                            <constraint firstItem="0cy-Jc-FjW" firstAttribute="top" secondItem="QED-6L-l3t" secondAttribute="bottom" constant="5" id="YKF-3s-2wG"/>
+                            <constraint firstItem="QED-6L-l3t" firstAttribute="leading" secondItem="3pa-MM-znk" secondAttribute="leading" constant="15" id="ZIf-m7-thS"/>
+                            <constraint firstItem="QED-6L-l3t" firstAttribute="top" secondItem="3pa-MM-znk" secondAttribute="top" id="yVA-BS-oyw"/>
+                            <constraint firstAttribute="bottom" secondItem="0cy-Jc-FjW" secondAttribute="bottom" id="z2X-iV-ueN"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="YKF-3s-2wG"/>
+                                <exclude reference="z2X-iV-ueN"/>
+                            </mask>
+                        </variation>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="LFL-u4-62U" firstAttribute="centerY" secondItem="yCW-7h-GDn" secondAttribute="centerY" id="4ji-4S-aMw"/>
-                    <constraint firstItem="LFL-u4-62U" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="7xx-hK-shr"/>
-                    <constraint firstAttribute="trailing" secondItem="yCW-7h-GDn" secondAttribute="trailing" constant="10" id="NOZ-IE-wvm"/>
-                    <constraint firstAttribute="bottom" secondItem="LFL-u4-62U" secondAttribute="bottom" constant="5" id="yfc-yP-V3u"/>
-                    <constraint firstItem="LFL-u4-62U" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="zhH-UC-bkJ"/>
+                    <constraint firstItem="3pa-MM-znk" firstAttribute="top" secondItem="yn0-Hj-7bl" secondAttribute="bottom" id="6SQ-5O-dmB"/>
+                    <constraint firstAttribute="trailing" secondItem="yn0-Hj-7bl" secondAttribute="trailing" id="IaH-JF-ZJj"/>
+                    <constraint firstItem="3pa-MM-znk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Ijh-gH-a8q"/>
+                    <constraint firstAttribute="bottom" secondItem="3pa-MM-znk" secondAttribute="bottom" id="KIN-la-Qh2"/>
+                    <constraint firstAttribute="trailing" secondItem="3pa-MM-znk" secondAttribute="trailing" id="MXI-dW-xMm"/>
+                    <constraint firstItem="yn0-Hj-7bl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="NJU-bu-xpr"/>
+                    <constraint firstItem="yn0-Hj-7bl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="fUa-5Z-rnQ"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="cellDescription" destination="LFL-u4-62U" id="sLu-qn-9Tb"/>
                 <outlet property="cellImage" destination="yCW-7h-GDn" id="erl-QJ-BYj"/>
+                <outlet property="secondHeader" destination="QED-6L-l3t" id="7wM-UO-gOK"/>
+                <outlet property="textBody" destination="0cy-Jc-FjW" id="heg-FH-DAg"/>
             </connections>
-            <point key="canvasLocation" x="322.5" y="452.5"/>
+            <point key="canvasLocation" x="322.5" y="737.5"/>
         </tableViewCell>
     </objects>
 </document>

@@ -27,13 +27,11 @@ class DoctorDetailInfoCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        bannerImageOriginalFrame = bannerImage.frame
+        self.selectionStyle = UITableViewCellSelectionStyle.None;
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     func fillWithProject(project: Project) {
@@ -49,9 +47,13 @@ class DoctorDetailInfoCell: UITableViewCell {
         leftCircleTitleView.setWithImageAndTitle(UIImage(named: "map-marker")!, title: project.location!)
         rightCircleTitleView.setWithImageStringAndTitle(project.treatmentImage!, title: project.treatmentName!)
     }
-
     
     func increaseBannerSizeByRatio(ratio: CGFloat) {
+        if bannerImageOriginalFrame == nil {
+            bannerImageOriginalFrame = bannerImage.frame
+        }
+        
+        
         var newWidth =  ratio * bannerImageOriginalFrame!.width
         var newHeight = ratio * bannerImageOriginalFrame!.height
         var newXorigin =  bannerImageOriginalFrame!.origin.x - (newWidth - bannerImageOriginalFrame!.width)/2  // To keep it centered
@@ -60,11 +62,10 @@ class DoctorDetailInfoCell: UITableViewCell {
     }
     
     func animateBannerBackToNormal() {
-        UIView.animateWithDuration(0.1, animations: {
-            self.bannerImage.frame = self.bannerImageOriginalFrame!
+        UIView.animateWithDuration(0.2, animations: {
+            if let bof = self.bannerImageOriginalFrame {
+                self.bannerImage.frame = bof
+            }            
         })
-        
     }
-    
-
 }

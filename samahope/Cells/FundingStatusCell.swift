@@ -18,6 +18,7 @@ class FundingStatusCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.selectionStyle = UITableViewCellSelectionStyle.None;
         self.backgroundColor = UIColor(red: 0.976, green: 0.973, blue: 0.969, alpha: 1.0)
         self.progressBar.backgroundColor = UIColor(red: 0.949, green: 0.941, blue: 0.929, alpha:1.0)
     }

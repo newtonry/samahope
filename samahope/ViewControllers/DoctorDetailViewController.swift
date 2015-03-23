@@ -12,12 +12,15 @@ class DoctorDetailViewController: UIViewController, UITableViewDataSource, UITab
     
     var project: Project?
     
-    
     @IBOutlet weak var donateButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     private var scrollingAtTop: Bool = false
     private var scrollingPoint: CGPoint?
     private var doctorDescriptionCell: DoctorDetailInfoCell?
+    private var expandedCells: [Int:Bool] = [:]
+    
+    private var expandableCells = [2, 3, 4] // this is a pretty silly way, but works for now.
+    let BASE_CELLS_COUNT = 4 // doctordetailinfocell, funding cell, moredoctordetailcell, treatment
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,22 +28,8 @@ class DoctorDetailViewController: UIViewController, UITableViewDataSource, UITab
         tableView.dataSource = self
         tableView.delegate = self
         tableView.separatorStyle = UITableViewCellSeparatorStyle.None;
-        tableView.allowsSelection = false;
         tableView.alwaysBounceVertical = false;
-        
         setupGestureRecognizer()
-        
-    }
-
-    func setupGestureRecognizer() {
-        let recognizer = UIPanGestureRecognizer(target: self, action: "beingPulled:")
-        recognizer.delegate = self
-        self.tableView.addGestureRecognizer(recognizer)
-    }
-    
-    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
-        // This is here so that the gesture recognizer doesn't block the table view scrolling
-        return true
     }
     
     @IBAction func onBackButtonPress(sender: UIButton) {
@@ -69,19 +58,20 @@ class DoctorDetailViewController: UIViewController, UITableViewDataSource, UITab
             let cellNib = UINib(nibName: "MoreDoctorDetailCell", bundle: nil)
             tableView.registerNib(cellNib, forCellReuseIdentifier: "MoreDoctorDetailCell")
             let cell = tableView.dequeueReusableCellWithIdentifier("MoreDoctorDetailCell") as MoreDoctorDetailCell
-            cell.fillWithDescriptionAndImage("About \(project!.doctorName!)", imageUrlString: project!.doctorImage!)
+            cell.fillWithDescriptionAndImage("About \(project!.doctorName!)", imageUrlString: project!.doctorImage!, secondHeader: "Over 15,000 babies delivered", textBody: project!.doctorBio!)
             return cell
         case 3:
             let cellNib = UINib(nibName: "MoreDoctorDetailCell", bundle: nil)
             tableView.registerNib(cellNib, forCellReuseIdentifier: "MoreDoctorDetailCell")
             let cell = tableView.dequeueReusableCellWithIdentifier("MoreDoctorDetailCell") as MoreDoctorDetailCell
-            cell.fillWithDescriptionAndImage("About the treatment", imageUrlString: project!.treatmentImage!)
+            cell.fillWithDescriptionAndImage("About the treatment", imageUrlString: project!.treatmentImage!, secondHeader: project!.treatmentName!, textBody: project!.treatmentDescription!)
             return cell
-        case 4:
+        case 4: // I guess there's no >= in case statements
             let cellNib = UINib(nibName: "MoreDoctorDetailCell", bundle: nil)
             tableView.registerNib(cellNib, forCellReuseIdentifier: "MoreDoctorDetailCell")
+            let story = project!.storiesToObjects()[0] // just showing 1 story for now
             let cell = tableView.dequeueReusableCellWithIdentifier("MoreDoctorDetailCell") as MoreDoctorDetailCell
-            cell.fillWithDescriptionAndImage("Patient Stories", imageUrlString: project!.treatmentImage!)
+            cell.fillWithDescriptionAndImage("Patient Stories", imageUrlString: story.image, secondHeader: story.patients, textBody: story.content)
             return cell
         default:
             let cell = tableView.dequeueReusableCellWithIdentifier("DoctorDetailInfoCell") as DoctorDetailInfoCell
@@ -99,19 +89,61 @@ class DoctorDetailViewController: UIViewController, UITableViewDataSource, UITab
         case 1:
             return 135
         case 2:
-            return 65
+            if let hasKey = expandedCells[indexPath.row] {
+                return UITableViewAutomaticDimension
+            }
+            return 150
         case 3:
-            return 65
+            if let hasKey = expandedCells[indexPath.row] {
+                return UITableViewAutomaticDimension
+            }
+            return 150
         case 4:
-            return 65
-
+            if let hasKey = expandedCells[indexPath.row] {
+                return UITableViewAutomaticDimension
+            }
+            return 150
         default:
             return 0
         }
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if contains(expandableCells, indexPath.row) {
+            expandedCells[indexPath.row] = true
+            tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.None)
+        }
+    }
+    
     func setProject(project: Project) {
         self.project = project
+    }
+    
+    @IBAction func onDonate(sender: AnyObject) {
+        
+        self.project!.storiesToObjects()
+        
+        
+        
+        var storyboard: UIStoryboard = UIStoryboard(name: "Isaac", bundle: nil)
+        var vc = storyboard.instantiateViewControllerWithIdentifier("DonateViewController") as DonateViewController
+        vc.project = project
+        self.showViewController(vc, sender: self)
+
+    }
+    
+    /////////////////////////////
+    //Image zoom
+    /////////////////////////////
+    func setupGestureRecognizer() {
+        let recognizer = UIPanGestureRecognizer(target: self, action: "beingPulled:")
+        recognizer.delegate = self
+        self.tableView.addGestureRecognizer(recognizer)
+    }
+    
+    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        // This is here so that the gesture recognizer doesn't block the table view scrolling
+        return true
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
@@ -123,10 +155,12 @@ class DoctorDetailViewController: UIViewController, UITableViewDataSource, UITab
             }
         }
     }
-
+    
     func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         self.scrollingAtTop = false
-        println("Ended scrolling")
+        if let ddc = self.doctorDescriptionCell {
+            ddc.animateBannerBackToNormal()
+        }
     }
     
     func beingPulled(sender: UIPanGestureRecognizer) {
@@ -139,11 +173,8 @@ class DoctorDetailViewController: UIViewController, UITableViewDataSource, UITab
             let location = sender.locationInView(self.view)
             if let point = scrollingPoint {
                 let pointDifference = location.y - scrollingPoint!.y
-
                 if pointDifference > 0 {
-                    
                     let newRatio = (100.0 + pointDifference * 0.5)/100
-                    
                     if let ddc = self.doctorDescriptionCell {
                         ddc.increaseBannerSizeByRatio(newRatio)
                     }
@@ -156,22 +187,8 @@ class DoctorDetailViewController: UIViewController, UITableViewDataSource, UITab
             if let ddc = self.doctorDescriptionCell {
                 ddc.animateBannerBackToNormal()
             }
-
         default:
-            NSLog("An unimportant state")
+            return
         }
-    }
-    
-    @IBAction func onDonate(sender: AnyObject) {
-        var storyboard: UIStoryboard = UIStoryboard(name: "Isaac", bundle: nil)
-        var vc = storyboard.instantiateViewControllerWithIdentifier("DonateViewController") as DonateViewController
-        vc.project = project
-        self.showViewController(vc, sender: self)
-
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }

@@ -42,7 +42,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="503"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DoctorDetailInfoCell" rowHeight="359" id="cAw-ls-Dfk" customClass="DoctorDetailInfoCell" customModule="samahope" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DoctorDetailInfoCell" rowHeight="359" id="cAw-ls-Dfk" customClass="DoctorDetailInfoCell" customModule="samahope" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cAw-ls-Dfk" id="Mtn-TS-IpW">
@@ -81,86 +81,98 @@
                                                         <constraint firstAttribute="height" constant="75" id="rIW-dP-7qu"/>
                                                     </constraints>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dhl-ns-CiY" customClass="CircleTitleView" customModule="samahope" customModuleProvider="target">
-                                                    <rect key="frame" x="15" y="222" width="150" height="90"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J7A-rs-8T9">
+                                                    <rect key="frame" x="0.0" y="214" width="320" height="144"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ENJ-x7-G89">
-                                                            <rect key="frame" x="55" y="5" width="41" height="41"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="41" id="JsQ-Xb-3JZ"/>
-                                                                <constraint firstAttribute="height" constant="41" id="n9d-5s-ZS1"/>
-                                                            </constraints>
-                                                        </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2bA-aQ-q77">
-                                                            <rect key="frame" x="29" y="49" width="93" height="46"/>
-                                                            <string key="text">Bo, Siera Leone
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dhl-ns-CiY" customClass="CircleTitleView" customModule="samahope" customModuleProvider="target">
+                                                            <rect key="frame" x="10" y="0.0" width="150" height="144"/>
+                                                            <subviews>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ENJ-x7-G89">
+                                                                    <rect key="frame" x="55" y="5" width="41" height="41"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="41" id="JsQ-Xb-3JZ"/>
+                                                                        <constraint firstAttribute="height" constant="41" id="n9d-5s-ZS1"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2bA-aQ-q77">
+                                                                    <rect key="frame" x="29" y="49" width="93" height="46"/>
+                                                                    <string key="text">Bo, Siera Leone
 
 </string>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
-                                                            <color key="textColor" red="0.41568630933761597" green="0.36862745881080627" blue="0.31764706969261169" alpha="1" colorSpace="deviceRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
+                                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                                                    <color key="textColor" red="0.41568630933761597" green="0.36862745881080627" blue="0.31764706969261169" alpha="1" colorSpace="deviceRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <constraints>
+                                                                <constraint firstItem="2bA-aQ-q77" firstAttribute="top" secondItem="ENJ-x7-G89" secondAttribute="bottom" constant="3" id="IIq-yx-QdI"/>
+                                                                <constraint firstItem="ENJ-x7-G89" firstAttribute="top" secondItem="dhl-ns-CiY" secondAttribute="top" constant="5" id="Jmw-rX-X4H"/>
+                                                                <constraint firstAttribute="width" constant="150" id="PFn-PN-U3L"/>
+                                                                <constraint firstAttribute="centerX" secondItem="ENJ-x7-G89" secondAttribute="centerX" id="PwA-M4-fiy"/>
+                                                                <constraint firstAttribute="centerX" secondItem="2bA-aQ-q77" secondAttribute="centerX" id="XFT-6j-Y25"/>
+                                                            </constraints>
+                                                            <connections>
+                                                                <outlet property="circleImage" destination="ENJ-x7-G89" id="HNc-b1-Let"/>
+                                                                <outlet property="title" destination="2bA-aQ-q77" id="vzd-t2-5PR"/>
+                                                            </connections>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="viF-I4-pbR" customClass="CircleTitleView" customModule="samahope" customModuleProvider="target">
+                                                            <rect key="frame" x="160" y="0.0" width="150" height="144"/>
+                                                            <subviews>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xsM-Ji-MHU">
+                                                                    <rect key="frame" x="55" y="5" width="41" height="41"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="41" id="NaL-09-nLL"/>
+                                                                        <constraint firstAttribute="width" constant="41" id="oPF-zN-Fen"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2pC-Zk-fyT">
+                                                                    <rect key="frame" x="29" y="49" width="93" height="46"/>
+                                                                    <string key="text">Bo, Siera Leone
+
+</string>
+                                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                                                    <color key="textColor" red="0.4156863093" green="0.36862745879999997" blue="0.31764706970000001" alpha="1" colorSpace="deviceRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="150" id="AjB-Os-90f"/>
+                                                                <constraint firstItem="2pC-Zk-fyT" firstAttribute="top" secondItem="xsM-Ji-MHU" secondAttribute="bottom" constant="3" id="E6A-5N-rWW"/>
+                                                                <constraint firstAttribute="centerX" secondItem="xsM-Ji-MHU" secondAttribute="centerX" id="eUG-nV-ncR"/>
+                                                                <constraint firstAttribute="centerX" secondItem="2pC-Zk-fyT" secondAttribute="centerX" id="eah-Zn-HcW"/>
+                                                                <constraint firstItem="xsM-Ji-MHU" firstAttribute="top" secondItem="viF-I4-pbR" secondAttribute="top" constant="5" id="oRq-7f-vTu"/>
+                                                            </constraints>
+                                                            <connections>
+                                                                <outlet property="circleImage" destination="xsM-Ji-MHU" id="ONu-8G-scL"/>
+                                                                <outlet property="title" destination="2pC-Zk-fyT" id="cR0-3p-1fe"/>
+                                                            </connections>
+                                                        </view>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="150" id="Gxm-1V-r0U"/>
-                                                        <constraint firstItem="2bA-aQ-q77" firstAttribute="top" secondItem="ENJ-x7-G89" secondAttribute="bottom" constant="3" id="IIq-yx-QdI"/>
-                                                        <constraint firstItem="ENJ-x7-G89" firstAttribute="top" secondItem="dhl-ns-CiY" secondAttribute="top" constant="5" id="Jmw-rX-X4H"/>
-                                                        <constraint firstAttribute="centerX" secondItem="ENJ-x7-G89" secondAttribute="centerX" id="PwA-M4-fiy"/>
-                                                        <constraint firstAttribute="centerX" secondItem="2bA-aQ-q77" secondAttribute="centerX" id="XFT-6j-Y25"/>
-                                                        <constraint firstAttribute="height" constant="90" id="dSn-Ax-5K4"/>
+                                                        <constraint firstAttribute="bottom" secondItem="dhl-ns-CiY" secondAttribute="bottom" id="5mF-Mm-N5w"/>
+                                                        <constraint firstAttribute="bottom" secondItem="viF-I4-pbR" secondAttribute="bottom" id="YnR-PX-mpe"/>
+                                                        <constraint firstItem="dhl-ns-CiY" firstAttribute="top" secondItem="J7A-rs-8T9" secondAttribute="top" id="Z88-lN-5Ff"/>
+                                                        <constraint firstItem="viF-I4-pbR" firstAttribute="top" secondItem="J7A-rs-8T9" secondAttribute="top" id="g1D-ZL-n1q"/>
+                                                        <constraint firstAttribute="trailing" secondItem="viF-I4-pbR" secondAttribute="trailing" constant="10" id="k9R-wC-vIq"/>
+                                                        <constraint firstItem="dhl-ns-CiY" firstAttribute="leading" secondItem="J7A-rs-8T9" secondAttribute="leading" constant="10" id="pXv-TH-M68"/>
                                                     </constraints>
-                                                    <connections>
-                                                        <outlet property="circleImage" destination="ENJ-x7-G89" id="HNc-b1-Let"/>
-                                                        <outlet property="title" destination="2bA-aQ-q77" id="vzd-t2-5PR"/>
-                                                    </connections>
-                                                </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="viF-I4-pbR" customClass="CircleTitleView" customModule="samahope" customModuleProvider="target">
-                                                    <rect key="frame" x="155" y="222" width="150" height="90"/>
-                                                    <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xsM-Ji-MHU">
-                                                            <rect key="frame" x="55" y="5" width="41" height="41"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="41" id="NaL-09-nLL"/>
-                                                                <constraint firstAttribute="width" constant="41" id="oPF-zN-Fen"/>
-                                                            </constraints>
-                                                        </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2pC-Zk-fyT">
-                                                            <rect key="frame" x="29" y="49" width="93" height="46"/>
-                                                            <string key="text">Bo, Siera Leone
-
-</string>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
-                                                            <color key="textColor" red="0.4156863093" green="0.36862745879999997" blue="0.31764706970000001" alpha="1" colorSpace="deviceRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="150" id="9lT-Vg-HqC"/>
-                                                        <constraint firstItem="2pC-Zk-fyT" firstAttribute="top" secondItem="xsM-Ji-MHU" secondAttribute="bottom" constant="3" id="E6A-5N-rWW"/>
-                                                        <constraint firstAttribute="centerX" secondItem="xsM-Ji-MHU" secondAttribute="centerX" id="eUG-nV-ncR"/>
-                                                        <constraint firstAttribute="centerX" secondItem="2pC-Zk-fyT" secondAttribute="centerX" id="eah-Zn-HcW"/>
-                                                        <constraint firstItem="xsM-Ji-MHU" firstAttribute="top" secondItem="viF-I4-pbR" secondAttribute="top" constant="5" id="oRq-7f-vTu"/>
-                                                        <constraint firstAttribute="height" constant="90" id="wE3-fz-9jS"/>
-                                                    </constraints>
-                                                    <connections>
-                                                        <outlet property="circleImage" destination="xsM-Ji-MHU" id="ONu-8G-scL"/>
-                                                        <outlet property="title" destination="2pC-Zk-fyT" id="cR0-3p-1fe"/>
-                                                    </connections>
                                                 </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="dhl-ns-CiY" firstAttribute="top" secondItem="n38-5i-87O" secondAttribute="bottom" constant="8" id="Jeq-s5-tdi"/>
-                                                <constraint firstAttribute="trailing" secondItem="viF-I4-pbR" secondAttribute="trailing" constant="15" id="apg-CO-1w9"/>
+                                                <constraint firstItem="J7A-rs-8T9" firstAttribute="top" secondItem="n38-5i-87O" secondAttribute="bottom" id="GF2-XU-cd2"/>
+                                                <constraint firstItem="J7A-rs-8T9" firstAttribute="leading" secondItem="Mtn-TS-IpW" secondAttribute="leading" id="U3M-aL-AVk"/>
+                                                <constraint firstAttribute="trailing" secondItem="J7A-rs-8T9" secondAttribute="trailing" id="bKy-Ea-kcX"/>
                                                 <constraint firstItem="n38-5i-87O" firstAttribute="leading" secondItem="Mtn-TS-IpW" secondAttribute="leading" id="bOp-7h-7Hp"/>
                                                 <constraint firstItem="n38-5i-87O" firstAttribute="top" secondItem="Phs-wr-0W2" secondAttribute="bottom" id="e17-35-qKJ"/>
+                                                <constraint firstAttribute="bottom" secondItem="J7A-rs-8T9" secondAttribute="bottom" id="ful-9h-kd7"/>
                                                 <constraint firstItem="Phs-wr-0W2" firstAttribute="leading" secondItem="Mtn-TS-IpW" secondAttribute="leading" id="i1d-87-gEh"/>
-                                                <constraint firstItem="dhl-ns-CiY" firstAttribute="centerY" secondItem="viF-I4-pbR" secondAttribute="centerY" id="jzD-RP-OfE"/>
                                                 <constraint firstAttribute="trailing" secondItem="n38-5i-87O" secondAttribute="trailing" id="nAO-Nq-ORN"/>
                                                 <constraint firstItem="Phs-wr-0W2" firstAttribute="top" secondItem="Mtn-TS-IpW" secondAttribute="top" constant="-5" id="vbN-3u-jOB"/>
                                                 <constraint firstAttribute="trailing" secondItem="Phs-wr-0W2" secondAttribute="trailing" id="y3u-73-wXV"/>
-                                                <constraint firstItem="dhl-ns-CiY" firstAttribute="leading" secondItem="Mtn-TS-IpW" secondAttribute="leading" constant="15" id="ysM-4R-caX"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>

@@ -19,7 +19,7 @@ class Project : PFObject, PFSubclassing {
     @NSManaged var treatmentName: String?
     @NSManaged var treatmentImage: String?
     @NSManaged var treatmentDescription: String?
-    @NSManaged var stories: String?
+    @NSManaged var stories: NSArray?
     @NSManaged var location: String?
     @NSManaged var speakTime: NSDate?
     @NSManaged var amountNeeded: NSNumber?
@@ -32,7 +32,7 @@ class Project : PFObject, PFSubclassing {
             self.registerSubclass()
         }
     }
-
+    
     func loadBannerIntoImageViewAsnync(callback: (UIImage)->Void) {
         let imageView = UIImageView()
         
@@ -54,7 +54,6 @@ class Project : PFObject, PFSubclassing {
         }
     }
     
-    
     class func cropBannerImage(image: UIImage) -> UIImage {
         let size = CGSizeApplyAffineTransform(image.size, CGAffineTransformMakeScale(0.1, 0.1))
         let hasAlpha = false
@@ -68,10 +67,17 @@ class Project : PFObject, PFSubclassing {
         return scaledImage
     }
     
-    
-    
-    
-    
+    func storiesToObjects() -> [Story] {
+        var storiesArray: [Story] = []
+        if let strs = stories as NSArray! {
+            for story in strs {
+                let storyData = story.dataUsingEncoding(NSUTF8StringEncoding)
+                let storyJSON = NSJSONSerialization.JSONObjectWithData(storyData!, options: nil, error: nil) as NSDictionary
+                storiesArray.append(Story(json: storyJSON))
+            }
+        }
+        return storiesArray
+    }
     
     class func parseClassName() -> String! {
         return "Project"
