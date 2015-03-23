@@ -32,6 +32,11 @@ class DoctorDetailViewController: UIViewController, UITableViewDataSource, UITab
         setupGestureRecognizer()
     }
     
+    override func prefersStatusBarHidden() -> Bool {
+        return true;
+    }
+
+    
     @IBAction func onBackButtonPress(sender: UIButton) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
@@ -89,28 +94,33 @@ class DoctorDetailViewController: UIViewController, UITableViewDataSource, UITab
         case 1:
             return 135
         case 2:
-            if let hasKey = expandedCells[indexPath.row] {
-                return UITableViewAutomaticDimension
-            }
-            return 150
+            return self.sizeForPossiblyExpandedCellAtIndexPath(indexPath)
         case 3:
-            if let hasKey = expandedCells[indexPath.row] {
-                return UITableViewAutomaticDimension
-            }
-            return 150
+            return self.sizeForPossiblyExpandedCellAtIndexPath(indexPath)
         case 4:
-            if let hasKey = expandedCells[indexPath.row] {
-                return UITableViewAutomaticDimension
-            }
-            return 150
+            return self.sizeForPossiblyExpandedCellAtIndexPath(indexPath)
         default:
             return 0
         }
     }
     
+
+    func sizeForPossiblyExpandedCellAtIndexPath(indexPath: NSIndexPath) -> CGFloat {
+        if let isExpanded = expandedCells[indexPath.row] {
+            if isExpanded {
+                return UITableViewAutomaticDimension
+            }
+        }
+        return 180
+    }
+
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if contains(expandableCells, indexPath.row) {
-            expandedCells[indexPath.row] = true
+            if let isExpanded = expandedCells[indexPath.row] {
+                expandedCells[indexPath.row] = !isExpanded
+            } else {
+                expandedCells[indexPath.row] = true
+            }
             tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.None)
         }
     }
@@ -120,11 +130,7 @@ class DoctorDetailViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     @IBAction func onDonate(sender: AnyObject) {
-        
         self.project!.storiesToObjects()
-        
-        
-        
         var storyboard: UIStoryboard = UIStoryboard(name: "Isaac", bundle: nil)
         var vc = storyboard.instantiateViewControllerWithIdentifier("DonateViewController") as DonateViewController
         vc.project = project
