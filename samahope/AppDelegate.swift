@@ -27,26 +27,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let ds = UIStoryboard(name: "Isaac", bundle: nil)
         let dvc = ds.instantiateViewControllerWithIdentifier("DoctorTableViewController") as DoctorTableViewController
+        
+        let afs = UIStoryboard(name: "ActivityFeedStoryboard", bundle: nil)
+        let afvc = afs.instantiateViewControllerWithIdentifier("ActivityFeedViewController") as ActivityFeedViewController
 
-        mvc.viewControllers = [pvc, dvc]
+        mvc.viewControllers = [pvc, dvc, afvc]
         mvc.activeViewController = pvc
         
         if let window = self.window {
             window.rootViewController = mvc
-        }
-        
-        
-        
-        
-        
-//
-
-//
-//        let storyboard = UIStoryboard(name: "ProgramStoryboard", bundle: nil)
-//        let programViewController = storyboard.instantiateViewControllerWithIdentifier("ProgramViewController") as ProgramViewController
-//        programViewController.events = events
-//        window?.rootViewController = programViewController
-        
+        }  
 
         return true
     }
