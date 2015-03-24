@@ -70,9 +70,10 @@ class ProgramViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func onDonateButtonCellPress(cell: ProgramTableViewCell) {
-        let storyboard = UIStoryboard(name: "PaymentStoryboard", bundle: nil)
-        let projectVC = storyboard.instantiateInitialViewController() as? UINavigationController
-        self.presentViewController(projectVC!, animated: true, completion: nil)
+        var storyboard: UIStoryboard = UIStoryboard(name: "Isaac", bundle: nil)
+        var vc = storyboard.instantiateViewControllerWithIdentifier("DonateViewController") as DonateViewController
+        vc.project = cell.project!
+        self.showViewController(vc, sender: self)
     }
     
     func onLearnButtonCellPress(cell: ProgramTableViewCell) {

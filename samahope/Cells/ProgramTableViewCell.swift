@@ -31,7 +31,7 @@ class ProgramTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        self.formatter.dateFormat = "EEE MMM d HH:mm:ss Z y"
+        self.formatter.timeStyle = .ShortStyle
         self.topicLabel.preferredMaxLayoutWidth = self.topicLabel.frame.size.width
         self.donateButton.layer.cornerRadius = 2
         self.learnButton.layer.cornerRadius = 2
@@ -48,9 +48,10 @@ class ProgramTableViewCell: UITableViewCell {
     
     func setProgramData() {
         if let p = project {
-//            self.timeLabel.text = formatter.dateFromString(p.speakTime!)
+            self.timeLabel.text = formatter.stringFromDate(p.speakTime!)
             self.topicLabel.text = p.doctorTopic
             self.speakerLabel.text = "Speaker: \(p.doctorName!)"
+            
             let total = p.totalAmount!.integerValue
             let needed = p.amountNeeded!.integerValue
             let amountRaised = total - needed

@@ -10,24 +10,42 @@ import UIKit
 
 class ActivityFeedViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+
+    @IBOutlet weak var eventDonationTotal: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
     var transactions: [Transaction]?
+    var rootEvent: Event?
+    let events = ParseClient.sharedInstance.events
     
     let activityCellId = "ActivityTableViewCell"
+    
+    let formatter = NSNumberFormatter()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.tableView.dataSource = self
         self.tableView.delegate = self
-        self.tableView.estimatedRowHeight = 50
+        self.tableView.estimatedRowHeight = 56
 
         let cellNib = UINib(nibName: activityCellId, bundle: NSBundle.mainBundle())
         tableView.registerNib(cellNib, forCellReuseIdentifier: activityCellId)
+        
+        formatter.numberStyle = NSNumberFormatterStyle.CurrencyStyle
+        formatter.maximumFractionDigits = 0
+        formatter.locale = NSLocale(localeIdentifier: "en_US")
     }
     
     func loadTransactions() {
+        if let e = events {
+            if let event = e[0] as Event? {
+                self.rootEvent = event
+                self.eventDonationTotal.text = formatter.stringFromNumber(rootEvent!.totalDonations!)
+            }
+        }
+        
         ParseClient.sharedInstance.loadTransactions(20) { (newTransactions: [Transaction])
         in
             self.transactions = newTransactions
