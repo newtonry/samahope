@@ -34,7 +34,7 @@ class DonateViewController: UIViewController, UITextFieldDelegate {
     @IBAction func onHalfTap(sender: AnyObject) {
         selectedAmount = halfAmountLabel!.text!.toInt()
         unHighlightAll()
-        halfView.backgroundColor = highlightColor
+        halfCheckImg.hidden = false
         customTextField.resignFirstResponder()
 
     }
@@ -43,31 +43,34 @@ class DonateViewController: UIViewController, UITextFieldDelegate {
         return true;
     }
 
+    @IBOutlet weak var customCheckImg: UIImageView!
+    @IBOutlet weak var completeCheckImg: UIImageView!
     
+    @IBOutlet weak var halfCheckImg: UIImageView!
+    @IBOutlet weak var fullCheckImg: UIImageView!
     @IBAction func onCancel(sender: AnyObject) {
         self.dismissViewControllerAnimated(true){}
     }
     @IBAction func onFullTap(sender: AnyObject) {
         selectedAmount = fullAmountLabel!.text!.toInt()
         unHighlightAll()
-        fullView.backgroundColor = highlightColor
+        fullCheckImg.hidden = false
         customTextField.resignFirstResponder()
 
     }
     @IBAction func onCompleteTap(sender: AnyObject) {
         selectedAmount = completeAmountLabel!.text!.toInt()
         unHighlightAll()
-        completeView.backgroundColor = highlightColor
+        completeCheckImg.hidden = false
         customTextField.resignFirstResponder()
 
     }
     func unHighlightAll()
     {
-        var c = UIColor(red:0.95, green:0.95, blue:0.95, alpha:1.0)
-        customView.backgroundColor = c
-        completeView.backgroundColor = c
-        halfView.backgroundColor = c
-        fullView.backgroundColor = c
+       customCheckImg.hidden = true
+        completeCheckImg.hidden = true
+        halfCheckImg.hidden = true
+        fullCheckImg.hidden = true
     }
     @IBAction func onEditingChanged(sender: AnyObject) {
         var textField = sender as UITextField
@@ -82,7 +85,7 @@ class DonateViewController: UIViewController, UITextFieldDelegate {
     @IBAction func onCustomEditStart(sender: AnyObject) {
         customTextField.text = ""
         unHighlightAll()
-        customView.backgroundColor = highlightColor
+        customCheckImg.hidden = false
     }
     @IBAction func onPay(sender: AnyObject) {
         let request = PKPaymentRequest()
