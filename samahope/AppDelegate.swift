@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var mvc: MenuViewController?
     
     func buildAndSetMainVC() {
-        mvc = self.storyboard.instantiateViewControllerWithIdentifier("MenuViewController") as MenuViewController
+        mvc = self.storyboard.instantiateViewControllerWithIdentifier("MenuViewController") as? MenuViewController
         
         let ps = UIStoryboard(name: "ProgramStoryboard", bundle: nil)
         let pvc = ps.instantiateViewControllerWithIdentifier("ProgramViewController") as ProgramViewController

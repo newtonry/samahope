@@ -90,10 +90,10 @@ class ParseClient {
             query.includeKey("project")
             query.includeKey("event")
             query.limit = numRowsToReturn
-            query.orderByAscending("createdAt")
+            query.orderByDescending("createdAt")
             var errorPtr = NSErrorPointer()
             var txObjects = query.findObjects(errorPtr)
-            var tx = txObjects[0]
+//            var tx = txObjects[0]
             
             callback( txObjects as [Transaction] )
         }
