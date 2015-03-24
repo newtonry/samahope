@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6750" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="jto-Ha-75t">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6735"/>
     </dependencies>
     <scenes>
         <!--Donate View Controller-->
@@ -37,8 +37,8 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
-                                                    <action selector="onCustomEdit:" destination="uCY-F2-fhv" eventType="editingDidEnd" id="HyX-aR-z8C"/>
-                                                    <action selector="onCustomEditStart:" destination="uCY-F2-fhv" eventType="editingDidBegin" id="3t6-H9-9is"/>
+                                                    <action selector="onCustomEditStart:" destination="uCY-F2-fhv" eventType="editingDidBegin" id="vM2-zp-Gjt"/>
+                                                    <action selector="onEditingChanged:" destination="uCY-F2-fhv" eventType="editingChanged" id="wIi-lv-vaI"/>
                                                 </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qha-gb-jhK">
@@ -136,14 +136,14 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="H8R-z6-L3u">
-                                <rect key="frame" x="143" y="439" width="48" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="DB5-66-vKi">
+                                <rect key="frame" x="10" y="10" width="21" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Cancel">
+                                <state key="normal" image="back-button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="onCancel:" destination="uCY-F2-fhv" eventType="touchUpInside" id="Gsv-bP-fVm"/>
+                                    <action selector="onCancel:" destination="uCY-F2-fhv" eventType="touchUpInside" id="fV1-40-yUw"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -162,9 +162,11 @@
                         <outlet property="fullView" destination="sKX-Ji-3MP" id="kbe-tN-Io2"/>
                         <outlet property="halfAmountLabel" destination="ACH-fj-HeW" id="bZZ-pa-n7w"/>
                         <outlet property="halfView" destination="lr7-iy-NNw" id="O3X-1I-9CW"/>
+                        <segue destination="5c5-hs-rRw" kind="unwind" identifier="goHome" unwindAction="returnHere:" id="muI-wI-shV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wBa-zw-PIQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="5c5-hs-rRw" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="VtM-e1-Hj6">
                     <connections>
                         <action selector="onTap:" destination="uCY-F2-fhv" id="SiA-ut-9gy"/>
@@ -247,7 +249,7 @@
                                                     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1000 raised of $1000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DFT-Li-km0">
-                                                    <rect key="frame" x="13" y="78" width="283" height="35"/>
+                                                    <rect key="frame" x="13" y="89" width="283" height="35"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -261,25 +263,25 @@
                                                     <rect key="frame" x="236" y="17" width="44" height="48"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sierra Leone" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Psf-3G-ejM">
-                                                    <rect key="frame" x="13" y="33" width="165" height="31"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
-                                                    <color key="textColor" red="0.81451231060606055" green="0.81451231060606055" blue="0.81451231060606055" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Burn focus" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pTD-rc-ZjO">
-                                                    <rect key="frame" x="13" y="50" width="165" height="31"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="focus" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pTD-rc-ZjO">
+                                                    <rect key="frame" x="13" y="46" width="172" height="19"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                                     <color key="textColor" red="0.81451231059999996" green="0.81451231059999996" blue="0.81451231059999996" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" id="STH-rC-ciU" customClass="FundingProgressBarView" customModule="samahope" customModuleProvider="target">
-                                                    <rect key="frame" x="13" y="109" width="262" height="15"/>
+                                                    <rect key="frame" x="13" y="121" width="262" height="15"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="location" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Psf-3G-ejM">
+                                                    <rect key="frame" x="13" y="64" width="172" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                                    <color key="textColor" red="0.81451231060606055" green="0.81451231060606055" blue="0.81451231060606055" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" red="0.00098642676767679571" green="0.00098177335777907028" blue="0.00096397222990839138" alpha="1" colorSpace="calibratedRGB"/>
                                         </view>
@@ -317,6 +319,7 @@
     </scenes>
     <resources>
         <image name="applePay" width="140" height="46"/>
+        <image name="back-button" width="84" height="129"/>
         <image name="doctor-robert" width="1920" height="810"/>
         <image name="doctor-robert-thumbnail" width="500" height="500"/>
         <image name="icon-trauma" width="120" height="120"/>

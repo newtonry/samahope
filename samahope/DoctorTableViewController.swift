@@ -10,9 +10,16 @@ import UIKit
 
 class DoctorTableViewController: UITableViewController {
     var events = ParseClient.sharedInstance.events
-    
     var doctors: [Doctor]? // internally we use Doctors converted from Projects
     
+    func onRefresh() {
+        ParseClient.sharedInstance.loadEvents() {
+            success in
+            // events have been refreshed
+            self.view.setNeedsDisplay()
+            self.refreshControl!.endRefreshing()
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,6 +35,13 @@ class DoctorTableViewController: UITableViewController {
             doctors!.append( d )
         }
         
+        refreshControl = UIRefreshControl()
+        self.view.addSubview(refreshControl!)
+        refreshControl?.addTarget(self, action:Selector("onRefresh"), forControlEvents: UIControlEvents.ValueChanged)
+        
+    }
+    override func prefersStatusBarHidden() -> Bool {
+        return true;
     }
 
     override func didReceiveMemoryWarning() {

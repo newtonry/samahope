@@ -13,14 +13,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     let storyboard = UIStoryboard(name: "MenuStoryboard", bundle: nil)
-
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-
-        ParseClient.setupParse()
-
-        var events = ParseClient.sharedInstance.events
-
-        let mvc = self.storyboard.instantiateViewControllerWithIdentifier("MenuViewController") as MenuViewController
+    var mvc: MenuViewController?
+    
+    func buildAndSetMainVC() {
+        mvc = self.storyboard.instantiateViewControllerWithIdentifier("MenuViewController") as MenuViewController
         
         let ps = UIStoryboard(name: "ProgramStoryboard", bundle: nil)
         let pvc = ps.instantiateViewControllerWithIdentifier("ProgramViewController") as ProgramViewController
@@ -30,14 +26,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let afs = UIStoryboard(name: "ActivityFeedStoryboard", bundle: nil)
         let afvc = afs.instantiateViewControllerWithIdentifier("ActivityFeedViewController") as ActivityFeedViewController
-
-        mvc.viewControllers = [pvc, dvc, afvc]
-        mvc.activeViewController = pvc
+        
+        mvc!.viewControllers = [pvc, dvc, afvc]
+        mvc!.activeViewController = pvc
         
         if let window = self.window {
             window.rootViewController = mvc
-        }  
+        }
+    }
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
+        ParseClient.setupParse()
+
+        var events = ParseClient.sharedInstance.events
+        
+        buildAndSetMainVC()
         return true
     }
 

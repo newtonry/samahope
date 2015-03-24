@@ -12,9 +12,8 @@ import PassKit
 class DonateViewController: UIViewController, UITextFieldDelegate {
     var project: Project? // XXX previous controller must set this first!
     
-    var treatment: Treatment? // we use treatment instead of project
-    
     var selectedAmount: Int?
+    var bProcessingPayment = false
 
     @IBOutlet weak var fullAmountLabel: UILabel!
     @IBOutlet weak var completeAmountLabel: UILabel!
@@ -33,25 +32,30 @@ class DonateViewController: UIViewController, UITextFieldDelegate {
     var highlightColor = UIColor(red:0.98, green:0.98, blue:0.98, alpha:1.0)
 
     @IBAction func onHalfTap(sender: AnyObject) {
-        selectedAmount = treatment!.cost! / 2
+        selectedAmount = halfAmountLabel!.text!.toInt()
         unHighlightAll()
         halfView.backgroundColor = highlightColor
         customTextField.resignFirstResponder()
 
     }
     
+    override func prefersStatusBarHidden() -> Bool {
+        return true;
+    }
+
+    
     @IBAction func onCancel(sender: AnyObject) {
         self.dismissViewControllerAnimated(true){}
     }
     @IBAction func onFullTap(sender: AnyObject) {
-        selectedAmount = treatment!.cost!
+        selectedAmount = fullAmountLabel!.text!.toInt()
         unHighlightAll()
         fullView.backgroundColor = highlightColor
         customTextField.resignFirstResponder()
 
     }
     @IBAction func onCompleteTap(sender: AnyObject) {
-        selectedAmount = treatment!.amountNeeded!
+        selectedAmount = completeAmountLabel!.text!.toInt()
         unHighlightAll()
         completeView.backgroundColor = highlightColor
         customTextField.resignFirstResponder()
@@ -65,13 +69,11 @@ class DonateViewController: UIViewController, UITextFieldDelegate {
         halfView.backgroundColor = c
         fullView.backgroundColor = c
     }
-    @IBAction func onCustomEdit(sender: AnyObject) {
+    @IBAction func onEditingChanged(sender: AnyObject) {
         var textField = sender as UITextField
-    
-        selectedAmount = textField.text.toInt()
         
-          }
-    
+        selectedAmount = textField.text.toInt()
+    }
     @IBAction func onTap(sender: AnyObject) {
         customTextField.resignFirstResponder()
       
@@ -98,17 +100,23 @@ class DonateViewController: UIViewController, UITextFieldDelegate {
         let applePayController = STPTestPaymentAuthorizationViewController(paymentRequest: request)
         applePayController.delegate = self
 
+    
+        /*self.addChildViewController(applePayController)
+        applePayController.view.bounds = CGRect(x:0,y:-100,width:300,height:300)
+        self.view.addSubview(applePayController.view)
+        applePayController.didMoveToParentViewController(self)
+        */
+        
         self.presentViewController(applePayController, animated: true, completion: nil)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        treatment = Treatment()
-        treatment!.cost = 555
-        treatment!.amountFunded = 222 //(project!.totalAmount! as String).toInt()
-        treatment!.amountNeeded = 999 //(project!.amountNeeded! as String).toInt()
-        
         selectedAmount = Int(0)
+        halfAmountLabel.text = String( Int( project!.totalAmount! ) / 2 )
+        fullAmountLabel.text = String( Int( project!.totalAmount! ))
+        completeAmountLabel.text = String( Int( project!.amountNeeded! ))
+        
         // Do any additional setup after loading the view.
         println( "DonateVC: viewDidLoad")
         customTextField.keyboardType = UIKeyboardType.NumberPad
@@ -137,39 +145,38 @@ class DonateViewController: UIViewController, UITextFieldDelegate {
 }
 
 extension DonateViewController: PKPaymentAuthorizationViewControllerDelegate {
+    // huge hack!  should refactor with appDelegate which builds and shows the same VC
+    func goToMainVC() {
+        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        self.presentViewController(appDelegate.mvc!, animated:true, completion:nil)
+    }
     func paymentAuthorizationViewController(controller: PKPaymentAuthorizationViewController!, didAuthorizePayment payment: PKPayment!, completion: ((PKPaymentAuthorizationStatus) -> Void)!) {
         
+        bProcessingPayment = true
         println( "payment auth complete: saving objects to db" )
         ParseClient.sharedInstance.processPayment( selectedAmount!, project: project!, event: ParseClient.sharedInstance.events![0])
 
+        var confirmMessage = "$\(selectedAmount!) to \(project!.doctorName!) has been processed.  Thank you!"
+        
+        
+        let actionSheetController: UIAlertController = UIAlertController(title: "Payment confirmed", message: confirmMessage, preferredStyle: .ActionSheet)
+        var action = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) { (UIAlertAction) -> Void in
+            println( "dismissing self")
+            
+            self.performSegueWithIdentifier("goHome", sender: self)
+        }
+        actionSheetController.addAction( action )
+        
+        controller.presentViewController(actionSheetController, animated: true, completion: nil)
 
         
         completion(PKPaymentAuthorizationStatus.Success)
 
     }
-    
     func paymentAuthorizationViewControllerDidFinish(controller: PKPaymentAuthorizationViewController!) {
-        
         // popup confirmation screen?
-        let actionSheetController: UIAlertController = UIAlertController(title: "Payment confirmed", message: "Thank you!", preferredStyle: .ActionSheet)
-        
-        //Create and add the Cancel action
-        let cancelAction: UIAlertAction = UIAlertAction(title: "Ok", style: .Cancel) { action -> Void in
-            //Just dismiss the action sheet
-        }
-        actionSheetController.addAction(cancelAction)
-        //Create and add first option action
-        let takePictureAction: UIAlertAction = UIAlertAction(title: "Take Picture", style: .Default) { action -> Void in
-            //Code for launching the camera goes here
-        }
-        
-        //Present the AlertController
-        self.presentViewController(actionSheetController, animated: true, completion: nil)
-        
-        controller.dismissViewControllerAnimated(true, completion: nil)
-    
-        
-
+        if ( !bProcessingPayment ) { controller.dismissViewControllerAnimated(true, completion: nil ) }
+        bProcessingPayment = false
     }
 }
 

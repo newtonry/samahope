@@ -22,6 +22,10 @@ class MenuViewController: UIViewController {
     
     let menuTxtColor = UIColor(red: CGFloat(171/255.0), green: CGFloat(165/255.0), blue: CGFloat(157/255.0), alpha: 1)
     
+    @IBAction func returnHere(segue:UIStoryboardSegue) {
+        println("returned to home")
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
