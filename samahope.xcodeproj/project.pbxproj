@@ -43,6 +43,7 @@
 		C5C11DC81AB604720048E0D6 /* CircleTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C11DC71AB604720048E0D6 /* CircleTitleView.swift */; };
 		C5C11DCA1AB613090048E0D6 /* CircleTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5C11DC91AB613090048E0D6 /* CircleTitleView.xib */; };
 		C5C11DCC1AB619770048E0D6 /* FundingStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C11DCB1AB619770048E0D6 /* FundingStatusView.swift */; };
+		C5D75E8A1AC0924E00EDB527 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D75E891AC0924E00EDB527 /* Story.swift */; };
 		C5DD150E1AAE716F00F116A6 /* ProjectStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5DD150D1AAE716F00F116A6 /* ProjectStoryboard.storyboard */; };
 		EB957D0E1AAA700F007037A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB957D0D1AAA700F007037A6 /* AppDelegate.swift */; };
 		EB957D131AAA700F007037A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB957D111AAA700F007037A6 /* Main.storyboard */; };
@@ -105,6 +106,7 @@
 		C5C11DC71AB604720048E0D6 /* CircleTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircleTitleView.swift; path = Views/CircleTitleView.swift; sourceTree = SOURCE_ROOT; };
 		C5C11DC91AB613090048E0D6 /* CircleTitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CircleTitleView.xib; path = Interfaces/CircleTitleView.xib; sourceTree = "<group>"; };
 		C5C11DCB1AB619770048E0D6 /* FundingStatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FundingStatusView.swift; path = Views/FundingStatusView.swift; sourceTree = SOURCE_ROOT; };
+		C5D75E891AC0924E00EDB527 /* Story.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Story.swift; path = samahope/Story.swift; sourceTree = "<group>"; };
 		C5DD150D1AAE716F00F116A6 /* ProjectStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ProjectStoryboard.storyboard; path = ../Interfaces/ProjectStoryboard.storyboard; sourceTree = "<group>"; };
 		EB957D081AAA700F007037A6 /* samahope.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = samahope.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB957D0C1AAA700F007037A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 		EB957CFF1AAA700F007037A6 = {
 			isa = PBXGroup;
 			children = (
+				C5D75E891AC0924E00EDB527 /* Story.swift */,
 				EB957D581AAA7956007037A6 /* TODO */,
 				EB957D0A1AAA700F007037A6 /* samahope */,
 				EB957D201AAA700F007037A6 /* samahopeTests */,
@@ -475,6 +478,7 @@
 				EB957D511AAA7501007037A6 /* ParseClient.swift in Sources */,
 				C5B5E0171AB646500082A65E /* FundingStatusCell.swift in Sources */,
 				C52E48651ABA76F600620E43 /* FundingProgressBarView.swift in Sources */,
+				C5D75E8A1AC0924E00EDB527 /* Story.swift in Sources */,
 				C516032D1AAFA62A0044799D /* PaymentTableViewCell.swift in Sources */,
 				C5B5E0141AB63FF70082A65E /* DoctorDetailInfoCell.swift in Sources */,
 				EBF30B3B1ABCCB7100F53E33 /* PaymentConfirmationViewController.swift in Sources */,

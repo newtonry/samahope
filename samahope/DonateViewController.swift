@@ -40,6 +40,9 @@ class DonateViewController: UIViewController, UITextFieldDelegate {
 
     }
     
+    @IBAction func onCancel(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true){}
+    }
     @IBAction func onFullTap(sender: AnyObject) {
         selectedAmount = treatment!.cost!
         unHighlightAll()
@@ -139,18 +142,34 @@ extension DonateViewController: PKPaymentAuthorizationViewControllerDelegate {
         println( "payment auth complete: saving objects to db" )
         ParseClient.sharedInstance.processPayment( selectedAmount!, project: project!, event: ParseClient.sharedInstance.events![0])
 
+
+        
         completion(PKPaymentAuthorizationStatus.Success)
 
     }
     
     func paymentAuthorizationViewControllerDidFinish(controller: PKPaymentAuthorizationViewController!) {
-        controller.dismissViewControllerAnimated(true, completion: nil)
         
-        // go to confirmation screen
-        let cs = UIStoryboard(name: "Isaac", bundle: nil)
-        let cvc = cs.instantiateViewControllerWithIdentifier("PaymentConfirmationViewController") as UIViewController
+        // popup confirmation screen?
+        let actionSheetController: UIAlertController = UIAlertController(title: "Payment confirmed", message: "Thank you!", preferredStyle: .ActionSheet)
+        
+        //Create and add the Cancel action
+        let cancelAction: UIAlertAction = UIAlertAction(title: "Ok", style: .Cancel) { action -> Void in
+            //Just dismiss the action sheet
+        }
+        actionSheetController.addAction(cancelAction)
+        //Create and add first option action
+        let takePictureAction: UIAlertAction = UIAlertAction(title: "Take Picture", style: .Default) { action -> Void in
+            //Code for launching the camera goes here
+        }
+        
+        //Present the AlertController
+        self.presentViewController(actionSheetController, animated: true, completion: nil)
+        
+        controller.dismissViewControllerAnimated(true, completion: nil)
+    
+        
 
-        controller.showViewController(cvc, sender: self)
     }
 }
 

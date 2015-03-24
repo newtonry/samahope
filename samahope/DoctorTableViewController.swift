@@ -58,16 +58,15 @@ class DoctorTableViewController: UITableViewController {
         vc.setProject( projects[ indexPath.row ])
         self.showViewController(vc, sender: self)
     }
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("com.codepath.doctortableviewcell", forIndexPath: indexPath) as DoctorTableViewCell
 
         // Configure the cell...
         cell.setDoctor( doctors![ indexPath.row ] )
         cell.setNeedsDisplay()
-        
         return cell
     }
-    
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
