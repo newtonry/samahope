@@ -17,7 +17,7 @@ class ActivityFeedViewController: UIViewController, UITableViewDataSource, UITab
     var transactions: [Transaction]?
     var rootEvent: Event?
     let events = ParseClient.sharedInstance.events
-    
+    let EVENTS_POLLING_INTERVAL = 5
     let activityCellId = "ActivityTableViewCell"
     
     let formatter = NSNumberFormatter()
@@ -36,6 +36,13 @@ class ActivityFeedViewController: UIViewController, UITableViewDataSource, UITab
         formatter.numberStyle = NSNumberFormatterStyle.CurrencyStyle
         formatter.maximumFractionDigits = 0
         formatter.locale = NSLocale(localeIdentifier: "en_US")
+        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+        dispatch_async(dispatch_get_global_queue(priority, 0)) {
+            while( true ) {
+                sleep( UInt32(self.EVENTS_POLLING_INTERVAL) )
+                self.loadTransactions()
+            }
+        }
     }
     
     func loadTransactions() {

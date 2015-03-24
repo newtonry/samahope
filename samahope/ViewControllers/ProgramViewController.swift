@@ -18,23 +18,14 @@ class ProgramViewController: UIViewController, UITableViewDataSource, UITableVie
     var rootEvent: Event?
     var projects: [Project]?
     var startTime: NSDate?
-    
-    let events = ParseClient.sharedInstance.events
+    var EVENTS_POLLING_INTERVAL = 5
+
+    var events : [Event]?
     let programCellId = "ProgramTableViewCell"
     let formatter = NSNumberFormatter()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        self.tableView.dataSource = self
-        self.tableView.delegate = self
-        self.tableView.estimatedRowHeight = 215
-        
-        
-        formatter.numberStyle = NSNumberFormatterStyle.CurrencyStyle
-        formatter.maximumFractionDigits = 0
-        formatter.locale = NSLocale(localeIdentifier: "en_US")
-        
+    func updateEvents() {
+        events = ParseClient.sharedInstance.events
         if let e = events {
             if let event = e[0] as Event? {
                 self.rootEvent = event
@@ -45,8 +36,35 @@ class ProgramViewController: UIViewController, UITableViewDataSource, UITableVie
                 self.eventDonationTotal.text = formatter.stringFromNumber(rootEvent!.totalDonations!)
             }
         }
+        self.view.setNeedsDisplay()
+
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
+        self.tableView.estimatedRowHeight = 215
+        
+        formatter.numberStyle = NSNumberFormatterStyle.CurrencyStyle
+        formatter.maximumFractionDigits = 0
+        formatter.locale = NSLocale(localeIdentifier: "en_US")
+
+        updateEvents()
+
         let cellNib = UINib(nibName: programCellId, bundle: NSBundle.mainBundle())
         tableView.registerNib(cellNib, forCellReuseIdentifier: programCellId)
+
+        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+        dispatch_async(dispatch_get_global_queue(priority, 0)) {
+            while( true ) {
+                sleep( UInt32(self.EVENTS_POLLING_INTERVAL) )
+                ParseClient.sharedInstance.loadEvents() {
+                    bSuccess in
+                    self.updateEvents()
+                }
+            }
+        }
     }
     
     func tableView(tableView: UITableView, shouldHighlightRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -66,7 +84,7 @@ class ProgramViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return rootEvent!.projects.count
     }
     
     func onDonateButtonCellPress(cell: ProgramTableViewCell) {
