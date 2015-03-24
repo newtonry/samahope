@@ -22,12 +22,10 @@ class DoctorTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         doctors = [Doctor]()
-        for ( var i = 0; i < events!.count; i++ ) {
-            var e = events![ i ]
-            for ( var j = 0; j < e.projects.count; j++ ) {
-                var d = Doctor( p:e.projects[j])
-                doctors!.append( d )
-            }
+        var projects = ParseClient.sharedInstance.projects
+        for ( var j = 0; j < projects!.count; j++ ) {
+            var d = Doctor( p:projects![j])
+            doctors!.append( d )
         }
         
     }
@@ -54,8 +52,7 @@ class DoctorTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         var storyboard: UIStoryboard = UIStoryboard(name: "DoctorDetailView", bundle: nil)
         var vc = storyboard.instantiateViewControllerWithIdentifier("DoctorDetailViewController") as DoctorDetailViewController
-        var projects = events![0].projects
-        vc.setProject( projects[ indexPath.row ])
+        vc.setProject( ParseClient.sharedInstance.projects![ indexPath.row ] )
         self.showViewController(vc, sender: self)
     }
     
@@ -72,10 +69,10 @@ class DoctorTableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using [segue destinationViewController].
         // Pass the selected object to the new view controller.
-        var destVc = segue.destinationViewController as DonateViewController
+        /*var destVc = segue.destinationViewController as DonateViewController
         var event = events![0]
         destVc.project = event.projects[0] // XXX I'm just hard-coding the first one, but you should send in the one you want!
-        
+        */
     }
     
 
