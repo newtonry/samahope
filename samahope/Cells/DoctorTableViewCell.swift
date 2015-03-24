@@ -20,9 +20,6 @@ class DoctorTableViewCell: UITableViewCell {
     @IBOutlet weak var locationLabel: UILabel!
     
 
-    @IBAction func onPayClick(sender: AnyObject) {
-    }
-    
     private var doctor: Doctor?
     
     func setDoctor( newDoctor: Doctor ) {
@@ -38,7 +35,6 @@ class DoctorTableViewCell: UITableViewCell {
         let url = NSURL(string: doctor!.bannerPicUrl! )
         
         doctorMainImageView.setImageWithURL(url)
-
         
         let url2 = NSURL(string: doctor!.thumbnailPicUrl! )
         doctorThumbnailView.setImageWithURL(url2)
@@ -55,6 +51,10 @@ class DoctorTableViewCell: UITableViewCell {
         println( "tableViewCell.awakeFromNib")
 
         super.awakeFromNib()
+
+        self.selectionStyle = UITableViewCellSelectionStyle.None;
+        
+        
         // Initialization code
         
     }

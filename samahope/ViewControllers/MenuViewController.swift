@@ -44,6 +44,10 @@ class MenuViewController: UIViewController {
 
         setCurrentButton(programButton)
     }
+
+    override func prefersStatusBarHidden() -> Bool {
+        return true;
+    }    
     
     func onProgramTap() {
         activeViewController = viewControllers[0]
