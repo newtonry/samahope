@@ -70,6 +70,8 @@ class DoctorTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("com.codepath.doctortableviewcell", forIndexPath: indexPath) as DoctorTableViewCell
 
+        cell.doctorMainImageView.alpha = 0
+        
         // Configure the cell...
         cell.setDoctor( doctors![ indexPath.row ] )
         cell.setNeedsDisplay()
@@ -79,8 +81,6 @@ class DoctorTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 180
     }
-    
-    
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

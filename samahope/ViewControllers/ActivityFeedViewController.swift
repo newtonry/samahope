@@ -16,13 +16,12 @@ class ActivityFeedViewController: UIViewController, UITableViewDataSource, UITab
     
     var transactions: [Transaction]?
     var rootEvent: Event?
-    let events = ParseClient.sharedInstance.events
+    var events = ParseClient.sharedInstance.events
     let EVENTS_POLLING_INTERVAL = 5
     let activityCellId = "ActivityTableViewCell"
     
-    let formatter = NSNumberFormatter()
+    var formatter = NSNumberFormatter()
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,9 +39,20 @@ class ActivityFeedViewController: UIViewController, UITableViewDataSource, UITab
         dispatch_async(dispatch_get_global_queue(priority, 0)) {
             while( true ) {
                 sleep( UInt32(self.EVENTS_POLLING_INTERVAL) )
+                self.events = ParseClient.sharedInstance.events
                 self.loadTransactions()
             }
         }
+    }
+    
+    func updateEventTotal() {
+        var newFormatter = NSNumberFormatter()
+        newFormatter.numberStyle = NSNumberFormatterStyle.CurrencyStyle
+        newFormatter.maximumFractionDigits = 0
+        newFormatter.locale = NSLocale(localeIdentifier: "en_US")
+        
+        
+        self.eventDonationTotal.text = newFormatter.stringFromNumber(rootEvent!.totalDonations!)//"\(rootEvent!.totalDonations!)"
     }
     
     func loadTransactions() {
@@ -56,11 +66,12 @@ class ActivityFeedViewController: UIViewController, UITableViewDataSource, UITab
         ParseClient.sharedInstance.loadTransactions(20) { (newTransactions: [Transaction])
         in
             self.transactions = newTransactions
-            println(">> loading \(self.transactions!.count) transactions")
+//            println(">> loading \(self.transactions!.count) transactions")
             dispatch_async(dispatch_get_main_queue()) { () -> Void in
                 self.tableView.reloadData()
             }
         }
+        self.updateEventTotal()
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -85,7 +96,6 @@ class ActivityFeedViewController: UIViewController, UITableViewDataSource, UITab
                 cell.transaction = t
             }
         }
-        
         return cell
     }
 

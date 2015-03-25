@@ -32,7 +32,6 @@ class ParseClient {
         var defaultACL = PFACL()
         defaultACL.setPublicReadAccess(true)
         PFACL.setDefaultACL(defaultACL, withAccessForCurrentUser: true)
-        
     }
 
     

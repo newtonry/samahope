@@ -36,6 +36,21 @@ class DoctorTableViewCell: UITableViewCell {
         
         doctorMainImageView.setImageWithURL(url)
         
+        let imageUrl = NSURL(string: doctor!.bannerPicUrl!)
+        let bannerRequest = NSURLRequest(URL: imageUrl!)
+        
+        let placeholder = UIImage(named: "doctor-robert-thumbnail")
+        
+        let imageLoadSuccess = {
+            (request: NSURLRequest!, response: NSHTTPURLResponse!, image: UIImage!) -> Void in
+                self.doctorMainImageView.image = image
+            UIView.animateWithDuration(1, animations: {
+                self.doctorMainImageView.alpha = 1
+                
+            })
+        }
+        doctorMainImageView.setImageWithURLRequest(bannerRequest, placeholderImage: placeholder, success: imageLoadSuccess, failure: nil)
+        
         let url2 = NSURL(string: doctor!.thumbnailPicUrl! )
         doctorThumbnailView.setImageWithURL(url2)
         let url3 = NSURL(string: doctor!.treatment!.iconPicUrl!)

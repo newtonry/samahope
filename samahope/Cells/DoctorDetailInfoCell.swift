@@ -18,7 +18,6 @@ class DoctorDetailInfoCell: UITableViewCell {
     
     @IBOutlet weak var supportersCountLabel: UILabel!
     
-
     @IBOutlet weak var leftCircleTitleView: CircleTitleView!
     
     @IBOutlet weak var rightCircleTitleView: CircleTitleView!
@@ -37,11 +36,17 @@ class DoctorDetailInfoCell: UITableViewCell {
     func fillWithProject(project: Project) {
         let bannerUrl = NSURL(string: project.doctorBanner!)
 
-//        bannerImage.setImageWithURL(bannerUrl!)
+        if project.actualBannerImage != nil {
+            project.loadBannerIntoImageViewAsnync({(image: UIImage)-> Void in
+                self.bannerImage.image = image
+            })
+        } else {
+            bannerImage.setImageWithURL(bannerUrl!)
+        }
         
-        project.loadBannerIntoImageViewAsnync({(image: UIImage)-> Void in
-            self.bannerImage.image = image            
-        })
+        
+        
+        
         
         doctorName.text = project.doctorName!
         leftCircleTitleView.setWithImageAndTitle(UIImage(named: "map-marker")!, title: project.location!)

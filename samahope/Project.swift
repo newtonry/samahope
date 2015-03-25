@@ -24,7 +24,7 @@ class Project : PFObject, PFSubclassing {
     @NSManaged var speakTime: NSDate?
     @NSManaged var amountNeeded: NSNumber?
     @NSManaged var totalAmount: NSNumber?
-    private var actualBannerImage: UIImage?
+    var actualBannerImage: UIImage?
     
     override class func initialize() {
         var onceToken : dispatch_once_t = 0;
@@ -41,11 +41,7 @@ class Project : PFObject, PFSubclassing {
             callback(img)
         } else {
             let imageUrl = NSURL(string: doctorBanner!)
-
-            
             imageView.setImageWithURL(imageUrl)
-            
-            
             let urlRequest = NSURLRequest(URL: imageUrl!)
             imageView.setImageWithURLRequest(urlRequest, placeholderImage: nil, success: {(request: NSURLRequest!, response: NSHTTPURLResponse!, image: UIImage!) -> Void in
                 self.actualBannerImage = image // Project.cropBannerImage(image)
