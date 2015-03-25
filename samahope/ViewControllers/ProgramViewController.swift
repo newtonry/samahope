@@ -18,26 +18,32 @@ class ProgramViewController: UIViewController, UITableViewDataSource, UITableVie
     var rootEvent: Event?
     var projects: [Project]?
     var startTime: NSDate?
-    var EVENTS_POLLING_INTERVAL = 5
+    var EVENTS_POLLING_INTERVAL = 2.0
 
     var events : [Event]?
     let programCellId = "ProgramTableViewCell"
     let formatter = NSNumberFormatter()
     
     func updateEvents() {
-        events = ParseClient.sharedInstance.events
-        if let e = events {
-            if let event = e[0] as Event? {
-                self.rootEvent = event
-                self.startTime = rootEvent!.startTime
-                self.projects = rootEvent!.projects
-                self.eventName.text = rootEvent!.name as String!
-                self.eventDescription.text = rootEvent!.eventDescription
-                self.eventDonationTotal.text = formatter.stringFromNumber(rootEvent!.totalDonations!)
+        println( "update events" )
+        ParseClient.sharedInstance.loadEventsInForeground()
+            println( "done loading events")
+            self.events = ParseClient.sharedInstance.events
+        
+            if let e = self.events {
+                if let event = e[0] as Event? {
+                    self.rootEvent = event
+                    self.startTime = self.rootEvent!.startTime
+                    self.projects = self.rootEvent!.projects
+                    self.eventName.text = self.rootEvent!.name as String!
+                    self.eventDescription.text = self.rootEvent!.eventDescription
+                    self.eventDonationTotal.text = "$\(self.rootEvent!.totalDonations!.integerValue)"
+                }
             }
-        }
-        self.view.setNeedsDisplay()
-
+        
+            self.view.setNeedsDisplay()
+            self.tableView.reloadData()
+    
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,17 +60,8 @@ class ProgramViewController: UIViewController, UITableViewDataSource, UITableVie
 
         let cellNib = UINib(nibName: programCellId, bundle: NSBundle.mainBundle())
         tableView.registerNib(cellNib, forCellReuseIdentifier: programCellId)
+        var timer = NSTimer.scheduledTimerWithTimeInterval(self.EVENTS_POLLING_INTERVAL, target: self, selector: Selector("updateEvents"), userInfo: nil, repeats: true)
 
-        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
-        dispatch_async(dispatch_get_global_queue(priority, 0)) {
-            while( true ) {
-                sleep( UInt32(self.EVENTS_POLLING_INTERVAL) )
-                ParseClient.sharedInstance.loadEvents() {
-                    bSuccess in
-                    self.updateEvents()
-                }
-            }
-        }
     }
     
     func tableView(tableView: UITableView, shouldHighlightRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -84,7 +81,10 @@ class ProgramViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return rootEvent!.projects.count
+        if let e = rootEvent {
+            return rootEvent!.projects.count
+        }
+        return 0
     }
     
     func onDonateButtonCellPress(cell: ProgramTableViewCell) {

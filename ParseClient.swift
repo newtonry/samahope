@@ -98,6 +98,21 @@ class ParseClient {
         }
 
     }
+    func loadTransactionsInForeground( numRowsToReturn: Int) -> [Transaction]
+    {
+            //Background Thread
+            var query = Transaction.query()
+            query.includeKey("project")
+            query.includeKey("event")
+            query.limit = numRowsToReturn
+            query.orderByDescending("createdAt")
+            var errorPtr = NSErrorPointer()
+            var txObjects = query.findObjects(errorPtr)
+        
+
+            return txObjects as [Transaction]
+    }
+
     // loads events and associated objects in background with a callback
     func loadEvents( callback: ( Bool ) -> () ) {
         var returnVal = true

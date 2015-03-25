@@ -17,11 +17,21 @@ class ActivityFeedViewController: UIViewController, UITableViewDataSource, UITab
     var transactions: [Transaction]?
     var rootEvent: Event?
     var events = ParseClient.sharedInstance.events
-    let EVENTS_POLLING_INTERVAL = 5
+    let EVENTS_POLLING_INTERVAL = 2.0
     let activityCellId = "ActivityTableViewCell"
     
     var formatter = NSNumberFormatter()
 
+    func updateTxAndEvents() {
+        println("updateTxAndEvents")
+        self.transactions = ParseClient.sharedInstance.loadTransactionsInForeground(20)
+
+        rootEvent = ParseClient.sharedInstance.events![0] // the programVC is already updating this
+        self.updateEventTotal()
+        self.tableView.reloadData()
+        self.view.setNeedsDisplay()
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,14 +45,9 @@ class ActivityFeedViewController: UIViewController, UITableViewDataSource, UITab
         formatter.numberStyle = NSNumberFormatterStyle.CurrencyStyle
         formatter.maximumFractionDigits = 0
         formatter.locale = NSLocale(localeIdentifier: "en_US")
-        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
-        dispatch_async(dispatch_get_global_queue(priority, 0)) {
-            while( true ) {
-                sleep( UInt32(self.EVENTS_POLLING_INTERVAL) )
-                self.events = ParseClient.sharedInstance.events
-                self.loadTransactions()
-            }
-        }
+        
+        var timer = NSTimer.scheduledTimerWithTimeInterval(self.EVENTS_POLLING_INTERVAL, target: self, selector: Selector("updateTxAndEvents"), userInfo: nil, repeats: true)
+
     }
     
     func updateEventTotal() {
