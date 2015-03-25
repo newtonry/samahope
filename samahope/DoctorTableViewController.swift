@@ -9,16 +9,20 @@
 import UIKit
 
 class DoctorTableViewController: UITableViewController {
-    var events = ParseClient.sharedInstance.events
     var doctors: [Doctor]? // internally we use Doctors converted from Projects
     
     func onRefresh() {
-        ParseClient.sharedInstance.loadEvents() {
-            success in
-            // events have been refreshed
-            self.view.setNeedsDisplay()
-            self.refreshControl!.endRefreshing()
+        // rely on model getting refreshed by another thread in NSTimer
+        doctors = [Doctor]()
+        var projects = ParseClient.sharedInstance.projects
+        for ( var j = 0; j < projects!.count; j++ ) {
+            var d = Doctor( p:projects![j])
+            doctors!.append( d )
         }
+
+        self.view.setNeedsDisplay()
+        self.tableView.reloadData()
+        self.refreshControl!.endRefreshing()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
