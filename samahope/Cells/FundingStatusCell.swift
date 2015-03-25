@@ -32,7 +32,8 @@ class FundingStatusCell: UITableViewCell {
     func setWithProject(project: Project) {
         let treatmentsFulfilled = 10
         let treatmentsGoal = 50
-        let amountRaised = project.amountNeeded!
+        
+        let amountRaised = project.totalAmount!.integerValue - project.amountNeeded!.integerValue
         let amountPerProcedure = project.totalAmount!
         
         treatmentStats.text = "Treatment \(treatmentsFulfilled) of \(treatmentsGoal) needed"
